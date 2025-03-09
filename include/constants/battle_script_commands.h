@@ -241,7 +241,9 @@
 #define VARIOUS_STORE_HEALING_WISH                   148
 #define VARIOUS_HIT_SWITCH_TARGET_FAILED             149
 #define VARIOUS_TRY_REVIVAL_BLESSING                 150
-#define VARIOUS_APPLY_TERASTALLIZATION                151
+#define VARIOUS_APPLY_TERASTALLIZATION               151
+#define VARIOUS_TRY_ACTIVATE_RECHARGE_SKIP           152
+#define VARIOUS_JUMP_IF_NOT_WEATHER_AFFECTED         153
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0
@@ -318,9 +320,10 @@
 #define MOVEEND_EMERGENCY_EXIT                    33
 #define MOVEEND_SYMBIOSIS                         34
 #define MOVEEND_OPPORTUNIST                       35    // Occurs after other stat change items/abilities to try and copy the boosts
-#define MOVEEND_SAME_MOVE_TURNS                   36
-#define MOVEEND_CLEAR_BITS                        37
-#define MOVEEND_COUNT                             38
+#define MOVEEND_LIQUID_OOZE                       36
+#define MOVEEND_SAME_MOVE_TURNS                   37
+#define MOVEEND_CLEAR_BITS                        38
+#define MOVEEND_COUNT                             39
 
 // switch cases
 #define B_SWITCH_NORMAL     0

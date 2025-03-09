@@ -943,6 +943,7 @@ static bool32 AI_IsMoveEffectInPlus(u32 battlerAtk, u32 battlerDef, u32 move, s3
             return TRUE;
         break;
     case EFFECT_DEFENSE_DOWN_HIT:
+    case EFFECT_DEFENSE_DOWN_HIT_2:
         if (ShouldLowerStat(battlerDef, abilityDef, STAT_DEF) && noOfHitsToKo != 1)
             return TRUE;
         break;
@@ -1005,6 +1006,7 @@ static bool32 AI_IsMoveEffectInMinus(u32 battlerAtk, u32 battlerDef, u32 move, s
     case EFFECT_SPEED_DOWN_HIT:
     case EFFECT_ATTACK_DOWN_HIT:
     case EFFECT_DEFENSE_DOWN_HIT:
+    case EFFECT_DEFENSE_DOWN_HIT_2:
     case EFFECT_SPECIAL_ATTACK_DOWN_HIT:
     case EFFECT_SPECIAL_DEFENSE_DOWN_HIT:
     case EFFECT_SPECIAL_DEFENSE_DOWN_HIT_2:
@@ -2902,8 +2904,7 @@ bool32 AI_CanBeBurned(u32 battler, u32 ability)
 
 bool32 AI_CanGetFrostbite(u32 battler, u32 ability)
 {
-    if (ability == ABILITY_MAGMA_ARMOR
-      || ability == ABILITY_COMATOSE
+    if (ability == ABILITY_COMATOSE
       || IS_BATTLER_OF_TYPE(battler, TYPE_ICE)
       || gBattleMons[battler].status1 & STATUS1_ANY
       || IsAbilityStatusProtected(battler)

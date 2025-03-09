@@ -4824,10 +4824,13 @@ s8 GetMovePriority(u32 battler, u16 move)
         return gBattleMoves[MOVE_MAX_GUARD].priority;
 
     if (ability == ABILITY_GALE_WINGS
-        && (B_GALE_WINGS < GEN_7 || BATTLER_MAX_HP(battler))
+        && (gBattleMons[battler].hp >= (gBattleMons[battler].maxHP / 2))
         && gBattleMoves[move].type == TYPE_FLYING)
     {
         priority++;
+    }
+    else if (ability == ABILITY_LINGERING_AROMA && gBattleMons[battler].species != SPECIES_LECHONK && gBattleMons[battler].species != SPECIES_OINKOLOGNE_MALE && gBattleMons[battler].species != SPECIES_OINKOLOGNE_FEMALE){
+        priority--;
     }
     else if (ability == ABILITY_FORECAST_PRIORITY && IsWeatherAffectedMove(move))
     {
@@ -4835,8 +4838,12 @@ s8 GetMovePriority(u32 battler, u16 move)
     }
     else if (ability == ABILITY_PRANKSTER && IS_MOVE_STATUS(move))
     {
-        gProtectStructs[battler].pranksterElevated = 1;
-        priority++;
+        if(move == MOVE_AFTER_YOU || move == MOVE_SPORE){
+            //idk how to make them fail so for now i'll just make it not have priority with prankster
+        } else {
+            gProtectStructs[battler].pranksterElevated = 1;
+            priority++;
+        }
     }
     else if (gBattleMoves[move].effect == EFFECT_GRASSY_GLIDE && gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN && IsBattlerGrounded(battler))
     {
@@ -4863,7 +4870,11 @@ u32 GetWhichBattlerFasterArgs(u32 battler1, u32 battler2, bool32 ignoreChosenMov
         // LAGGING TAIL - always last
         // STALL - always last
 
-        if (gProtectStructs[battler1].quickDraw && !gProtectStructs[battler2].quickDraw)
+        if ((gBattleResources->flags->flags[battler1] & RESOURCE_FLAG_EMERGENCY_EXIT) && !(gBattleResources->flags->flags[battler2] & RESOURCE_FLAG_EMERGENCY_EXIT))
+            strikesFirst = 0;
+        else if (!(gBattleResources->flags->flags[battler1] & RESOURCE_FLAG_EMERGENCY_EXIT) && (gBattleResources->flags->flags[battler2] & RESOURCE_FLAG_EMERGENCY_EXIT))
+            strikesFirst = 1;
+        else if (gProtectStructs[battler1].quickDraw && !gProtectStructs[battler2].quickDraw)
             strikesFirst = 0;
         else if (!gProtectStructs[battler1].quickDraw && gProtectStructs[battler2].quickDraw)
             strikesFirst = 1;
@@ -5796,7 +5807,7 @@ void SetTypeBeforeUsingMove(u32 move, u32 battlerAtk)
     {
         gBattleStruct->dynamicMoveType = ItemId_GetSecondaryId(gBattleMons[battlerAtk].item) | F_DYNAMIC_TYPE_SET;
     }
-    else if (gBattleMoves[move].effect == EFFECT_REVELATION_DANCE)
+    else if (gBattleMoves[move].effect == EFFECT_REVELATION_DANCE || move == MOVE_VEEVEE_VOLLEY)
     {
         if (IsTerastallized(battlerAtk) && GetBattlerTeraType(battlerAtk) != TYPE_STELLAR)
             gBattleStruct->dynamicMoveType = GetBattlerTeraType(battlerAtk);

@@ -4908,7 +4908,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
           && !IS_MOVE_STATUS(move) && AI_GetTypeEffectiveness(predictedMove, battlerDef, battlerAtk) != AI_EFFECTIVENESS_x0)
             ADJUST_SCORE(1);
         break;
-    case EFFECT_FLAME_BURST:
+    case EFFECT_MULTI_HIT_FLAME_BURST:
         if (isDoubleBattle)
         {
             if (IsBattlerAlive(BATTLE_PARTNER(battlerDef))

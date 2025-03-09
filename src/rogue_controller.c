@@ -6100,7 +6100,7 @@ static void SetupTrainerBattleInternal(u16 trainerNum)
     switch(Rogue_GetConfigRange(CONFIG_RANGE_BATTLE_FORMAT))
     {
         case BATTLE_FORMAT_SINGLES:
-            shouldDoubleBattle = FALSE;
+            shouldDoubleBattle = TRUE;
             break;
 
         case BATTLE_FORMAT_DOUBLES:
@@ -6108,7 +6108,7 @@ static void SetupTrainerBattleInternal(u16 trainerNum)
             break;
 
         case BATTLE_FORMAT_MIXED:
-            shouldDoubleBattle = (RogueRandom() % 2);
+            shouldDoubleBattle = TRUE;
             break;
 
         default:

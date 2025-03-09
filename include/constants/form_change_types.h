@@ -127,4 +127,12 @@
 // Form dynamic disable stub
 #define FORM_CHANGE_DISABLED_STUB                        22
 
+// Form change that activates when the Pokémon's HP % passes a certain threshold.
+// param1: Item to check.
+// param2: HP comparer
+// - HP_HIGHER_THAN if the form triggers when the current HP is higher than the specified threshold.
+// - HP_LOWER_EQ_THAN if the form triggers when the current HP is lower or equal than the specified threshold.
+// param3: HP percentage threshold.
+#define FORM_CHANGE_BATTLE_HP_PERCENT_ITEM 23
+
 #endif // GUARD_CONSTANTS_FORM_CHANGE_TYPES_H

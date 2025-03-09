@@ -405,8 +405,8 @@ static const u8 sHypnosisDescription[] = _(
     "may induce sleep.");
 
 static const u8 sMeditateDescription[] = _(
-    "Meditates in a peaceful\n"
-    "fashion to raise Attack.");
+    "Meditates to raise\n"
+    "Attack and Sp. Def.");
 
 static const u8 sAgilityDescription[] = _(
     "Relaxes the body to sharply\n"
@@ -1101,8 +1101,8 @@ static const u8 sNaturePowerDescription[] = _(
     "depending on the location.");
 
 static const u8 sChargeDescription[] = _(
-    "Charges power to boost the\n"
-    "electric move used next.");
+    "Charges power to heal and\n"
+    "boost next Electric move.");
 
 static const u8 sTauntDescription[] = _(
     "Taunts the foe into only\n"
@@ -1806,7 +1806,7 @@ static const u8 sJudgmentDescription[] = _(
 
 static const u8 sChargeBeamDescription[] = _(
     "Fires a beam of electricity.\n"
-    "May raise Sp. Atk.");
+    "Raises Sp. Atk.");
 
 static const u8 sWoodHammerDescription[] = _(
     "Slams the body into a foe.\n"
@@ -2365,8 +2365,8 @@ static const u8 sGeomancyDescription[] = _(
     "Speed on the 2nd turn.");
 
 static const u8 sMagneticFluxDescription[] = _(
-    "Boosts the defenses of\n"
-    "those with Plus or Minus.");
+    "Burns all other Steel\n"
+    "types on the field.");
 
 static const u8 sHappyHourDescription[] = _(
     "Doubles the amount of\n"
@@ -3332,6 +3332,58 @@ static const u8 sMalignantChainDescription[] = _(
     "A corrosive chain attack\n"
     "that may badly poison.");
 
+static const u8 sOnslaughtCoreDescription[] = _(
+    "If you're reading this,\n"
+    "please contact Debug.");
+
+static const u8 sDiveBombDescription[] = _(
+    "A dangerous maneuvre. If it\n"
+    "misses, the user is hurt.");
+
+static const u8 sDivineSmiteDescription[] = _(
+    "A mystical electric attack\n"
+    "that may inflict paralysis.");
+
+static const u8 sExpandingMawsDescription[] = _(
+    "Power goes up and damages\n"
+    "all foes on Psychic Terrain.");
+
+static const u8 sFlashFreezeDescription[] = _(
+    "Inflicts frostbite on the\n"
+    "foe with a sudden chill.");
+
+static const u8 sPsychOutDescription[] = _(
+    "A 1st-turn, 1st-strike move\n"
+    "that causes flinching.");
+
+static const u8 sIceRinkDescription[] = _(
+    "Absorbs ice into itself\n"
+    "to restore HP.");
+
+static const u8 sQuarryDescription[] = _(
+    "Adds rocks to its body\n"
+    "to restore HP.");
+    
+static const u8 sSmelteryDescription[] = _(
+    "Melts and consumes metal\n"
+    "to restore HP.");
+
+static const u8 sSlushCrushDescription[] = _(
+    "Does more damage if the\n"
+    "user outweighs the foe.");
+
+static const u8 sPurifyingWaterDescription[] = _(
+    "A mystical water attack\n"
+    "that may inflict frostbite.");
+
+static const u8 sStalacbiteDescription[] = _(
+    "May cause flinching or\n"
+    "lower the foe's Defense.");
+
+static const u8 sExtremeEvoboostDescription[] = _(
+    "Calls upon its ancestors\n"
+    "to sharply boost all stats.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4190,4 +4242,18 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_PSYCHIC_NOISE - 1] = sPsychicNoiseDescription,
     [MOVE_UPPER_HAND - 1] = sUpperHandDescription,
     [MOVE_MALIGNANT_CHAIN - 1] = sMalignantChainDescription,
+    // VGC Pride
+    [MOVE_ONSLAUGHT_CORE - 1] = sOnslaughtCoreDescription,
+    [MOVE_DIVE_BOMB - 1] = sDiveBombDescription,
+    [MOVE_DIVINE_SMITE - 1] = sDivineSmiteDescription,
+    [MOVE_EXPANDING_MAWS - 1] = sExpandingMawsDescription,
+    [MOVE_FLASH_FREEZE - 1] = sFlashFreezeDescription,
+    [MOVE_PSYCH_OUT - 1] = sPsychOutDescription,
+    [MOVE_ICE_RINK - 1] = sIceRinkDescription,
+    [MOVE_QUARRY - 1] = sQuarryDescription,
+    [MOVE_SMELTERY - 1] = sSmelteryDescription,
+    [MOVE_SLUSH_CRUSH - 1] = sSlushCrushDescription,
+    [MOVE_PURIFYING_WATER - 1] = sPurifyingWaterDescription,
+    [MOVE_STALACBITE - 1] = sStalacbiteDescription,
+    [MOVE_EXTREME_EVOBOOST_2 - 1] = sExtremeEvoboostDescription,
 };

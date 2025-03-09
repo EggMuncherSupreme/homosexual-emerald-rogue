@@ -465,6 +465,7 @@ static u8 GetMaxPowerTier(u16 move)
         case EFFECT_LOW_KICK:
             return MAX_POWER_TIER_7;
         case EFFECT_MULTI_HIT:
+        case EFFECT_MULTI_HIT_FLAME_BURST:
             switch(gBattleMoves[move].power)
             {
                 case 0 ... 15:    return MAX_POWER_TIER_1;

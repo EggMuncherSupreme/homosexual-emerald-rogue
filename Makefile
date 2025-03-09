@@ -41,7 +41,7 @@ endif
 ifeq ($(OS),Windows_NT)
 PORYSCRIPT := tools/poryscript/poryscript-windows/poryscript$(EXE)
 else
-PORYSCRIPT := tools/poryscript/poryscript-linux/poryscript$(EXE)
+PORYSCRIPT := tools/poryscript/poryscript$(EXE)
 endif
 
 ROGUEPORYSCRIPTSDIR := data/scripts/Rogue
@@ -403,7 +403,7 @@ include $(OBJEVENTGFXDIR)/pokemon_ow/include/spritesheet_rules_gen.mk
 $(CRY_SUBDIR)/uncomp_%.bin: $(CRY_SUBDIR)/uncomp_%.aif ; $(AIF) $< $@
 $(CRY_SUBDIR)/%.bin: $(CRY_SUBDIR)/%.aif ; $(AIF) $< $@ --compress
 sound/%.bin: sound/%.aif ; $(AIF) $< $@
-data/%.inc: data/%.pory; $(PORYSCRIPT) -i $< -o $@ $(PORYSCRIPTARGS)
+data/%.inc: data/%.pory; $(PORYSCRIPT) -i $< -o $@ $(PORYSCRIPTARGS) -cc tools/poryscript/command_config.json
 
 
 ifeq ($(MODERN),0)

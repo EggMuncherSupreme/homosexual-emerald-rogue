@@ -567,6 +567,10 @@
 #define B_ANIM_SWAMP                    44
 #define B_ANIM_TERA_CHARGE              45
 #define B_ANIM_TERA_ACTIVATE            46
+#define B_ANIM_ICE_RINK_HEAL            47
+#define B_ANIM_QUARRY_HEAL              48
+#define B_ANIM_SMELTERY_HEAL            49
+#define B_ANIM_ROTTEN                   50
 
 // special animations table (gBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0

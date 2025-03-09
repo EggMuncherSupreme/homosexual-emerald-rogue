@@ -221,7 +221,7 @@ static const u8 sText_SmackDown[] = _("Smacked Down");
 static const u8 sText_MiracleEye[] = _("Miracle Eye");
 static const u8 sText_AquaRing[] = _("Aqua Ring");
 static const u8 sText_LaserFocus[] = _("Laser Focused");
-static const u8 sText_Electrified[] = _("Electrified");
+static const u8 sText_Electrified[] = _("Color Change");
 static const u8 sText_AuroraVeil[] = _("Aurora Veil");
 static const u8 sText_LuckyChant[] = _("Lucky Chant");
 static const u8 sText_Tailwind[] = _("Tailwind");
@@ -319,7 +319,7 @@ static const struct BitfieldInfo sStatus3Bitfield[] =
 
 static const struct BitfieldInfo sStatus4Bitfield[] =
 {
-    {/*Electrified*/ 1, 0,}
+    {/*Electrified*/ 1, 10,}
 };
 
 static const struct BitfieldInfo sAIBitfield[] =

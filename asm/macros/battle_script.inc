@@ -1160,9 +1160,8 @@
 	.4byte \failInstr
 	.endm
 
-	.macro unused2 ptr:req
+	.macro setwrapped
 	.byte 0xe1
-	.4byte \ptr
 	.endm
 
 	.macro switchoutabilities battler:req
@@ -1184,8 +1183,10 @@
 	.byte 0xe5
 	.endm
 
-	.macro unused3
+	.macro setuserstatus4 flags:req, failInstr:req
 	.byte 0xe6
+	.4byte \flags
+	.4byte \failInstr
 	.endm
 
 	.macro unused4
@@ -1739,6 +1740,10 @@
 	various \battler, VARIOUS_TRY_ACTIVATE_BEAST_BOOST
 	.endm
 
+	.macro tryactivaterechargeskip battler:req
+	various \battler, VARIOUS_TRY_ACTIVATE_RECHARGE_SKIP
+	.endm
+
 	.macro tryactivatereceiver battler:req
 	various \battler, VARIOUS_TRY_ACTIVATE_RECEIVER
 	.endm
@@ -2122,6 +2127,12 @@
 	.4byte \jumpInstr
 	.endm
 
+	.macro jumpifnotweatheraffected battler:req, flags:req, jumpInstr:req	
+	various \battler, VARIOUS_JUMP_IF_NOT_WEATHER_AFFECTED
+	.4byte \flags
+	.4byte \jumpInstr
+	.endm
+
 	.macro jumpifspecies battler:req, species:req, jumpInstr:req
 	various \battler, VARIOUS_JUMP_IF_SPECIES
 	.2byte \species
@@ -2367,8 +2378,9 @@
 	.endm
 
 	.macro jumpifleafguardprotected battler:req, jumpInstr:req
-	various \battler, VARIOUS_JUMP_IF_LEAF_GUARD_PROTECTED
-	.4byte \jumpInstr
+	jumpifnotweatheraffected BS_TARGET, B_WEATHER_SUN, 1f
+	jumpifability BS_TARGET_SIDE, ABILITY_LEAF_GUARD, \jumpInstr
+	1:
 	.endm
 
 	.macro jumpifsafeguard jumpInstr:req

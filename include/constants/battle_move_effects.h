@@ -434,7 +434,18 @@
 #define EFFECT_TERA_BLAST                   428
 #define EFFECT_TERA_STARSTORM               429
 #define EFFECT_ELECTRO_SHOT                 430
+#define EFFECT_DEFENSE_DOWN_HIT_2           431
+#define EFFECT_RECHARGE_PHYS_SPEC           432
+#define EFFECT_SPEED_UP_2_HIT               433
+#define EFFECT_MULTI_HIT_FLAME_BURST        434
+#define EFFECT_ATTACK_SPDEF_UP              435
+#define EFFECT_SHADOW_FORCE                 436
+#define EFFECT_FLASH_FREEZE                 437
+#define EFFECT_ICE_RINK                     438
+#define EFFECT_QUARRY                       439
+#define EFFECT_SMELTERY                     440
+#define EFFECT_EXTREME_EVOBOOST_2           441
 
-#define NUM_BATTLE_MOVE_EFFECTS             431
+#define NUM_BATTLE_MOVE_EFFECTS             442
 
 #endif  // GUARD_CONSTANTS_BATTLE_MOVE_EFFECTS_H

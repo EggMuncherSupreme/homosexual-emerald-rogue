@@ -432,7 +432,7 @@ static void Rogue_ResetToDefaults(bool8 difficultySettingsOnly)
     {
         Rogue_SetConfigToggle(CONFIG_TOGGLE_OVERWORLD_MONS, TRUE);
         Rogue_SetConfigToggle(CONFIG_TOGGLE_EXP_ALL, TRUE);
-        Rogue_SetConfigRange(CONFIG_RANGE_BATTLE_FORMAT, BATTLE_FORMAT_SINGLES);
+        Rogue_SetConfigRange(CONFIG_RANGE_BATTLE_FORMAT, BATTLE_FORMAT_DOUBLES);
     }
 }
 

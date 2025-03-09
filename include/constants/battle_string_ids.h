@@ -706,8 +706,17 @@
 #define STRINGID_PKMNTERASTALLIZEDINTO                704
 #define STRINGID_PKMNMADESHELLGLEAM                   705
 #define STRINGID_ELECTROSHOTCHARGING                  706
+#define STRINGID_PKMNALREADYHASFROSTBITE              707
+#define STRINGID_PKMNBEGINSREPAIRING                  708
+#define STRINGID_ICERINKHEAL                          709
+#define STRINGID_QUARRYHEAL                           710
+#define STRINGID_SMELTERYHEAL                         711
+#define STRINGID_GUARDDOGENTERS                       712
+#define STRINGID_HEALERRESTORATION                    713
+#define STRINGID_LEAFGUARDPROTECTED                   714
+#define STRINGID_ITEMWENTROTTEN                       715
 
-#define BATTLESTRINGS_COUNT                           707
+#define BATTLESTRINGS_COUNT                           716
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -971,6 +980,7 @@
 #define B_MSG_SWITCHIN_CURIOUS_MEDICINE 14
 #define B_MSG_SWITCHIN_PASTEL_VEIL      15
 #define B_MSG_SWITCHIN_NEUTRALIZING_GAS 16
+#define B_MSG_SWITCHIN_GUARD_DOG        17
 
 // gMentalHerbCureStringIds
 #define B_MSG_MENTALHERBCURE_INFATUATION       0
@@ -1007,7 +1017,8 @@
 #define B_MSG_WRAPPED_INFESTATION  7
 #define B_MSG_WRAPPED_SNAP_TRAP    8
 #define B_MSG_WRAPPED_THUNDER_CAGE 9
-#define NUM_TRAPPING_MOVES         10
+#define B_MSG_WRAPPED_OCTOLOCK     10
+#define NUM_TRAPPING_MOVES         11
 
 // z effects
 #define B_MSG_Z_RESET_STATS   0
