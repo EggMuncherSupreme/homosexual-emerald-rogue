@@ -8274,7 +8274,7 @@ BattleScript_KnockedOff::
 
 BattleScript_StickyHeld::
 	playanimation BS_ATTACKER, B_ANIM_ITEM_KNOCKOFF
-	printstring STRINGID_PKMNKNOCKEDOFF
+	printstring STRINGID_PKMNSTICKYHELD
 	waitmessage B_WAIT_TIME_LONG
 	return
 

@@ -715,7 +715,7 @@
 #define STRINGID_HEALERRESTORATION                    713
 #define STRINGID_LEAFGUARDPROTECTED                   714
 #define STRINGID_ITEMWENTROTTEN                       715
-#define STRINGID_STICKYHELD                           716
+#define STRINGID_PKMNSTICKYHELD                       716
 
 #define BATTLESTRINGS_COUNT                           717
 

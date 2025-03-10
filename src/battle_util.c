@@ -4342,7 +4342,7 @@ static inline u8 GetBattlerSideFaintCounter(u32 battler)
 // Supreme Overlord adds a x0.1 damage boost for each fainted ally.
 static inline uq4_12_t GetSupremeOverlordModifier(u32 battler)
 {
-    return UQ_4_12(1.0) + (UQ_4_12(0.1) * gBattleStruct->supremeOverlordCounter[battler]);
+    return UQ_4_12(1.0) + (UQ_4_12(0.15) * gBattleStruct->supremeOverlordCounter[battler]);
 }
 
 static inline bool32 HadMoreThanHalfHpNowHasLess(u32 battler)
@@ -4844,12 +4844,10 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             }
             break;
         case ABILITY_SUPERSWEET_SYRUP:
-            if (!gSpecialStatuses[battler].switchInAbilityDone
-                    && !(gBattleStruct->supersweetSyrup[GetBattlerSide(battler)] & gBitTable[gBattlerPartyIndexes[battler]]))
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gBattlerAttacker = battler;
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
-                gBattleStruct->supersweetSyrup[GetBattlerSide(battler)] |= gBitTable[gBattlerPartyIndexes[battler]];
                 BattleScriptPushCursorAndCallback(BattleScript_SupersweetSyrupActivates);
                 effect++;
             }
@@ -4979,7 +4977,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
-                gBattleStruct->supremeOverlordCounter[battler] = min(5, GetBattlerSideFaintCounter(battler));
+                gBattleStruct->supremeOverlordCounter[battler] = min(3, GetBattlerSideFaintCounter(battler));
                 if (gBattleStruct->supremeOverlordCounter[battler] > 0)
                 {
                     BattleScriptPushCursorAndCallback(BattleScript_SupremeOverlordActivates);
