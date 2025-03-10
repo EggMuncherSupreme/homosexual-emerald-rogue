@@ -1463,7 +1463,7 @@ static void Cmd_attackcanceler(void)
         PREPARE_BYTE_NUMBER_BUFFER(gBattleScripting.multihitString, 1, 0)
         return;
     }
-    
+
     // Check Protean activation.
     if (ProteanTryChangeType(gBattlerAttacker, attackerAbility, gCurrentMove, moveType))
     {
@@ -11509,6 +11509,9 @@ static void Cmd_manipulatedamage(void)
         break;
     case DMG_CURR_ATTACKER_HP:
         gBattleMoveDamage = GetNonDynamaxHP(gBattlerAttacker);
+        if (GetBattlerAbility(gBattlerAttacker) == ABILITY_RECKLESS){
+            gBattleMoveDamage = gBattleMoveDamage + (gBattleMoveDamage / 5);
+        }
         break;
     case DMG_BIG_ROOT:
         gBattleMoveDamage = GetDrainedBigRootHp(gBattlerAttacker, gBattleMoveDamage);
