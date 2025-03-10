@@ -6701,6 +6701,8 @@ bool32 CanBattlerEscape(u32 battler) // no ability check
 {
     if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_SHED_SHELL)
         return TRUE;
+    else if (GetBattlerAbility(battler) == ABILITY_RUN_AWAY)
+        return TRUE;
     else if (B_GHOSTS_ESCAPE >= GEN_6 && IS_BATTLER_OF_TYPE(battler, TYPE_GHOST))
         return TRUE;
     else if (gBattleMons[battler].status2 & (STATUS2_ESCAPE_PREVENTION | STATUS2_WRAPPED))
@@ -9405,13 +9407,13 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
     case ABILITY_SAND_FORCE:
         if ((moveType == TYPE_STEEL || moveType == TYPE_ROCK || moveType == TYPE_GROUND)
             && weather & B_WEATHER_SANDSTORM)
-           modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
+           modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_RIVALRY:
         if (AreBattlersOfSameGender(battlerAtk, battlerDef))
-            modifier = uq4_12_multiply(modifier, UQ_4_12(1.25));
+            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         else if (AreBattlersOfOppositeGender(battlerAtk, battlerDef))
-            modifier = uq4_12_multiply(modifier, UQ_4_12(0.75));
+            modifier = uq4_12_multiply(modifier, UQ_4_12(0.9));
         break;
     case ABILITY_TRANSPHOBIA:
         if (GetBattlerGender(battlerDef) == MON_GENDERLESS)
@@ -10030,6 +10032,14 @@ static inline u32 CalcDefenseStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 
     case ABILITY_WANDERING_SPIRIT:
         if (gBattleMons[battlerDef].species != SPECIES_YAMASK_GALARIAN && gBattleMons[battlerDef].species != SPECIES_RUNERIGUS) 
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.8));
+        break;
+    case ABILITY_SAND_VEIL:
+        if (WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_SANDSTORM)
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.2));
+        break;
+    case ABILITY_SNOW_CLOAK:
+        if (WEATHER_HAS_EFFECT && (gBattleWeather & (B_WEATHER_HAIL | B_WEATHER_SNOW)))
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.2));
         break;
     }
 
