@@ -854,7 +854,6 @@ BattleScript_EffectCorrosiveGas:
 	jumpifcantloseitem BS_TARGET, BattleScript_CorrosiveGasFail
 	attackanimation
 	waitanimation
-	jumpifability BS_TARGET, ABILITY_STICKY_HOLD, BattleScript_StickyHoldActivates
 	setlastuseditem BS_TARGET
 	removeitem BS_TARGET
 	printstring STRINGID_PKMNITEMMELTED
@@ -8273,6 +8272,12 @@ BattleScript_KnockedOff::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_StickyHeld::
+	playanimation BS_ATTACKER, B_ANIM_ITEM_KNOCKOFF
+	printstring STRINGID_PKMNKNOCKEDOFF
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_MoveUsedIsImprisoned::
 	printstring STRINGID_PKMNCANTUSEMOVESEALED
 	waitmessage B_WAIT_TIME_LONG
@@ -10949,7 +10954,6 @@ BattleScript_RemoveTerrain_Cont:
 
 BattleScript_Pickpocket::
 	call BattleScript_AbilityPopUp
-	jumpifability BS_ATTACKER, ABILITY_STICKY_HOLD, BattleScript_PickpocketPrevented
 	swapattackerwithtarget
 	call BattleScript_ItemSteal
 	swapattackerwithtarget

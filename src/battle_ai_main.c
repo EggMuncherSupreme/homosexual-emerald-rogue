@@ -1803,11 +1803,6 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
               || *(gBattleStruct->monToSwitchIntoId + BATTLE_PARTNER(battlerAtk)) != PARTY_SIZE) //Partner is switching out.
                 ADJUST_SCORE(-10);
             break;
-        case EFFECT_TRICK:
-        case EFFECT_KNOCK_OFF:
-            if (aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
-                ADJUST_SCORE(-10);
-            break;
         case EFFECT_INGRAIN:
             if (gStatuses3[battlerAtk] & STATUS3_ROOTED)
                 ADJUST_SCORE(-10);
@@ -3921,8 +3916,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
               && aiData->items[battlerDef] != ITEM_NONE
               && CanBattlerGetOrLoseItem(battlerDef, aiData->items[battlerDef])
               && CanBattlerGetOrLoseItem(battlerAtk, aiData->items[battlerDef])
-              && !HasMoveEffect(battlerAtk, EFFECT_ACROBATICS)
-              && aiData->abilities[battlerDef] != ABILITY_STICKY_HOLD)
+              && !HasMoveEffect(battlerAtk, EFFECT_ACROBATICS))
             {
                 switch (aiData->holdEffects[battlerDef])
                 {
@@ -4709,13 +4703,13 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         }
         break;
     case EFFECT_BUG_BITE:   // And pluck
-        if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
+        if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE)
             break;
         else if (ItemId_GetPocket(aiData->items[battlerDef]) == POCKET_BERRIES)
             ADJUST_SCORE(3);
         break;
     case EFFECT_INCINERATE:
-        if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE || aiData->abilities[battlerDef] == ABILITY_STICKY_HOLD)
+        if (gBattleMons[battlerDef].status2 & STATUS2_SUBSTITUTE)
             break;
         else if (ItemId_GetPocket(aiData->items[battlerDef]) == POCKET_BERRIES || aiData->holdEffects[battlerDef] == HOLD_EFFECT_GEMS)
             ADJUST_SCORE(3);

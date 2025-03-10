@@ -2751,9 +2751,6 @@ bool32 CanKnockOffItem(u32 battler, u32 item)
       )) && GetBattlerSide(battler) == B_SIDE_PLAYER)
         return FALSE;
 
-    if (AI_DATA->abilities[battler] == ABILITY_STICKY_HOLD)
-        return FALSE;
-
     if (!CanBattlerGetOrLoseItem(battler, item))
         return FALSE;
 
