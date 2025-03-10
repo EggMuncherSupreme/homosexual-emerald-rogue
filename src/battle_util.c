@@ -9850,6 +9850,10 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.8));
         } 
         break;
+    case ABILITY_BALLIN:
+        if (gSpecialStatuses[battler].dancerUsedMove){
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.5));
+        }
     }
 
     // target's abilities
