@@ -9845,6 +9845,11 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
         if (gBattleMons[battlerAtk].status1 & STATUS1_ANY && IS_MOVE_PHYSICAL(move))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
+    case ABILITY_MUMMY:
+        if ((gBattleMons[battlerAtk].species != SPECIES_YAMASK) &&(gBattleMons[battlerAtk].species != SPECIES_COFAGRIGUS)){
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.8));
+        } 
+        break;
     }
 
     // target's abilities
@@ -10017,6 +10022,10 @@ static inline u32 CalcDefenseStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 
     case ABILITY_PURIFYING_SALT:
         if (gBattleMoves[move].type == TYPE_GHOST)
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(2.0));
+        break;
+    case ABILITY_WANDERING_SPIRIT:
+        if (gBattleMons[battlerDef].species != SPECIES_YAMASK_GALARIAN && gBattleMons[battlerDef].species != SPECIES_RUNERIGUS) 
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.8));
         break;
     }
 
@@ -11292,9 +11301,11 @@ u8 GetBattleMoveSplit(u32 moveId)
         return gBattleStruct->dynamax.activeSplit;
     if (gBattleStruct != NULL && gBattleStruct->swapDamageCategory) // Photon Geyser, Shell Side Arm, Light That Burns the Sky
         return SPLIT_PHYSICAL;
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_BALLIN && gBattleMoves[moveId].ballisticMove){
+        return GetSplitBasedOnStats(gBattlerAttacker);
+    }
     if (B_PHYSICAL_SPECIAL_SPLIT >= GEN_4)
         return gBattleMoves[moveId].split;
-
     if (IS_MOVE_STATUS(moveId))
         return SPLIT_STATUS;
     else if (gBattleMoves[moveId].type < TYPE_MYSTERY)
