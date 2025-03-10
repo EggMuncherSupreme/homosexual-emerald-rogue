@@ -10554,6 +10554,11 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
         if (recordAbilities)
             RecordAbilityBattle(battlerAtk, abilityAtk);
     }
+    if (moveType == TYPE_NORMAL
+        && abilityAtk == ABILITY_NORMALIZE)
+    {
+        mod = UQ_4_12(1.0);
+    }
     // B_WEATHER_STRONG_WINDS weakens Super Effective moves against Flying-type Pokémon
     if (gBattleWeather & B_WEATHER_STRONG_WINDS && WEATHER_HAS_EFFECT)
     {

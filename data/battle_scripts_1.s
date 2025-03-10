@@ -2055,6 +2055,7 @@ BattleScript_EffectMagneticFlux::
 	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_AbilityProtectsDoesntAffect
 	jumpifability BS_TARGET, ABILITY_PURIFYING_SALT, BattleScript_AbilityProtectsDoesntAffect
 	jumpifflowerveil BattleScript_FlowerVeilProtects
+	jumpifability BS_TARGET_SIDE, ABILITY_PASTEL_VEIL, BattleScript_PastelVeilProtects
 	jumpifleafguardprotected BS_TARGET_SIDE, BattleScript_LeafGuardProtects
 	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
@@ -3625,6 +3626,7 @@ BattleScript_EffectSleep::
 	jumpifability BS_TARGET, ABILITY_PURIFYING_SALT, BattleScript_AbilityProtectsDoesntAffect
 	jumpifflowerveil BattleScript_FlowerVeilProtects
 	jumpifability BS_TARGET_SIDE, ABILITY_SWEET_VEIL, BattleScript_SweetVeilProtects
+	jumpifability BS_TARGET_SIDE, ABILITY_PASTEL_VEIL, BattleScript_PastelVeilProtects
 	jumpifleafguardprotected BS_TARGET_SIDE, BattleScript_LeafGuardProtects
 	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
@@ -4691,6 +4693,7 @@ BattleScript_EffectParalyze:
 	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_AbilityProtectsDoesntAffect
 	jumpifability BS_TARGET, ABILITY_PURIFYING_SALT, BattleScript_AbilityProtectsDoesntAffect
 	jumpifflowerveil BattleScript_FlowerVeilProtects
+	jumpifability BS_TARGET_SIDE, ABILITY_PASTEL_VEIL, BattleScript_PastelVeilProtects
 	jumpifleafguardprotected BS_TARGET_SIDE, BattleScript_LeafGuardProtects
 	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
 	jumpifsubstituteblocks BattleScript_ButItFailed
@@ -6155,6 +6158,7 @@ BattleScript_EffectWillOWisp::
 	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_AbilityProtectsDoesntAffect
 	jumpifability BS_TARGET, ABILITY_PURIFYING_SALT, BattleScript_AbilityProtectsDoesntAffect
 	jumpifflowerveil BattleScript_FlowerVeilProtects
+	jumpifability BS_TARGET_SIDE, ABILITY_PASTEL_VEIL, BattleScript_PastelVeilProtects
 	jumpifleafguardprotected BS_TARGET_SIDE, BattleScript_LeafGuardProtects
 	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
@@ -6177,6 +6181,7 @@ BattleScript_EffectFlashFreeze::
 	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_AbilityProtectsDoesntAffect
 	jumpifability BS_TARGET, ABILITY_PURIFYING_SALT, BattleScript_AbilityProtectsDoesntAffect
 	jumpifflowerveil BattleScript_FlowerVeilProtects
+	jumpifability BS_TARGET_SIDE, ABILITY_PASTEL_VEIL, BattleScript_PastelVeilProtects
 	jumpifleafguardprotected BS_TARGET_SIDE, BattleScript_LeafGuardProtects
 	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
 	jumpifstatus BS_TARGET, STATUS1_ANY, BattleScript_ButItFailed
@@ -6465,6 +6470,7 @@ BattleScript_EffectYawn::
 	jumpifability BS_TARGET, ABILITY_COMATOSE, BattleScript_PrintBattlerAbilityMadeIneffective
 	jumpifability BS_TARGET, ABILITY_PURIFYING_SALT, BattleScript_AbilityProtectsDoesntAffect
 	jumpifflowerveil BattleScript_FlowerVeilProtects
+	jumpifability BS_TARGET_SIDE, ABILITY_PASTEL_VEIL, BattleScript_PastelVeilProtects
 	jumpifleafguardprotected BS_TARGET_SIDE, BattleScript_LeafGuardProtects
 	jumpifshieldsdown BS_TARGET, BattleScript_AbilityProtectsDoesntAffect
 	jumpifsubstituteblocks BattleScript_ButItFailed
