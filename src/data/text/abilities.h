@@ -55,8 +55,8 @@ static const u8 sPickupDescription[] = _("May pick up items.");
 static const u8 sTruantDescription[] = _("Moves only every two turns.");
 static const u8 sHustleDescription[] = _("Trades accuracy for power.");
 static const u8 sCuteCharmDescription[] = _("Infatuates on contact.");
-static const u8 sPlusDescription[] = _("Powers up with Minus.");
-static const u8 sMinusDescription[] = _("Powers up with Plus.");
+static const u8 sPlusDescription[] = _("Attacks up with Minus.");
+static const u8 sMinusDescription[] = _("Attacks with Plus.");
 static const u8 sForecastDescription[] = _("Changes with the weather.");
 static const u8 sStickyHoldDescription[] = _("Prevents item theft.");
 static const u8 sShedSkinDescription[] = _("Heals the body by shedding.");
@@ -303,6 +303,7 @@ static const u8 sTeraformZeroDescription[] = _("Removes weather and terrain.");
 static const u8 sPoisonPuppeteerDescription[] = _("Confuses poisoned foes.");
 static const u8 sTransphobiaDescription[] = _("Extra damage to genderless.");
 static const u8 sHomophobiaDescription[] = _("Extra damage to gay couples.");
+static const u8 sBallinDescription[] = _("Copies “bullet” moves.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -622,6 +623,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_POISON_PUPPETEER] = _("Poison Puppeteer"),
     [ABILITY_TRANSPHOBIA] = _("Transphobia"),
     [ABILITY_HOMOPHOBIA] = _("Homophobia"),
+    [ABILITY_BALLIN] = _("Ballin'"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -941,6 +943,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_POISON_PUPPETEER] = _("PoisnPuppter"),
     [ABILITY_TRANSPHOBIA] = _("Transphobia"),
     [ABILITY_HOMOPHOBIA] = _("Homophobia"),
+    [ABILITY_BALLIN] = _("Ballin'"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1261,6 +1264,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_POISON_PUPPETEER] = sPoisonPuppeteerDescription,
     [ABILITY_TRANSPHOBIA] = sTransphobiaDescription,
     [ABILITY_HOMOPHOBIA] = sHomophobiaDescription,
+    [ABILITY_BALLIN] = sBallinDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
