@@ -11507,10 +11507,11 @@ static void Cmd_manipulatedamage(void)
     case DMG_FULL_ATTACKER_HP:
         gBattleMoveDamage = GetNonDynamaxMaxHP(gBattlerAttacker);
         break;
-    case DMG_CURR_ATTACKER_HP:
-        gBattleMoveDamage = GetNonDynamaxHP(gBattlerAttacker);
+    case DMG_CURR_ATTACKER_HP:  
         if (GetBattlerAbility(gBattlerAttacker) == ABILITY_RECKLESS){
-            gBattleMoveDamage = gBattleMoveDamage + (gBattleMoveDamage / 5);
+            gBattleMoveDamage = GetNonDynamaxHP(gBattlerAttacker) * 1.2;
+        } else {
+            gBattleMoveDamage = GetNonDynamaxHP(gBattlerAttacker);
         }
         break;
     case DMG_BIG_ROOT:
