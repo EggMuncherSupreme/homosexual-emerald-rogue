@@ -1594,7 +1594,7 @@ bool32 ShouldSetHail(u32 battler, u32 ability, u32 holdEffect)
       || ability == ABILITY_ICE_BODY
       || IS_FORECAST_ABILITY(ability)
       || ability == ABILITY_SLUSH_RUSH
-      || ability == ARCTIC_RUSH
+      || ability == ABILITY_ARCTIC_RUSH
       || ability == ABILITY_MAGIC_GUARD
       || ability == ABILITY_OVERCOAT
       || holdEffect == HOLD_EFFECT_SAFETY_GOGGLES

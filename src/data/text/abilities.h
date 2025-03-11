@@ -306,7 +306,8 @@ static const u8 sHomophobiaDescription[] = _("Extra damage to gay couples.");
 static const u8 sBallinDescription[] = _("Copies “bullet” moves.");
 static const u8 sPutridStenchDescription[] = _("Foes can't eat Berries.");
 static const u8 sAncestorDescription[] = _("Changes type to used move.");
-static const u8 sArcticRushDescription[] = _("Speed, Sp. Def doubled in snow.")
+static const u8 sArcticRushDescription[] = _("Speed, Sp. Def doubled in snow.");
+static const u8 sBarrierCoreDescription[] = _("Uses Cosmic Power on entry.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -630,6 +631,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_PUTRID_STENCH] = _("Putrid Stench"),
     [ABILITY_ANCESTOR] = _("Ancestor"),
     [ABILITY_ARCTIC_RUSH] = _("Arctic Rush"),
+    [ABILITY_BARRIER_CORE] = _("Barrier Core"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -953,6 +955,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_PUTRID_STENCH] = _("Putrid Stench"),
     [ABILITY_ANCESTOR] = _("Ancestor"),
     [ABILITY_ARCTIC_RUSH] = _("Arctic Rush"),
+    [ABILITY_BARRIER_CORE] = _("Barrier Core"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1277,6 +1280,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_PUTRID_STENCH] = sPutridStenchDescription,
     [ABILITY_ANCESTOR] = sAncestorDescription,
     [ABILITY_ARCTIC_RUSH] = sArcticRushDescription,
+    [ABILITY_BARRIER_CORE] = sBarrierCoreDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
