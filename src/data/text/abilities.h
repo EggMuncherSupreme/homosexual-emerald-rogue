@@ -128,7 +128,7 @@ static const u8 sBadDreamsDescription[] = _("Damages sleeping Pokémon.");
 static const u8 sPickpocketDescription[] = _("Steals the foe's held item.");
 static const u8 sSheerForceDescription[] = _("Trades effects for power.");
 static const u8 sContraryDescription[] = _("Inverts stat changes.");
-static const u8 sUnnerveDescription[] = _("Foes can't eat Berries.");
+static const u8 sUnnerveDescription[] = _("Lowers the foe's Sp. Atk.");
 static const u8 sDefiantDescription[] = _("Lowered stats up Attack.");
 static const u8 sDefeatistDescription[] = _("Gives up at half HP.");
 static const u8 sCursedBodyDescription[] = _("Disables moves on contact.");
@@ -304,6 +304,7 @@ static const u8 sPoisonPuppeteerDescription[] = _("Confuses poisoned foes.");
 static const u8 sTransphobiaDescription[] = _("Extra damage to genderless.");
 static const u8 sHomophobiaDescription[] = _("Extra damage to gay couples.");
 static const u8 sBallinDescription[] = _("Copies “bullet” moves.");
+static const u8 sPutridStenchDescription[] = _("Foes can't eat Berries.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -624,6 +625,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_TRANSPHOBIA] = _("Transphobia"),
     [ABILITY_HOMOPHOBIA] = _("Homophobia"),
     [ABILITY_BALLIN] = _("Ballin'"),
+    [ABILITY_PUTRID_STENCH] = _("Putrid Stench"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -944,6 +946,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_TRANSPHOBIA] = _("Transphobia"),
     [ABILITY_HOMOPHOBIA] = _("Homophobia"),
     [ABILITY_BALLIN] = _("Ballin'"),
+    [ABILITY_PUTRID_STENCH] = _("Putrid Stench"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1265,6 +1268,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_TRANSPHOBIA] = sTransphobiaDescription,
     [ABILITY_HOMOPHOBIA] = sHomophobiaDescription,
     [ABILITY_BALLIN] = sBallinDescription,
+    [ABILITY_PUTRID_STENCH] = sPutridStenchDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };

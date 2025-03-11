@@ -9267,7 +9267,7 @@ BattleScript_IntimidateLoop:
 	jumpifabsent BS_TARGET, BattleScript_IntimidateLoopIncrement
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_IntimidateLoopIncrement
 	jumpifability BS_TARGET, ABILITY_GUARD_DOG, BattleScript_IntimidateInReverse
-	jumpifability BS_TARGET, ABILITY_BIG_PECKS, BattleScript_BigPecksActivates
+	jumpifability BS_TARGET, ABILITY_BIG_PECKS, BattleScript_BigPecksActivatesIntimidate
 BattleScript_IntimidateEffect:
 	copybyte sBATTLER, gBattlerAttacker
 	setstatchanger STAT_ATK, 1, TRUE
@@ -9308,7 +9308,7 @@ BattleScript_IntimidateInReverse:
 	call BattleScript_TryAdrenalineOrb
 	goto BattleScript_IntimidateLoopIncrement
 
-BattleScript_BigPecksActivates:
+BattleScript_BigPecksActivatesIntimidate:
 	copybyte sBATTLER, gBattlerTarget
 	call BattleScript_AbilityPopUpTarget
 	pause B_WAIT_TIME_SHORT
@@ -9317,6 +9317,69 @@ BattleScript_BigPecksActivates:
 	modifybattlerstatstage BS_TARGET, STAT_SPEED, INCREASE, 1, BattleScript_IntimidateLoopIncrement, ANIM_ON
 	call BattleScript_TryAdrenalineOrb
 	goto BattleScript_IntimidateLoopIncrement
+
+BattleScript_UnnerveActivates::
+	showabilitypopup BS_ATTACKER
+	copybyte sSAVED_BATTLER, gBattlerTarget
+	pause B_WAIT_TIME_LONG
+	destroyabilitypopup
+	setbyte gBattlerTarget, 0
+BattleScript_UnnerveLoop:
+	jumpifbyteequal gBattlerTarget, gBattlerAttacker, BattleScript_UnnerveLoopIncrement
+	jumpiftargetally BattleScript_UnnerveLoopIncrement
+	jumpifabsent BS_TARGET, BattleScript_UnnerveLoopIncrement
+	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_UnnerveLoopIncrement
+	jumpifability BS_TARGET, ABILITY_GUARD_DOG, BattleScript_UnnerveInReverse
+	jumpifability BS_TARGET, ABILITY_BIG_PECKS, BattleScript_BigPecksActivatesUnnerve
+BattleScript_UnnerveEffect:
+	copybyte sBATTLER, gBattlerAttacker
+	setstatchanger STAT_SPATK, 1, TRUE
+	statbuffchange STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_UnnerveLoopIncrement
+	setgraphicalstatchangevalues
+	jumpifability BS_TARGET, ABILITY_CONTRARY, BattleScript_UnnerveContrary
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNCUTSSPECIALATTACKWITH
+BattleScript_UnnerveEffect_WaitString:
+	waitmessage B_WAIT_TIME_LONG
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_TryAdrenalineOrb
+BattleScript_UnnerveLoopIncrement:
+	addbyte gBattlerTarget, 1
+	jumpifbytenotequal gBattlerTarget, gBattlersCount, BattleScript_UnnerveLoop
+BattleScript_UnnerveEnd:
+	copybyte sBATTLER, gBattlerAttacker
+	destroyabilitypopup
+	copybyte gBattlerTarget, sSAVED_BATTLER
+	pause B_WAIT_TIME_MED
+	end3
+
+BattleScript_UnnerveContrary:
+	call BattleScript_AbilityPopUpTarget
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_UnnerveContrary_WontIncrease
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gStatUpStringIds
+	goto BattleScript_UnnerveEffect_WaitString
+BattleScript_UnnerveContrary_WontIncrease:
+	printstring STRINGID_TARGETSTATWONTGOHIGHER
+	goto BattleScript_UnnerveEffect_WaitString
+
+BattleScript_UnnerveInReverse:
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_AbilityPopUpTarget
+	pause B_WAIT_TIME_SHORT
+	modifybattlerstatstage BS_TARGET, STAT_ATK, INCREASE, 1, BattleScript_UnnerveLoopIncrement, ANIM_ON
+	call BattleScript_TryAdrenalineOrb
+	goto BattleScript_UnnerveLoopIncrement
+
+BattleScript_BigPecksActivatesUnnerve:
+	copybyte sBATTLER, gBattlerTarget
+	call BattleScript_AbilityPopUpTarget
+	pause B_WAIT_TIME_SHORT
+	modifybattlerstatstage BS_TARGET, STAT_ATK, INCREASE, 1, BattleScript_UnnerveLoopIncrement, ANIM_ON
+	modifybattlerstatstage BS_TARGET, STAT_SPATK, INCREASE, 1, BattleScript_UnnerveLoopIncrement, ANIM_ON
+	modifybattlerstatstage BS_TARGET, STAT_SPEED, INCREASE, 1, BattleScript_UnnerveLoopIncrement, ANIM_ON
+	call BattleScript_TryAdrenalineOrb
+	goto BattleScript_UnnerveLoopIncrement
 
 BattleScript_SupersweetSyrupActivates::
 	showabilitypopup BS_ATTACKER
