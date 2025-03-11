@@ -2843,6 +2843,12 @@ u8 DoBattlerEndTurnEffects(void)
                 && gBattleMons[battler].hp != 0)
             {
                 MAGIC_GUARD_CHECK;
+                if (ability == ABILITY_TOXIC_BOOST) 
+                {
+                    RecordAbilityBattle(battler, ability);
+                    gBattleStruct->turnEffectsTracker++;
+                    break;
+                }
 
                 if (ability == ABILITY_POISON_HEAL)
                 {
@@ -5712,6 +5718,10 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
              && TARGET_TURN_DAMAGED
              && IsMoveMakingContact(move, gBattlerAttacker))
             {
+                if(GetBattlerAbility(gBattlerTarget) == ABILITY_TANGLING_HAIR){
+                    gBattleMons[gBattlerAttacker].status2 |= STATUS2_ESCAPE_PREVENTION;
+                    gDisableStructs[gBattlerAttacker].battlerPreventingEscape = gBattlerAttacker;
+                }
                 SET_STATCHANGER(STAT_SPEED, 1, TRUE);
                 gBattleScripting.moveEffect = MOVE_EFFECT_SPD_MINUS_1;
                 PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
@@ -9155,6 +9165,9 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         break;
     case EFFECT_HEAT_CRASH:
         weight = GetBattlerWeight(battlerAtk) / GetBattlerWeight(battlerDef);
+        if (GetBattlerAbility(battlerAtk) == ABILITY_THICK_FAT){
+            basePower = 120;
+        }
         if (weight >= ARRAY_COUNT(sHeatCrashPowerTable))
             basePower = sHeatCrashPowerTable[ARRAY_COUNT(sHeatCrashPowerTable) - 1];
         else
@@ -9566,6 +9579,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
             if (moveType == TYPE_STEEL)
                 modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
             break;
+        case ABILITY_SWARM:
+        if (moveType == TYPE_BUG)
+            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
+        break;
         }
     }
 
@@ -9797,10 +9814,6 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
         break;
     case ABILITY_FLASH_FIRE:
         if (moveType == TYPE_FIRE && gBattleResources->flags->flags[battlerAtk] & RESOURCE_FLAG_FLASH_FIRE)
-            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
-        break;
-    case ABILITY_SWARM:
-        if (moveType == TYPE_BUG && gBattleMons[battlerAtk].hp <= (gBattleMons[battlerAtk].maxHP / 3))
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_TORRENT:
@@ -10294,6 +10307,14 @@ static inline uq4_12_t GetAttackerAbilitiesModifier(u32 battlerAtk, uq4_12_t typ
         if (typeEffectivenessModifier <= UQ_4_12(0.5))
             return UQ_4_12(2.0);
         break;
+    case ABILITY_TURBOBLAZE:
+        if (typeEffectivenessModifier <= UQ_4_12(0.5) && gBattleMoves[gCurrentMove].type == TYPE_FIRE)
+            return UQ_4_12(1.2);
+        break;
+    case ABILITY_TERAVOLT:
+        if (typeEffectivenessModifier <= UQ_4_12(0.5) && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
+            return UQ_4_12(1.2);
+        break;
     }
     return UQ_4_12(1.0);
 }
@@ -10573,6 +10594,14 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
         && mod == UQ_4_12(0.0))
     {
         mod = UQ_4_12(1.0);
+        if (recordAbilities)
+            RecordAbilityBattle(battlerAtk, abilityAtk);
+    }
+    if ((moveType == TYPE_ELECTRIC) && defType == TYPE_GROUND
+        && (abilityAtk == ABILITY_TERAVOLT)
+        && mod == UQ_4_12(0.0))
+    {
+        mod = UQ_4_12(0.5);
         if (recordAbilities)
             RecordAbilityBattle(battlerAtk, abilityAtk);
     }

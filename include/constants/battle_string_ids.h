@@ -716,8 +716,9 @@
 #define STRINGID_LEAFGUARDPROTECTED                   714
 #define STRINGID_ITEMWENTROTTEN                       715
 #define STRINGID_PKMNSTICKYHELD                       716
+#define STRINGID_PKMNTRAPPEDBYHAIR                    717
 
-#define BATTLESTRINGS_COUNT                           717
+#define BATTLESTRINGS_COUNT                           718
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

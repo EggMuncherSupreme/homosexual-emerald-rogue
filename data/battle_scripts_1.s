@@ -10068,6 +10068,14 @@ BattleScript_GooeyActivates::
 	call BattleScript_AbilityPopUp
 	swapattackerwithtarget  @ for defiant, mirror armor
 	seteffectsecondary
+	jumpifability BS_ATTACKER ABILITY_TANGLING_HAIR BattleScript_TanglingHairActivates
+	return
+
+BattleScript_TanglingHairActivates::
+	waitstate
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_PKMNTRAPPEDBYHAIR
+	waitmessage B_WAIT_TIME_LONG
 	return
 
 BattleScript_AbilityStatusEffect::
