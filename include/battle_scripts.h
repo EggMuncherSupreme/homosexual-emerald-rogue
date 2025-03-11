@@ -400,6 +400,7 @@ extern const u8 BattleScript_BallFetch[];
 extern const u8 BattleScript_SandSpitActivates[];
 extern const u8 BattleScript_PerishBodyActivates[];
 extern const u8 BattleScript_ActivateAsOne[];
+extern const u8 BattleScript_ActivateBigBalls[];
 extern const u8 BattleScript_RaiseStatOnFaintingTarget[];
 extern const u8 BattleScript_QuickClawActivation[];
 extern const u8 BattleScript_QuickDrawActivation[];

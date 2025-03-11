@@ -2097,6 +2097,8 @@ s32 CalcCritChanceStageArgs(u32 battlerAtk, u32 battlerDef, u32 move, bool32 rec
     }
     else if (gStatuses3[battlerAtk] & STATUS3_LASER_FOCUS
              || gBattleMoves[move].effect == EFFECT_ALWAYS_CRIT
+             || ((GetBattlerAbility(battlerAtk) == ABILITY_BIG_BALLS
+             || GetBattlerAbility(battlerDef) == ABILITY_BIG_BALLS) && gBattleMoves[move].priority < 1)
              || (move == MOVE_SPACIAL_REND && gBattleMons[battlerAtk].species == SPECIES_PALKIA_ORIGIN)
              || (abilityAtk == ABILITY_MERCILESS && gBattleMons[battlerDef].status1 & STATUS1_PSN_ANY))
     {

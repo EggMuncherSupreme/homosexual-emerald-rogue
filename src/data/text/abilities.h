@@ -308,6 +308,7 @@ static const u8 sPutridStenchDescription[] = _("Foes can't eat Berries.");
 static const u8 sAncestorDescription[] = _("Changes type to used move.");
 static const u8 sArcticRushDescription[] = _("Speed, Sp. Def doubled in snow.");
 static const u8 sBarrierCoreDescription[] = _("Uses Cosmic Power on entry.");
+static const u8 sBigBallsDescription[] = _("Ensures that all moves crit.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -632,6 +633,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ANCESTOR] = _("Ancestor"),
     [ABILITY_ARCTIC_RUSH] = _("Arctic Rush"),
     [ABILITY_BARRIER_CORE] = _("Barrier Core"),
+    [ABILITY_BIG_BALLS] = _("Big Balls"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -956,6 +958,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_ANCESTOR] = _("Ancestor"),
     [ABILITY_ARCTIC_RUSH] = _("Arctic Rush"),
     [ABILITY_BARRIER_CORE] = _("Barrier Core"),
+    [ABILITY_BIG_BALLS] = _("Big Balls"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1281,6 +1284,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_ANCESTOR] = sAncestorDescription,
     [ABILITY_ARCTIC_RUSH] = sArcticRushDescription,
     [ABILITY_BARRIER_CORE] = sBarrierCoreDescription,
+    [ABILITY_BIG_BALLS] = sBigBallsDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };

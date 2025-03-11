@@ -10042,6 +10042,12 @@ BattleScript_ActivateAsOne::
 	waitmessage B_WAIT_TIME_LONG
 	end3
 
+BattleScript_ActivateBigBalls::
+	call BattleScript_AbilityPopUp
+	printfromtable gSwitchInAbilityStringIds
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
 BattleScript_FriskMsgWithPopup::
 	copybyte gBattlerAbility, gBattlerAttacker
 	call BattleScript_AbilityPopUp
