@@ -1439,7 +1439,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         case EFFECT_FOCUS_PUNCH:
         //case EFFECT_ENDEAVOR:
             // AI_CBM_HighRiskForDamage
-            if (aiData->abilities[battlerDef] == ABILITY_WONDER_GUARD && effectiveness < AI_EFFECTIVENESS_x2)
+            if (aiData->abilities[battlerDef] == ABILITY_WONDER_GUARD && effectiveness < AI_EFFECTIVENESS_x2 && !IsTerastallized(battlerDef))
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_COUNTER:
@@ -4836,7 +4836,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
             ADJUST_SCORE(2); // Get some super effective moves
         break;
     case EFFECT_THIRD_TYPE:
-        if (aiData->abilities[battlerDef] == ABILITY_WONDER_GUARD)
+        if (aiData->abilities[battlerDef] == ABILITY_WONDER_GUARD && !IsTerastallized(battlerDef))
             ADJUST_SCORE(2); // Give target more weaknesses
         break;
     case EFFECT_ELECTRIFY:
