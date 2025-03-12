@@ -1024,6 +1024,7 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_GOOD_AS_GOLD] = 1,
     [ABILITY_PURIFYING_SALT] = 1,
     [ABILITY_WELL_BAKED_BODY] = 1,
+    [ABILITY_DOUBLE_DOWN] = 1,
 };
 
 static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
@@ -1436,9 +1437,9 @@ void PrepareStringBattle(u16 stringId, u32 battler)
     else if (stringId == STRINGID_STATSWONTINCREASE && gBattleScripting.statChanger & STAT_BUFF_NEGATIVE)
         stringId = STRINGID_STATSWONTDECREASE;
 
-    else if (stringId == STRINGID_STATSWONTDECREASE2 && battlerAbility == ABILITY_CONTRARY)
+    else if (stringId == STRINGID_STATSWONTDECREASE2 && (battlerAbility == ABILITY_CONTRARY || battlerAbility == ABILITY_DOUBLE_DOWN))
         stringId = STRINGID_STATSWONTINCREASE2;
-    else if (stringId == STRINGID_STATSWONTINCREASE2 && battlerAbility == ABILITY_CONTRARY)
+    else if (stringId == STRINGID_STATSWONTINCREASE2 && (battlerAbility == ABILITY_CONTRARY || battlerAbility == ABILITY_DOUBLE_DOWN))
         stringId = STRINGID_STATSWONTDECREASE2;
 
     // Check Defiant and Competitive stat raise whenever a stat is lowered.
@@ -7164,7 +7165,7 @@ static u8 RandomStatRaiseBerry(u32 battler, u32 itemId, bool32 end2)
         } while (!CompareStat(battler, STAT_ATK + i, MAX_STAT_STAGE, CMP_LESS_THAN));
 
         PREPARE_STAT_BUFFER(gBattleTextBuff1, i + 1);
-        stringId = (battlerAbility == ABILITY_CONTRARY) ? STRINGID_STATFELL : STRINGID_STATROSE;
+        stringId = (battlerAbility == ABILITY_CONTRARY || battlerAbility == ABILITY_DOUBLE_DOWN) ? STRINGID_STATFELL : STRINGID_STATROSE;
         gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
         gBattleTextBuff2[1] = B_BUFF_STRING;
         gBattleTextBuff2[2] = STRINGID_STATSHARPLY;
@@ -11862,7 +11863,7 @@ bool32 CompareStat(u32 battler, u8 statId, u8 cmpTo, u8 cmpKind)
 
     // Because this command is used as a way of checking if a stat can be lowered/raised,
     // we need to do some modification at run-time.
-    if (GetBattlerAbility(battler) == ABILITY_CONTRARY)
+    if (GetBattlerAbility(battler) == ABILITY_CONTRARY || GetBattlerAbility(battler) == ABILITY_DOUBLE_DOWN)
     {
         if (cmpKind == CMP_GREATER_THAN)
             cmpKind = CMP_LESS_THAN;
@@ -11908,7 +11909,7 @@ bool32 CompareStat(u32 battler, u8 statId, u8 cmpTo, u8 cmpKind)
 
 void BufferStatChange(u32 battler, u8 statId, u8 stringId)
 {
-    bool32 hasContrary = (GetBattlerAbility(battler) == ABILITY_CONTRARY);
+    bool32 hasContrary = (GetBattlerAbility(battler) == ABILITY_CONTRARY || GetBattlerAbility(battler) == ABILITY_DOUBLE_DOWN);
 
     PREPARE_STAT_BUFFER(gBattleTextBuff1, statId);
     if (stringId == STRINGID_STATFELL)

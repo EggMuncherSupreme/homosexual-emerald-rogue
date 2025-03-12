@@ -9274,6 +9274,7 @@ BattleScript_IntimidateEffect:
 	statbuffchange STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_IntimidateLoopIncrement
 	setgraphicalstatchangevalues
 	jumpifability BS_TARGET, ABILITY_CONTRARY, BattleScript_IntimidateContrary
+	jumpifability BS_TARGET, ABILITY_DOUBLE_DOWN, BattleScript_IntimidateContrary
 	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	printstring STRINGID_PKMNCUTSATTACKWITH
 BattleScript_IntimidateEffect_WaitString:
@@ -9299,6 +9300,7 @@ BattleScript_IntimidateContrary:
 BattleScript_IntimidateContrary_WontIncrease:
 	printstring STRINGID_TARGETSTATWONTGOHIGHER
 	goto BattleScript_IntimidateEffect_WaitString
+
 
 BattleScript_IntimidateInReverse:
 	copybyte sBATTLER, gBattlerTarget
@@ -9337,6 +9339,7 @@ BattleScript_UnnerveEffect:
 	statbuffchange STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_UnnerveLoopIncrement
 	setgraphicalstatchangevalues
 	jumpifability BS_TARGET, ABILITY_CONTRARY, BattleScript_UnnerveContrary
+	jumpifability BS_TARGET, ABILITY_DOUBLE_DOWN, BattleScript_UnnerveContrary
 	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	printstring STRINGID_PKMNCUTSSPECIALATTACKWITH
 BattleScript_UnnerveEffect_WaitString:

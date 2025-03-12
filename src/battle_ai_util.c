@@ -65,6 +65,7 @@ static const s8 sAiAbilityRatings[ABILITIES_COUNT] =
     [ABILITY_COMPETITIVE] = 5,
     [ABILITY_COMPOUND_EYES] = 7,
     [ABILITY_CONTRARY] = 8,
+    [ABILITY_DOUBLE_DOWN] = 10,
     [ABILITY_CORROSION] = 5,
     [ABILITY_CURSED_BODY] = 4,
     [ABILITY_CUTE_CHARM] = 2,
@@ -1010,7 +1011,7 @@ static bool32 AI_IsMoveEffectInMinus(u32 battlerAtk, u32 battlerDef, u32 move, s
     case EFFECT_SPECIAL_ATTACK_DOWN_HIT:
     case EFFECT_SPECIAL_DEFENSE_DOWN_HIT:
     case EFFECT_SPECIAL_DEFENSE_DOWN_HIT_2:
-        if (noOfHitsToKo != 1 && abilityDef == ABILITY_CONTRARY && !IsMoldBreakerTypeAbility(abilityAtk))
+        if (noOfHitsToKo != 1 && (abilityDef == ABILITY_CONTRARY || abilityDef == ABILITY_DOUBLE_DOWN) && !IsMoldBreakerTypeAbility(abilityAtk))
             return TRUE;
         break;
     }
@@ -1723,7 +1724,7 @@ void ProtectChecks(u32 battlerAtk, u32 battlerDef, u32 move, u32 predictedMove, 
 // stat stages
 bool32 ShouldLowerStat(u32 battler, u32 battlerAbility, u32 stat)
 {
-    if (gBattleMons[battler].statStages[stat] > MIN_STAT_STAGE && battlerAbility != ABILITY_CONTRARY)
+    if (gBattleMons[battler].statStages[stat] > MIN_STAT_STAGE && battlerAbility != ABILITY_CONTRARY && battlerAbility != ABILITY_DOUBLE_DOWN)
     {
         if (AI_DATA->holdEffects[battler] == HOLD_EFFECT_CLEAR_AMULET
          || battlerAbility == ABILITY_CLEAR_BODY
@@ -1747,8 +1748,8 @@ bool32 ShouldLowerStat(u32 battler, u32 battlerAbility, u32 stat)
 
 bool32 BattlerStatCanRise(u32 battler, u32 battlerAbility, u32 stat)
 {
-    if ((gBattleMons[battler].statStages[stat] < MAX_STAT_STAGE && battlerAbility != ABILITY_CONTRARY)
-      || (battlerAbility == ABILITY_CONTRARY && gBattleMons[battler].statStages[stat] > MIN_STAT_STAGE))
+    if ((gBattleMons[battler].statStages[stat] < MAX_STAT_STAGE && battlerAbility != ABILITY_CONTRARY && battlerAbility != ABILITY_DOUBLE_DOWN)
+      || ((battlerAbility == ABILITY_CONTRARY || battlerAbility == ABILITY_DOUBLE_DOWN) && gBattleMons[battler].statStages[stat] > MIN_STAT_STAGE))
         return TRUE;
     return FALSE;
 }
@@ -1808,6 +1809,7 @@ bool32 ShouldLowerAttack(u32 battlerAtk, u32 battlerDef, u32 defAbility)
     if (gBattleMons[battlerDef].statStages[STAT_ATK] > 4
       && HasMoveWithSplit(battlerDef, SPLIT_PHYSICAL)
       && defAbility != ABILITY_CONTRARY
+      && defAbility != ABILITY_DOUBLE_DOWN
       && defAbility != ABILITY_CLEAR_BODY
       && defAbility != ABILITY_WHITE_SMOKE
       && defAbility != ABILITY_FULL_METAL_BODY
@@ -1825,6 +1827,7 @@ bool32 ShouldLowerDefense(u32 battlerAtk, u32 battlerDef, u32 defAbility)
     if (gBattleMons[battlerDef].statStages[STAT_DEF] > 4
       && HasMoveWithSplit(battlerAtk, SPLIT_PHYSICAL)
       && defAbility != ABILITY_CONTRARY
+      && defAbility != ABILITY_DOUBLE_DOWN
       && defAbility != ABILITY_CLEAR_BODY
       && defAbility != ABILITY_WHITE_SMOKE
       && defAbility != ABILITY_FULL_METAL_BODY
@@ -1841,6 +1844,7 @@ bool32 ShouldLowerSpeed(u32 battlerAtk, u32 battlerDef, u32 defAbility)
 
     if (!AI_STRIKES_FIRST(battlerAtk, battlerDef, AI_THINKING_STRUCT->moveConsidered)
       && defAbility != ABILITY_CONTRARY
+      && defAbility != ABILITY_DOUBLE_DOWN
       && defAbility != ABILITY_CLEAR_BODY
       && defAbility != ABILITY_FULL_METAL_BODY
       && defAbility != ABILITY_WHITE_SMOKE
@@ -1857,6 +1861,7 @@ bool32 ShouldLowerSpAtk(u32 battlerAtk, u32 battlerDef, u32 defAbility)
     if (gBattleMons[battlerDef].statStages[STAT_SPATK] > 4
       && HasMoveWithSplit(battlerDef, SPLIT_SPECIAL)
       && defAbility != ABILITY_CONTRARY
+      && defAbility != ABILITY_DOUBLE_DOWN
       && defAbility != ABILITY_CLEAR_BODY
       && defAbility != ABILITY_FULL_METAL_BODY
       && defAbility != ABILITY_WHITE_SMOKE
@@ -1873,6 +1878,7 @@ bool32 ShouldLowerSpDef(u32 battlerAtk, u32 battlerDef, u32 defAbility)
     if (gBattleMons[battlerDef].statStages[STAT_SPDEF] > 4
       && HasMoveWithSplit(battlerAtk, SPLIT_SPECIAL)
       && defAbility != ABILITY_CONTRARY
+      && defAbility != ABILITY_DOUBLE_DOWN
       && defAbility != ABILITY_CLEAR_BODY
       && defAbility != ABILITY_FULL_METAL_BODY
       && defAbility != ABILITY_WHITE_SMOKE
@@ -1887,6 +1893,7 @@ bool32 ShouldLowerAccuracy(u32 battlerAtk, u32 battlerDef, u32 defAbility)
         return FALSE; // Don't bother lowering stats if can kill enemy.
 
     if (defAbility != ABILITY_CONTRARY
+      && defAbility != ABILITY_DOUBLE_DOWN
       && defAbility != ABILITY_CLEAR_BODY
       && defAbility != ABILITY_WHITE_SMOKE
       && defAbility != ABILITY_FULL_METAL_BODY
@@ -1905,6 +1912,7 @@ bool32 ShouldLowerEvasion(u32 battlerAtk, u32 battlerDef, u32 defAbility)
 
     if (gBattleMons[battlerDef].statStages[STAT_EVASION] > DEFAULT_STAT_STAGE
       && defAbility != ABILITY_CONTRARY
+      && defAbility != ABILITY_DOUBLE_DOWN
       && defAbility != ABILITY_CLEAR_BODY
       && defAbility != ABILITY_FULL_METAL_BODY
       && defAbility != ABILITY_WHITE_SMOKE
@@ -3565,7 +3573,7 @@ bool32 IsRecycleEncouragedItem(u32 item)
 #define STAT_UP_STAGE       10
 void IncreaseStatUpScore(u32 battlerAtk, u32 battlerDef, u32 statId, s32 *score)
 {
-    if (AI_DATA->abilities[battlerAtk] == ABILITY_CONTRARY)
+    if (AI_DATA->abilities[battlerAtk] == ABILITY_CONTRARY || AI_DATA->abilities[battlerAtk] == ABILITY_DOUBLE_DOWN)
         return;
 
     if (AI_DATA->hpPercents[battlerAtk] < 80 && AI_RandLessThan(128))

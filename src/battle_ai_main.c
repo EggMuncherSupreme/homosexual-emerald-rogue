@@ -927,6 +927,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 if (gBattleMoves[move].magicCoatAffected)
                     RETURN_SCORE_MINUS(20);
                 break;
+            case ABILITY_DOUBLE_DOWN:
             case ABILITY_CONTRARY:
                 if (IsStatLoweringEffect(moveEffect))
                     RETURN_SCORE_MINUS(20);
@@ -1185,7 +1186,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-6);
             break;
         case EFFECT_ATTACK_ACCURACY_UP: //hone claws
-            if (aiData->abilities[battlerAtk] != ABILITY_CONTRARY)
+            if (aiData->abilities[battlerAtk] != ABILITY_CONTRARY && aiData->abilities[battlerAtk] != ABILITY_DOUBLE_DOWN)
             {
                 if (gBattleMons[battlerAtk].statStages[STAT_ATK] >= MAX_STAT_STAGE
                   && (gBattleMons[battlerAtk].statStages[STAT_ACC] >= MAX_STAT_STAGE || !HasMoveWithSplit(battlerAtk, SPLIT_PHYSICAL)))
@@ -1230,7 +1231,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_SHELL_SMASH:
-            if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY)
+            if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY || aiData->abilities[battlerAtk] == ABILITY_DOUBLE_DOWN)
             {
                 if (!BattlerStatCanRise(battlerAtk, aiData->abilities[battlerAtk], STAT_DEF))
                     ADJUST_SCORE(-10);
@@ -1262,6 +1263,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                   && !(IS_BATTLER_OF_TYPE(BATTLE_PARTNER(battlerAtk), TYPE_GRASS)
                   && AI_IsBattlerGrounded(BATTLE_PARTNER(battlerAtk))
                   && aiData->abilities[BATTLE_PARTNER(battlerAtk)] != ABILITY_CONTRARY
+                  && aiData->abilities[BATTLE_PARTNER(battlerAtk)] != ABILITY_DOUBLE_DOWN
                   && (BattlerStatCanRise(BATTLE_PARTNER(battlerAtk), aiData->abilities[BATTLE_PARTNER(battlerAtk)], STAT_ATK)
                    || BattlerStatCanRise(BATTLE_PARTNER(battlerAtk), aiData->abilities[BATTLE_PARTNER(battlerAtk)], STAT_SPATK))))
                 {
@@ -1736,7 +1738,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             break;
         case EFFECT_BELLY_DRUM:
         case EFFECT_FILLET_AWAY:
-            if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY)
+            if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY || aiData->abilities[battlerAtk] == ABILITY_DOUBLE_DOWN)
                 ADJUST_SCORE(-10);
             else if (aiData->hpPercents[battlerAtk] <= 60)
                 ADJUST_SCORE(-10);
@@ -1856,7 +1858,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-6);
             break;
         case EFFECT_STRENGTH_SAP:
-            if (aiData->abilities[battlerDef] == ABILITY_CONTRARY)
+            if (aiData->abilities[battlerDef] == ABILITY_CONTRARY || aiData->abilities[battlerDef] == ABILITY_DOUBLE_DOWN)
                 ADJUST_SCORE(-10);
             else if (!ShouldLowerStat(battlerDef, aiData->abilities[battlerDef], STAT_ATK))
                 ADJUST_SCORE(-10);
@@ -2152,7 +2154,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 
             // evasion check
             if (gBattleMons[battlerDef].statStages[STAT_EVASION] == MIN_STAT_STAGE
-              || ((aiData->abilities[battlerDef] == ABILITY_CONTRARY) && !IS_TARGETING_PARTNER(battlerAtk, battlerDef))) // don't want to raise target stats unless its your partner
+              || ((aiData->abilities[battlerDef] == ABILITY_CONTRARY || aiData->abilities[battlerDef] == ABILITY_DOUBLE_DOWN) && !IS_TARGETING_PARTNER(battlerAtk, battlerDef))) // don't want to raise target stats unless its your partner
                 ADJUST_SCORE(-10);
             break;
 
@@ -2995,6 +2997,7 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                     RETURN_SCORE_PLUS(1);
                 }
                 break;
+            case ABILITY_DOUBLE_DOWN:
             case ABILITY_CONTRARY:
                 if (IsStatLoweringEffect(effect))
                 {
@@ -3597,7 +3600,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         break;
     case EFFECT_GROWTH:
     case EFFECT_ATTACK_SPATK_UP:    // work up
-        if (aiData->hpPercents[battlerAtk] <= 40 || aiData->abilities[battlerAtk] == ABILITY_CONTRARY)
+        if (aiData->hpPercents[battlerAtk] <= 40 || aiData->abilities[battlerAtk] == ABILITY_CONTRARY || aiData->abilities[battlerAtk] == ABILITY_DOUBLE_DOWN)
             break;
 
         if (HasMoveWithSplit(battlerAtk, SPLIT_PHYSICAL))
@@ -3754,7 +3757,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_SPECIAL_DEFENSE_DOWN_HIT:
     case EFFECT_ACCURACY_DOWN_HIT:
     case EFFECT_EVASION_DOWN_HIT:
-        if (secondaryEffectChance >= 100 && aiData->abilities[battlerDef] != ABILITY_CONTRARY)
+        if (secondaryEffectChance >= 100 && aiData->abilities[battlerDef] != ABILITY_CONTRARY && aiData->abilities[battlerDef] != ABILITY_DOUBLE_DOWN)
             ADJUST_SCORE(2);
         break;
     case EFFECT_SUBSTITUTE:
@@ -3886,7 +3889,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
             ADJUST_SCORE(1);
         break;
     case EFFECT_SPEED_UP_HIT:
-        if (secondaryEffectChance >= 100 && aiData->abilities[battlerDef] != ABILITY_CONTRARY && !AI_STRIKES_FIRST(battlerAtk, battlerDef, move))
+        if (secondaryEffectChance >= 100 && aiData->abilities[battlerDef] != ABILITY_CONTRARY && aiData->abilities[battlerDef] != ABILITY_DOUBLE_DOWN && !AI_STRIKES_FIRST(battlerAtk, battlerDef, move))
             ADJUST_SCORE(3);
         break;
     case EFFECT_DESTINY_BOND:
@@ -3975,7 +3978,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         }
         else
         {
-            if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY || aiData->abilities[battlerDef] == ABILITY_MAGIC_GUARD)
+            if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY || aiData->abilities[battlerDef] == ABILITY_MAGIC_GUARD || aiData->abilities[battlerDef] == ABILITY_DOUBLE_DOWN)
                 break;
             else if (gBattleMons[battlerAtk].statStages[STAT_ATK] < 8)
                 score += (8 - gBattleMons[battlerAtk].statStages[STAT_ATK]);
@@ -4156,6 +4159,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_FELL_STINGER:
         if (gBattleMons[battlerAtk].statStages[STAT_ATK] < MAX_STAT_STAGE
           && aiData->abilities[battlerAtk] != ABILITY_CONTRARY
+          && aiData->abilities[battlerAtk] != ABILITY_DOUBLE_DOWN
           && CanIndexMoveFaintTarget(battlerAtk, battlerDef, movesetIndex, 0))
         {
             if (AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER) // Attacker goes first
@@ -4165,7 +4169,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         }
         break;
     case EFFECT_BELLY_DRUM:
-        if (!CanTargetFaintAi(battlerDef, battlerAtk) && HasMoveWithSplit(battlerAtk, SPLIT_PHYSICAL) && aiData->abilities[battlerAtk] != ABILITY_CONTRARY)
+        if (!CanTargetFaintAi(battlerDef, battlerAtk) && HasMoveWithSplit(battlerAtk, SPLIT_PHYSICAL) && aiData->abilities[battlerAtk] != ABILITY_CONTRARY && aiData->abilities[battlerAtk] != ABILITY_DOUBLE_DOWN)
             score += (MAX_STAT_STAGE - gBattleMons[battlerAtk].statStages[STAT_ATK]);
         break;
     case EFFECT_PSYCH_UP:
@@ -4230,7 +4234,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         }
         break;
     case EFFECT_STOCKPILE:
-        if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY)
+        if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY || aiData->abilities[battlerAtk] == ABILITY_DOUBLE_DOWN)
             break;
         if (HasMoveEffect(battlerAtk, EFFECT_SWALLOW)
           || HasMoveEffect(battlerAtk, EFFECT_SPIT_UP))
@@ -4245,7 +4249,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
           || HasMoveEffect(battlerAtk, EFFECT_SPECTRAL_THIEF))
             ADJUST_SCORE(1);
 
-        if (aiData->abilities[battlerDef] == ABILITY_CONTRARY)
+        if (aiData->abilities[battlerDef] == ABILITY_CONTRARY || aiData->abilities[battlerDef] == ABILITY_DOUBLE_DOWN)
             ADJUST_SCORE(2);
 
         IncreaseConfusionScore(battlerAtk, battlerDef, move, &score);
@@ -4255,7 +4259,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
           || HasMoveEffect(battlerAtk, EFFECT_SPECTRAL_THIEF))
             ADJUST_SCORE(2);
 
-        if (aiData->abilities[battlerDef] == ABILITY_CONTRARY)
+        if (aiData->abilities[battlerDef] == ABILITY_CONTRARY || aiData->abilities[battlerDef] == ABILITY_DOUBLE_DOWN)
             ADJUST_SCORE(2);
 
         IncreaseConfusionScore(battlerAtk, battlerDef, move, &score);
@@ -4471,7 +4475,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
     case EFFECT_SUPERPOWER:
     case EFFECT_OVERHEAT:
     case EFFECT_MAKE_IT_RAIN:
-        if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY)
+        if (aiData->abilities[battlerAtk] == ABILITY_CONTRARY || aiData->abilities[battlerAtk] == ABILITY_DOUBLE_DOWN)
             ADJUST_SCORE(3);
         break;
     case EFFECT_MAGIC_COAT:
@@ -4587,7 +4591,7 @@ static s32 AI_CheckViability(u32 battlerAtk, u32 battlerDef, u32 move, s32 score
         break;
     case EFFECT_TICKLE:
         if (gBattleMons[battlerDef].statStages[STAT_DEF] > 4 && HasMoveWithSplit(battlerAtk, SPLIT_PHYSICAL)
-          && aiData->abilities[battlerDef] != ABILITY_CONTRARY && ShouldLowerDefense(battlerAtk, battlerDef, aiData->abilities[battlerDef]))
+          && aiData->abilities[battlerDef] != ABILITY_CONTRARY && aiData->abilities[battlerDef] != ABILITY_DOUBLE_DOWN && ShouldLowerDefense(battlerAtk, battlerDef, aiData->abilities[battlerDef]))
         {
             ADJUST_SCORE(2);
         }

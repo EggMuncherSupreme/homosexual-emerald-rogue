@@ -5416,12 +5416,12 @@ static void Cmd_playstatchangeanimation(void)
     u32 stats = cmd->stats;
 
     // Handle Contrary and Simple
-    if (ability == ABILITY_CONTRARY)
+    if (ability == ABILITY_CONTRARY || ability == ABILITY_DOUBLE_DOWN)
     {
         flags ^= STAT_CHANGE_NEGATIVE;
         RecordAbilityBattle(battler, ability);
     }
-    else if (ability == ABILITY_SIMPLE)
+    if (ability == ABILITY_SIMPLE || ability == ABILITY_DOUBLE_DOWN)
     {
         flags |= STAT_CHANGE_BY_TWO;
         RecordAbilityBattle(battler, ability);
@@ -11867,7 +11867,7 @@ static u32 ChangeStatBuffs(s8 statValue, u32 statId, u32 flags, const u8 *BS_ptr
         notProtectAffected++;
     flags &= ~STAT_CHANGE_NOT_PROTECT_AFFECTED;
 
-    if (battlerAbility == ABILITY_CONTRARY)
+    if (battlerAbility == ABILITY_CONTRARY || battlerAbility == ABILITY_DOUBLE_DOWN)
     {
         statValue ^= STAT_BUFF_NEGATIVE;
         gBattleScripting.statChanger ^= STAT_BUFF_NEGATIVE;
@@ -11878,7 +11878,7 @@ static u32 ChangeStatBuffs(s8 statValue, u32 statId, u32 flags, const u8 *BS_ptr
             gBattleScripting.moveEffect = ReverseStatChangeMoveEffect(gBattleScripting.moveEffect);
         }
     }
-    else if (battlerAbility == ABILITY_SIMPLE)
+    if (battlerAbility == ABILITY_SIMPLE || battlerAbility == ABILITY_DOUBLE_DOWN)
     {
         statValue = (SET_STAT_BUFF_VALUE(GET_STAT_BUFF_VALUE(statValue) * 2)) | ((statValue <= -1) ? STAT_BUFF_NEGATIVE : 0);
     }

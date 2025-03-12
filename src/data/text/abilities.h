@@ -316,6 +316,7 @@ static const u8 sConstrictorDescription[] = _("Contact moves wrap foes.");
 static const u8 sCopyCoreDescription[] = _("Uses Copycat on entry.");
 static const u8 sHazardCoreDescription[] = _("Uses Spikes on entry.");
 static const u8 sOnslaughtCoreDescription[] = _("Uses an attack on entry.");
+static const u8 sDoubleDownDescription[] = _("Inverts stat changes.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -648,6 +649,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_COPY_CORE] = _("Copy Core"),
     [ABILITY_HAZARD_CORE] = _("Hazard Core"),
     [ABILITY_ONSLAUGHT_CORE] = _("Onslaught Core"),
+    [ABILITY_DOUBLE_DOWN] = _("Double Down"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -980,6 +982,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_COPY_CORE] = _("Copy Core"),
     [ABILITY_HAZARD_CORE] = _("Hazard Core"),
     [ABILITY_ONSLAUGHT_CORE] = _("OnslaugtCore"),
+    [ABILITY_DOUBLE_DOWN] = _("Double Down"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1313,6 +1316,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_COPY_CORE] = sCopyCoreDescription,
     [ABILITY_HAZARD_CORE] = sHazardCoreDescription,
     [ABILITY_ONSLAUGHT_CORE] = sOnslaughtCoreDescription,
+    [ABILITY_DOUBLE_DOWN] = sDoubleDownDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
