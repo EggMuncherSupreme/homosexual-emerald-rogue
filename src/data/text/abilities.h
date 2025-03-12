@@ -310,6 +310,7 @@ static const u8 sArcticRushDescription[] = _("Speed, Sp. Def doubled in snow.");
 static const u8 sBarrierCoreDescription[] = _("Uses Cosmic Power on entry.");
 static const u8 sBigBallsDescription[] = _("Ensures that all moves crit.");
 static const u8 sCatsCradleDescription[] = _("User's moves are Pursuit.");
+static const u8 sCaptivatingSongDescription[] = _("Sound moves trap foes.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -636,6 +637,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_BARRIER_CORE] = _("Barrier Core"),
     [ABILITY_BIG_BALLS] = _("Big Balls"),
     [ABILITY_CATS_CRADLE] = _("Cat's Cradle"),
+    [ABILITY_CAPTIVATING_SONG] = _("Captivating Song"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -962,6 +964,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_BARRIER_CORE] = _("Barrier Core"),
     [ABILITY_BIG_BALLS] = _("Big Balls"),
     [ABILITY_CATS_CRADLE] = _("Cat's Cradle"),
+    [ABILITY_CAPTIVATING_SONG] = _("CaptvatnSong"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1289,6 +1292,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_BARRIER_CORE] = sBarrierCoreDescription,
     [ABILITY_BIG_BALLS] = sBigBallsDescription,
     [ABILITY_CATS_CRADLE] = sCatsCradleDescription,
+    [ABILITY_CAPTIVATING_SONG] = sCaptivatingSongDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };

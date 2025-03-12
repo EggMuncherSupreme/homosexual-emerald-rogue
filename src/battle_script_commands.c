@@ -6065,22 +6065,6 @@ static void Cmd_moveend(void)
             }
             gBattleScripting.moveendState++;
             break;
-        /*case MOVEEND_FLAME_BODY:
-        if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-             && gBattleMons[gBattlerTarget].hp != 0
-             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-             && (IsMoveMakingContact(gCurrentMove, gBattlerAttacker))
-             && TARGET_TURN_DAMAGED
-             && CanBeBurned(gBattlerTarget)
-             && RandomWeighted(RNG_FLAME_BODY, 2, 1))
-            {
-                gBattleScripting.moveEffect = MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_BURN;
-                BattleScriptPushCursor();
-                gBattlescriptCurrInstr = BattleScript_AbilityStatusEffect;
-                gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
-                effect++;
-            }
-            break;*/
         case MOVEEND_LIQUID_OOZE:
             if (GetBattlerAbility(gBattlerAttacker) == ABILITY_LIQUID_OOZE
               && gCurrentMove != MOVE_FLING && gCurrentMove != MOVE_NATURAL_GIFT
