@@ -1253,7 +1253,8 @@ static bool32 TryAegiFormChange(void)
     u32 side = GetBattlerSide(gBattlerAttacker);
 
     // Only Aegislash with Stance Change can transform, transformed mons cannot.
-    if (GetBattlerAbility(gBattlerAttacker) != ABILITY_STANCE_CHANGE
+    if ((GetBattlerAbility(gBattlerAttacker) != ABILITY_STANCE_CHANGE
+        && GetBattlerAbility(gBattlerAttacker) != ABILITY_CLOAK_CHANGE)
         || gBattleMons[gBattlerAttacker].status2 & STATUS2_TRANSFORMED)
         return FALSE;
 
@@ -1274,6 +1275,45 @@ static bool32 TryAegiFormChange(void)
         if (gCurrentMove != MOVE_KINGS_SHIELD)
             return FALSE;
         gBattleMons[gBattlerAttacker].species = SPECIES_AEGISLASH_SHIELD;
+        break;
+    case SPECIES_WORMADAM_PLANT_CLOAK:
+        if (IS_MOVE_STATUS(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_WORMADAM_TRASH_CLOAK;
+        } else if (IS_MOVE_PHYSICAL(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_WORMADAM_SANDY_CLOAK;
+        } else {
+            return FALSE;
+        }
+        break;
+    case SPECIES_WORMADAM_SANDY_CLOAK:
+        if (IS_MOVE_STATUS(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_WORMADAM_TRASH_CLOAK;
+        } else if (IS_MOVE_SPECIAL(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_WORMADAM_PLANT_CLOAK;
+        } else {
+            return FALSE;
+        }
+        break;
+    case SPECIES_WORMADAM_TRASH_CLOAK:
+        if (IS_MOVE_SPECIAL(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_WORMADAM_PLANT_CLOAK;
+        } else if (IS_MOVE_PHYSICAL(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_WORMADAM_SANDY_CLOAK;
+        } else {
+            return FALSE;
+        }
         break;
 
     case SPECIES_WOBBUFFET: // Regular -> Punching
@@ -3511,6 +3551,10 @@ void SetMoveEffect(bool32 primary, u32 certain)
 
                     for (gBattleCommunication[MULTISTRING_CHOOSER] = 0; gBattleCommunication[MULTISTRING_CHOOSER] < NUM_TRAPPING_MOVES; gBattleCommunication[MULTISTRING_CHOOSER]++)
                     {
+                        if(GetBattlerAbility(gBattlerAttacker) == ABILITY_CONSTRICTOR) {
+                            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_WRAPPED_WRAP;
+                            break;
+                        }
                         if (sTrappingMoves[gBattleCommunication[MULTISTRING_CHOOSER]] == gCurrentMove)
                             break;
                     }
@@ -9684,7 +9728,7 @@ static void Cmd_various(void)
             case ABILITY_SCHOOLING:         case ABILITY_COMATOSE:
             case ABILITY_SHIELDS_DOWN:      case ABILITY_DISGUISE:
             case ABILITY_RKS_SYSTEM:        case ABILITY_TRACE:
-            case ABILITY_ZERO_TO_HERO:
+            case ABILITY_ZERO_TO_HERO:      case ABILITY_CLOAK_CHANGE:
             case ABILITY_FORECAST_PRIORITY:
                 break;
             default:

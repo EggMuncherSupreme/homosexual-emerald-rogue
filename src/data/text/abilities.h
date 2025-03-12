@@ -311,6 +311,8 @@ static const u8 sBarrierCoreDescription[] = _("Uses Cosmic Power on entry.");
 static const u8 sBigBallsDescription[] = _("Ensures that all moves crit.");
 static const u8 sCatsCradleDescription[] = _("User's moves are Pursuit.");
 static const u8 sCaptivatingSongDescription[] = _("Sound moves trap foes.");
+static const u8 sCloakChangeDescription[] = _("Transforms as it battles.");
+static const u8 sConstrictorDescription[] = _("Contact moves wrap foes.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -638,6 +640,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_BIG_BALLS] = _("Big Balls"),
     [ABILITY_CATS_CRADLE] = _("Cat's Cradle"),
     [ABILITY_CAPTIVATING_SONG] = _("Captivating Song"),
+    [ABILITY_CLOAK_CHANGE] = _("Cloak Change"),
+    [ABILITY_CONSTRICTOR] = _("Constrictor"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -965,6 +969,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_BIG_BALLS] = _("Big Balls"),
     [ABILITY_CATS_CRADLE] = _("Cat's Cradle"),
     [ABILITY_CAPTIVATING_SONG] = _("CaptvatnSong"),
+    [ABILITY_CLOAK_CHANGE] = _("Cloak Change"),
+    [ABILITY_CONSTRICTOR] = _("Constrictor"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1293,6 +1299,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_BIG_BALLS] = sBigBallsDescription,
     [ABILITY_CATS_CRADLE] = sCatsCradleDescription,
     [ABILITY_CAPTIVATING_SONG] = sCaptivatingSongDescription,
+    [ABILITY_CLOAK_CHANGE] = sCloakChangeDescription,
+    [ABILITY_CONSTRICTOR] = sConstrictorDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };

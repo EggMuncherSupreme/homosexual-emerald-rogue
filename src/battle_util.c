@@ -118,6 +118,7 @@ static const u16 sSkillSwapBannedAbilities[] =
     ABILITY_GULP_MISSILE,
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
+    ABILITY_CLOAK_CHANGE,
 };
 
 static const u16 sRolePlayBannedAbilities[] =
@@ -145,6 +146,7 @@ static const u16 sRolePlayBannedAbilities[] =
     ABILITY_GULP_MISSILE,
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
+    ABILITY_CLOAK_CHANGE,
 
     ABILITY_FORECAST_PRIORITY,
 };
@@ -165,6 +167,7 @@ static const u16 sRolePlayBannedAttackerAbilities[] =
     ABILITY_GULP_MISSILE,
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
+    ABILITY_CLOAK_CHANGE,
 };
 
 static const u16 sWorrySeedBannedAbilities[] =
@@ -183,6 +186,7 @@ static const u16 sWorrySeedBannedAbilities[] =
     ABILITY_GULP_MISSILE,
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
+    ABILITY_CLOAK_CHANGE,
 };
 
 static const u16 sGastroAcidBannedAbilities[] =
@@ -203,6 +207,7 @@ static const u16 sGastroAcidBannedAbilities[] =
     ABILITY_ZEN_MODE,
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
+    ABILITY_CLOAK_CHANGE,
 };
 
 static const u16 sEntrainmentBannedAttackerAbilities[] =
@@ -223,6 +228,7 @@ static const u16 sEntrainmentBannedAttackerAbilities[] =
     ABILITY_GULP_MISSILE,
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
+    ABILITY_CLOAK_CHANGE,
 
     ABILITY_FORECAST_PRIORITY,
 };
@@ -242,6 +248,7 @@ static const u16 sEntrainmentTargetSimpleBeamBannedAbilities[] =
     ABILITY_GULP_MISSILE,
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
+    ABILITY_CLOAK_CHANGE,
 };
 
 static u8 CalcBeatUpPower(void)
@@ -1047,6 +1054,7 @@ static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
     [ABILITY_ZEN_MODE] = 1,
     [ABILITY_ZERO_TO_HERO] = 1,
     [ABILITY_TERA_SHIFT] = 1,
+    [ABILITY_CLOAK_CHANGE] = 1,
 
     [ABILITY_FORECAST_PRIORITY] = 1,
 };
@@ -5688,6 +5696,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 case ABILITY_SCHOOLING:
                 case ABILITY_SHIELDS_DOWN:
                 case ABILITY_STANCE_CHANGE:
+                case ABILITY_CLOAK_CHANGE:
                     break;
                 default:
                     if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_ABILITY_SHIELD)
@@ -5727,6 +5736,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 case ABILITY_WONDER_GUARD:
                 case ABILITY_ZEN_MODE:
                 case ABILITY_ZERO_TO_HERO:
+                case ABILITY_CLOAK_CHANGE:
                     break;
                 default:
                     if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_ABILITY_SHIELD)
@@ -6176,11 +6186,25 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+            case ABILITY_CONSTRICTOR:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && gBattleMons[gBattlerTarget].hp != 0
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+             && IsMoveMakingContact(move, gBattlerAttacker)
+             && TARGET_TURN_DAMAGED) // Need to actually hit the target
+            {
+                gBattleScripting.moveEffect = MOVE_EFFECT_WRAP;
+                PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gLastUsedAbility);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_AbilityStatusEffect;
+                gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
+                effect++;
+            }
+            break;
         case ABILITY_CAPTIVATING_SONG:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
              && gBattleMons[gBattlerTarget].hp != 0
              && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
-             && CanBePoisoned(gBattlerAttacker, gBattlerTarget) 
              && gBattleMoves[move].soundMove
              && TARGET_TURN_DAMAGED) // Need to actually hit the target
             {
@@ -6692,6 +6716,7 @@ bool32 IsNeutralizingGasBannedAbility(u32 ability)
     case ABILITY_AS_ONE_SHADOW_RIDER:
     case ABILITY_ZERO_TO_HERO:
     case ABILITY_TERA_SHIFT:
+    case ABILITY_CLOAK_CHANGE:
         return TRUE;
     default:
         return FALSE;
