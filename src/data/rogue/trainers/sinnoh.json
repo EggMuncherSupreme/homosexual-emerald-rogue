@@ -204,7 +204,7 @@
                 }
             },
             {
-                "name": "CRASHER WAKE",
+                "name": "CRASHER WOKE",
                 "type_assignment": "WATER",
                 "gfx_suffix": "SINNOH_CRASHER_WAKE",
                 "class_flags": [ "BOSS_GYM_4" ],
