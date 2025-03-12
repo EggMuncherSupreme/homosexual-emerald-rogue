@@ -719,8 +719,9 @@
 #define STRINGID_PKMNTRAPPEDBYHAIR                    717
 #define STRINGID_PKMNCUTSSPECIALATTACKWITH            718
 #define STRINGID_BIGBALLSENTERS                       719
+#define STRINGID_CATSCRADLEENTERS                     720
 
-#define BATTLESTRINGS_COUNT                           720
+#define BATTLESTRINGS_COUNT                           721
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
@@ -986,6 +987,7 @@
 #define B_MSG_SWITCHIN_NEUTRALIZING_GAS 16
 #define B_MSG_SWITCHIN_GUARD_DOG        17
 #define B_MSG_SWITCHIN_BIGBALLS         18
+#define B_MSG_SWITCHIN_CATSCRADLE       19
 
 // gMentalHerbCureStringIds
 #define B_MSG_MENTALHERBCURE_INFATUATION       0
