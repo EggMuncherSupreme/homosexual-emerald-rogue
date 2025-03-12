@@ -4895,6 +4895,66 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_COPY_CORE:
+            if (IsBattlerAlive(battler)
+             && !gSpecialStatuses[battler].switchInAbilityDone
+             && !gSpecialStatuses[battler].dancerUsedMove)
+            {
+                // Set bit and save Dancer mon's original target
+                gSpecialStatuses[battler].dancerUsedMove = TRUE;
+                gBattleStruct->atkCancellerTracker = 0;
+                gBattlerAttacker = gBattlerAbility = battler;
+                gCalledMove = MOVE_COPYCAT;
+
+                // Set the target to the original target of the mon that first used a Dance move
+                gBattlerTarget = gBattlerAttacker;
+
+                // Make sure that the target isn't an ally - if it is, target the original user
+                gHitMarker &= ~HITMARKER_ATTACKSTRING_PRINTED;
+                BattleScriptExecute(BattleScript_DancerActivates);
+                effect++;
+            }
+            break;
+        case ABILITY_HAZARD_CORE:
+            if (IsBattlerAlive(battler)
+             && !gSpecialStatuses[battler].switchInAbilityDone
+             && !gSpecialStatuses[battler].dancerUsedMove)
+            {
+                // Set bit and save Dancer mon's original target
+                gSpecialStatuses[battler].dancerUsedMove = TRUE;
+                gBattleStruct->atkCancellerTracker = 0;
+                gBattlerAttacker = gBattlerAbility = battler;
+                gCalledMove = MOVE_SPIKES;
+
+                // Set the target to the original target of the mon that first used a Dance move
+                gBattlerTarget = BATTLE_OPPOSITE(gBattlerAttacker);
+
+                // Make sure that the target isn't an ally - if it is, target the original user
+                gHitMarker &= ~HITMARKER_ATTACKSTRING_PRINTED;
+                BattleScriptExecute(BattleScript_DancerActivates);
+                effect++;
+            }
+            break;
+        case ABILITY_ONSLAUGHT_CORE:
+            if (IsBattlerAlive(battler)
+             && !gSpecialStatuses[battler].switchInAbilityDone
+             && !gSpecialStatuses[battler].dancerUsedMove)
+            {
+                // Set bit and save Dancer mon's original target
+                gSpecialStatuses[battler].dancerUsedMove = TRUE;
+                gBattleStruct->atkCancellerTracker = 0;
+                gBattlerAttacker = gBattlerAbility = battler;
+                gCalledMove = MOVE_ONSLAUGHT_CORE;
+
+                // Set the target to the original target of the mon that first used a Dance move
+                gBattlerTarget = BATTLE_OPPOSITE(gBattlerAttacker);
+
+                // Make sure that the target isn't an ally - if it is, target the original user
+                gHitMarker &= ~HITMARKER_ATTACKSTRING_PRINTED;
+                BattleScriptExecute(BattleScript_DancerActivates);
+                effect++;
+            }
+            break;
         case ABILITY_UNNERVE:
             if (!gSpecialStatuses[battler].switchInAbilityDone)
             {
