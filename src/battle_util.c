@@ -10094,6 +10094,12 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
         if (gSpecialStatuses[battlerAtk].dancerUsedMove){
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.5));
         }
+        break;
+    case ABILITY_IL_VATICANO:
+        if (battlerDef == BATTLE_PARTNER(BATTLE_OPPOSITE(battlerAtk))){
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
+        }
+        break;
     }
 
     // target's abilities
