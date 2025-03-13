@@ -691,6 +691,21 @@ static const struct FormChange sAegislashFormChangeTable[] = {
 };
 #endif //P_FAMILY_HONEDGE
 
+#if P_FAMILY_PUMPKABOO
+static const struct FormChange sPumpkabooFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_TURN_END,   SPECIES_PUMPKABOO_SUPER,     ABILITY_GROWING_PUMPKIN},
+    {FORM_CHANGE_FAINT,             SPECIES_PUMPKABOO_SMALL},
+    {FORM_CHANGE_END_BATTLE,        SPECIES_PUMPKABOO_SMALL},
+    {FORM_CHANGE_TERMINATOR},
+};
+static const struct FormChange sGourgeistFormChangeTable[] = {
+    {FORM_CHANGE_BATTLE_TURN_END,   SPECIES_GOURGEIST_SUPER,     ABILITY_GROWING_PUMPKIN},
+    {FORM_CHANGE_FAINT,             SPECIES_GOURGEIST_SMALL},
+    {FORM_CHANGE_END_BATTLE,        SPECIES_GOURGEIST_SMALL},
+    {FORM_CHANGE_TERMINATOR},
+};
+#endif
+
 #if P_FAMILY_XERNEAS
 static const struct FormChange sXerneasFormChangeTable[] = {
     {FORM_CHANGE_BEGIN_BATTLE, SPECIES_XERNEAS_ACTIVE},

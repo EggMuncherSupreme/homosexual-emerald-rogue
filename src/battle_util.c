@@ -119,6 +119,7 @@ static const u16 sSkillSwapBannedAbilities[] =
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
+    ABILITY_GROWING_PUMPKIN,
 };
 
 static const u16 sRolePlayBannedAbilities[] =
@@ -147,6 +148,7 @@ static const u16 sRolePlayBannedAbilities[] =
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
+    ABILITY_GROWING_PUMPKIN,
 
     ABILITY_FORECAST_PRIORITY,
 };
@@ -229,6 +231,7 @@ static const u16 sEntrainmentBannedAttackerAbilities[] =
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
+    ABILITY_GROWING_PUMPKIN,
 
     ABILITY_FORECAST_PRIORITY,
 };
@@ -1056,6 +1059,7 @@ static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
     [ABILITY_ZERO_TO_HERO] = 1,
     [ABILITY_TERA_SHIFT] = 1,
     [ABILITY_CLOAK_CHANGE] = 1,
+    [ABILITY_GROWING_PUMPKIN] = 1,
 
     [ABILITY_FORECAST_PRIORITY] = 1,
 };
@@ -5404,6 +5408,14 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     effect++;
                 }
                 break;
+            case ABILITY_GROWING_PUMPKIN:
+                if (TryBattleFormChange(battler, FORM_CHANGE_BATTLE_TURN_END) && gBattleMons[battler].species != SPECIES_PUMPKABOO_SUPER && gBattleMons[battler].species != SPECIES_GOURGEIST_SUPER)
+                {
+                    gBattlerAttacker = battler;
+                    BattleScriptPushCursorAndCallback(BattleScript_AttackerFormChangeEnd3);
+                    effect++;
+                }
+                break;
             case ABILITY_HUNGER_SWITCH:
                 if (TryBattleFormChange(battler, FORM_CHANGE_BATTLE_TURN_END))
                 {
@@ -5798,6 +5810,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 case ABILITY_ZEN_MODE:
                 case ABILITY_ZERO_TO_HERO:
                 case ABILITY_CLOAK_CHANGE:
+                case ABILITY_GROWING_PUMPKIN:
                     break;
                 default:
                     if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_ABILITY_SHIELD)
@@ -11323,7 +11336,29 @@ u16 GetBattleFormChangeTargetSpecies(u32 battler, u16 method)
                     break;
                 case FORM_CHANGE_BATTLE_TURN_END:
                     if (formChange.param1 == GetBattlerAbility(battler))
-                        targetSpecies = formChange.targetSpecies;
+                        switch (gBattleMons[battler].species){
+                            case SPECIES_PUMPKABOO_SMALL:
+                                targetSpecies = SPECIES_PUMPKABOO_AVERAGE; 
+                                break;
+                            case SPECIES_PUMPKABOO_AVERAGE:
+                                targetSpecies = SPECIES_PUMPKABOO_LARGE; 
+                                break;
+                            case SPECIES_PUMPKABOO_LARGE:
+                                targetSpecies = SPECIES_PUMPKABOO_SUPER; 
+                                break;
+                            case SPECIES_GOURGEIST_SMALL:
+                                targetSpecies = SPECIES_GOURGEIST_AVERAGE; 
+                                break;
+                            case SPECIES_GOURGEIST_AVERAGE:
+                                targetSpecies = SPECIES_GOURGEIST_LARGE; 
+                                break;
+                            case SPECIES_GOURGEIST_LARGE:
+                                targetSpecies = SPECIES_GOURGEIST_SUPER; 
+                                break;
+                            default:
+                                targetSpecies = formChange.targetSpecies; 
+                                break;
+                        }
                     break;
                 case FORM_CHANGE_STATUS:
                     if (gBattleMons[battler].status1 & formChange.param1)

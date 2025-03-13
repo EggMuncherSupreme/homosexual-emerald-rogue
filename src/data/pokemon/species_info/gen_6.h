@@ -3526,7 +3526,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         ICON(Pumpkaboo, 2),                                                 \
         .footprint = gMonFootprint_Pumpkaboo,                               \
         LEARNSETS(Pumpkaboo),                                               \
-        .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable
+        .formSpeciesIdTable = sPumpkabooFormSpeciesIdTable,                 \
+        .formChangeTable = sPumpkabooFormChangeTable                        
 
     [SPECIES_PUMPKABOO_AVERAGE] =
     {
@@ -3653,7 +3654,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,                                  \
         .growthRate = GROWTH_MEDIUM_FAST,                                   \
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },          \
-        .abilities = { ABILITY_PICKUP, ABILITY_FRISK, ABILITY_INSOMNIA },   \
+        .abilities = { ABILITY_GROWING_PUMPKIN, ABILITY_FRISK, ABILITY_INSOMNIA },   \
         .bodyColor = BODY_COLOR_BROWN,                                      \
         .speciesName = _("Gourgeist"),                                      \
         .natDexNum = NATIONAL_DEX_GOURGEIST,                                \
@@ -3665,7 +3666,8 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         ICON(Gourgeist, 2),                                                 \
         .footprint = gMonFootprint_Gourgeist,                               \
         LEARNSETS(Gourgeist),                                               \
-        .formSpeciesIdTable = sGourgeistFormSpeciesIdTable
+        .formSpeciesIdTable = sGourgeistFormSpeciesIdTable,                 \
+        .formChangeTable = sGourgeistFormChangeTable
 
     [SPECIES_GOURGEIST_AVERAGE] =
     {
