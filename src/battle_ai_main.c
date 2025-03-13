@@ -878,6 +878,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                     RETURN_SCORE_MINUS(20);
                 break;
             case ABILITY_FLASH_FIRE:
+            case ABILITY_HEAT_SINK:
                 if (moveType == TYPE_FIRE)
                     RETURN_SCORE_MINUS(20);
                 break;
@@ -988,6 +989,10 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                     break;
                 case ABILITY_STORM_DRAIN:
                     if (moveType == TYPE_WATER && !IsMoveRedirectionPrevented(move, aiData->abilities[battlerAtk]))
+                        RETURN_SCORE_MINUS(20);
+                    break;
+                case ABILITY_HEAT_SINK:
+                    if (moveType == TYPE_FIRE && !IsMoveRedirectionPrevented(move, aiData->abilities[battlerAtk]))
                         RETURN_SCORE_MINUS(20);
                     break;
                 case ABILITY_MAGIC_BOUNCE:
@@ -2949,6 +2954,14 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 break;  // handled in AI_HPAware
             case ABILITY_STORM_DRAIN:
                 if (moveType == TYPE_WATER
+                    && HasMoveWithSplit(battlerAtkPartner, SPLIT_SPECIAL)
+                    && BattlerStatCanRise(battlerAtkPartner, atkPartnerAbility, STAT_SPATK))
+                {
+                    RETURN_SCORE_PLUS(1);
+                }
+                break;
+            case ABILITY_HEAT_SINK:
+                if (moveType == TYPE_FIRE
                     && HasMoveWithSplit(battlerAtkPartner, SPLIT_SPECIAL)
                     && BattlerStatCanRise(battlerAtkPartner, atkPartnerAbility, STAT_SPATK))
                 {

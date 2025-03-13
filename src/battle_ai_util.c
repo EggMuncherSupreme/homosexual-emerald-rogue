@@ -231,6 +231,7 @@ static const s8 sAiAbilityRatings[ABILITIES_COUNT] =
     [ABILITY_STENCH] = 1,
     [ABILITY_STICKY_HOLD] = 3,
     [ABILITY_STORM_DRAIN] = 7,
+    [ABILITY_HEAT_SINK] = 7,
     [ABILITY_STRONG_JAW] = 6,
     [ABILITY_STURDY] = 6,
     [ABILITY_SUCTION_CUPS] = 2,

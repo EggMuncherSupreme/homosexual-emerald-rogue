@@ -319,6 +319,7 @@ static const u8 sOnslaughtCoreDescription[] = _("Uses an attack on entry.");
 static const u8 sDoubleDownDescription[] = _("Inverts stat changes.");
 static const u8 sGrowingPumpkinDescription[] = _("Grows in size each turn.");
 static const u8 sHammerTimeDescription[] = _("Boosts hammer moves.");
+static const u8 sHeatSinkDescription[] = _("Draws in Fire moves.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -654,6 +655,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_DOUBLE_DOWN] = _("Double Down"),
     [ABILITY_GROWING_PUMPKIN] = _("Growing Pumpkin"),
     [ABILITY_HAMMER_TIME] = _("Hammer Time"),
+    [ABILITY_HEAT_SINK] = _("Heat Sink"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -989,6 +991,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_DOUBLE_DOWN] = _("Double Down"),
     [ABILITY_GROWING_PUMPKIN] = _("GrowinPumpkn"),
     [ABILITY_HAMMER_TIME] = _("Hammer Time"),
+    [ABILITY_HEAT_SINK] = _("Heat Sink"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1325,6 +1328,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_DOUBLE_DOWN] = sDoubleDownDescription,
     [ABILITY_GROWING_PUMPKIN] = sGrowingPumpkinDescription,
     [ABILITY_HAMMER_TIME] = sHammerTimeDescription,
+    [ABILITY_HEAT_SINK] = sHeatSinkDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
