@@ -476,6 +476,7 @@ struct BattleMove
     u32 skyBattleBanned:1;
     u32 sketchBanned:1;
     u32 hammerMove:1;
+    u32 drillMove:1;
 };
 
 #define SPINDA_SPOT_WIDTH 16

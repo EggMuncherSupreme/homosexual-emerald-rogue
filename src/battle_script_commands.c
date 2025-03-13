@@ -1897,6 +1897,10 @@ u32 GetTotalAccuracy(u32 battlerAtk, u32 battlerDef, u32 move, u32 atkAbility, u
     case ABILITY_COMPOUND_EYES:
         calc = (calc * 130) / 100; // 1.3 compound eyes boost
         break;
+    case ABILITY_JUST_THE_TIP:
+        if(move == MOVE_HORN_DRILL)
+            calc = (calc * 150) / 100;
+        break;
     case ABILITY_ANALYTIC:
         if (GetBattlerTurnOrderNum(battlerAtk) == gBattlersCount - 1 && move != MOVE_FUTURE_SIGHT && move != MOVE_DOOM_DESIRE)
            calc = (calc * 110) / 100; // 1.1 analytic boost if last

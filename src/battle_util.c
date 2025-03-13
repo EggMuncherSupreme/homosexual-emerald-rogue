@@ -9677,6 +9677,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
         if (gBattleMoves[move].hammerMove)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
         break;    
+    case ABILITY_JUST_THE_TIP:
+        if (gBattleMoves[move].drillMove)
+           modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
+        break; 
     case ABILITY_HONEY_GATHER:
         if (move == MOVE_POLLEN_PUFF){
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
@@ -12059,6 +12063,8 @@ u32 GetBattlerMoveTargetType(u32 battler, u32 move)
         && IsBattlerTerrainAffected(battler, STATUS_FIELD_PSYCHIC_TERRAIN))
         return MOVE_TARGET_BOTH;
     else if (move == MOVE_DIAMOND_STORM && IsBattlerWeatherAffected(battler, WEATHER_SANDSTORM))
+        return MOVE_TARGET_BOTH;
+    else if (gBattleMoves[move].type == TYPE_FLYING && GetBattlerAbility(battler) == ABILITY_LARGE_WINGSPAN)
         return MOVE_TARGET_BOTH;
     else if (gBattleMoves[move].effect == EFFECT_TERA_STARSTORM
         && gBattleMons[battler].species == SPECIES_TERAPAGOS_STELLAR)

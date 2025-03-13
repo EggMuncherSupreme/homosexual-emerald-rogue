@@ -321,6 +321,8 @@ static const u8 sGrowingPumpkinDescription[] = _("Grows in size each turn.");
 static const u8 sHammerTimeDescription[] = _("Boosts hammer moves.");
 static const u8 sHeatSinkDescription[] = _("Draws in Fire moves.");
 static const u8 sIlVaticanoDescription[] = _("Boosts diagonal attacks.");
+static const u8 sJustTheTipDescription[] = _("Boosts drill moves.");
+static const u8 sLargeWingspanDescription[] = _("Flying moves hit both.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -658,6 +660,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_HAMMER_TIME] = _("Hammer Time"),
     [ABILITY_HEAT_SINK] = _("Heat Sink"),
     [ABILITY_IL_VATICANO] = _("Il Vaticano"),
+    [ABILITY_JUST_THE_TIP] = _("Just The Tip"),
+    [ABILITY_LARGE_WINGSPAN] = _("Large Wingspan"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -995,6 +999,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_HAMMER_TIME] = _("Hammer Time"),
     [ABILITY_HEAT_SINK] = _("Heat Sink"),
     [ABILITY_IL_VATICANO] = _("Il Vaticano"),
+    [ABILITY_JUST_THE_TIP] = _("Just The Tip"),
+    [ABILITY_LARGE_WINGSPAN] = _("LrgWingspan"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1333,6 +1339,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_HAMMER_TIME] = sHammerTimeDescription,
     [ABILITY_HEAT_SINK] = sHeatSinkDescription,
     [ABILITY_IL_VATICANO] = sIlVaticanoDescription,
+    [ABILITY_JUST_THE_TIP] = sJustTheTipDescription,
+    [ABILITY_LARGE_WINGSPAN] = sLargeWingspanDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };

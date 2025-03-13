@@ -567,6 +567,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
+        .drillMove = TRUE,
     },
 
     [MOVE_TACKLE] =
@@ -1152,6 +1153,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
+        .drillMove = TRUE,
     },
 
     [MOVE_SUBMISSION] =
@@ -9301,6 +9303,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
         .highCritRatio = TRUE,
+        .drillMove = TRUE,
     },
 
     [MOVE_DUAL_CHOP] =
@@ -14143,6 +14146,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .makesContact = TRUE,
         .ignoresProtect = TRUE,
         .metronomeBanned = TRUE,
+        .drillMove = TRUE,
     },
 
     [MOVE_TWIN_BEAM] =
