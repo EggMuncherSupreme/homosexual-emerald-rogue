@@ -9656,6 +9656,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
         if (gBattleMoves[move].pulseMove || gBattleMoves[move].ballisticMove)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
         break;
+    case ABILITY_HAMMER_TIME:
+        if (gBattleMoves[move].hammerMove)
+           modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
+        break;    
     case ABILITY_HONEY_GATHER:
         if (move == MOVE_POLLEN_PUFF){
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));

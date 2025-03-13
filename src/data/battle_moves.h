@@ -2725,6 +2725,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
         .highCritRatio = TRUE,
+        .hammerMove = TRUE,
     },
 
     [MOVE_EXPLOSION] =
@@ -6439,6 +6440,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
         .punchingMove = TRUE,
+        .hammerMove = TRUE,
     },
 
     [MOVE_GYRO_BALL] =
@@ -8001,6 +8003,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
+        .hammerMove = TRUE,
     },
 
     [MOVE_AQUA_JET] =
@@ -10985,6 +10988,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
         .punchingMove = TRUE,
+        .hammerMove = TRUE,
     },
 
     [MOVE_FLORAL_HEALING] =
@@ -11425,6 +11429,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .makesContact = TRUE,
+        .hammerMove = TRUE,
     },
 
     [MOVE_BRUTAL_SWING] =
@@ -14235,6 +14240,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .split = SPLIT_PHYSICAL,
         .zMoveEffect = Z_EFFECT_NONE,
         .cantUseTwice = TRUE,
+        .hammerMove = TRUE,
     },
 
     [MOVE_COMEUPPANCE] =
