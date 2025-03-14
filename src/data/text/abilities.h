@@ -323,6 +323,8 @@ static const u8 sHeatSinkDescription[] = _("Draws in Fire moves.");
 static const u8 sIlVaticanoDescription[] = _("Boosts diagonal attacks.");
 static const u8 sJustTheTipDescription[] = _("Boosts drill moves.");
 static const u8 sLargeWingspanDescription[] = _("Flying moves hit both.");
+static const u8 sLawnSurferDescription[] = _("Faster on grass.");
+static const u8 sMindSurferDescription[] = _("Faster on weird.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -662,6 +664,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_IL_VATICANO] = _("Il Vaticano"),
     [ABILITY_JUST_THE_TIP] = _("Just The Tip"),
     [ABILITY_LARGE_WINGSPAN] = _("Large Wingspan"),
+    [ABILITY_LAWN_SURFER] = _("Lawn Surfer"),
+    [ABILITY_MIND_SURFER] = _("Mind Surfer"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1001,6 +1005,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_IL_VATICANO] = _("Il Vaticano"),
     [ABILITY_JUST_THE_TIP] = _("Just The Tip"),
     [ABILITY_LARGE_WINGSPAN] = _("LrgWingspan"),
+    [ABILITY_LAWN_SURFER] = _("Lawn Surfer"),
+    [ABILITY_MIND_SURFER] = _("Mind Surfer"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1341,6 +1347,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_IL_VATICANO] = sIlVaticanoDescription,
     [ABILITY_JUST_THE_TIP] = sJustTheTipDescription,
     [ABILITY_LARGE_WINGSPAN] = sLargeWingspanDescription,
+    [ABILITY_LAWN_SURFER] = sLawnSurferDescription,
+    [ABILITY_MIND_SURFER] = sMindSurferDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
