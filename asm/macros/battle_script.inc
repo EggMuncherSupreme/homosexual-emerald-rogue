@@ -1756,6 +1756,10 @@
 	various \battler, VARIOUS_TRY_ACTIVATE_FELL_STINGER
 	.endm
 
+	.macro tryactivatelifetaker battler:req
+	various \battler, VARIOUS_TRY_ACTIVATE_LIFETAKER
+	.endm
+
 	.macro playmoveanimation battler:req, move:req
 	various \battler, VARIOUS_PLAY_MOVE_ANIMATION
 	.2byte \move
@@ -2087,6 +2091,11 @@
 
 	.macro tryhealquarterhealth battler:req, failInstr:req
 	various \battler, VARIOUS_TRY_HEAL_QUARTER_HP
+	.4byte \failInstr
+	.endm
+
+	.macro tryhealthirdhealth battler:req, failInstr:req
+	various \battler, VARIOUS_TRY_HEAL_THIRD_HP
 	.4byte \failInstr
 	.endm
 

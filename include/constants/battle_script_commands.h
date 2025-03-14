@@ -244,6 +244,8 @@
 #define VARIOUS_APPLY_TERASTALLIZATION               151
 #define VARIOUS_TRY_ACTIVATE_RECHARGE_SKIP           152
 #define VARIOUS_JUMP_IF_NOT_WEATHER_AFFECTED         153
+#define VARIOUS_TRY_ACTIVATE_LIFETAKER               154
+#define VARIOUS_TRY_HEAL_THIRD_HP                    155
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0

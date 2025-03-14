@@ -6879,6 +6879,7 @@ BattleScript_FaintTarget::
 	tryactivaterechargeskip BS_ATTACKER
 	tryactivategrimneigh BS_ATTACKER    @ and as one shadow rider
 	tryactivatebattlebond BS_ATTACKER
+	tryactivatelifetaker BS_ATTACKER
 	trytrainerslidefirstdownmsg BS_TARGET
 	return
 
@@ -9995,6 +9996,18 @@ BattleScript_RaiseStatOnFaintingTarget::
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_RaiseStatOnFaintingTarget_End:
 	return
+
+BattleScript_LifetakerEffect::
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	tryhealthirdhealth BS_ATTACKER, BattleScript_LifetakerEffect_NothingToHeal
+	playanimation BS_ATTACKER, B_ANIM_WISH_HEAL
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_ATTACKERREGAINEDHEALTH
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_LifetakerEffect_NothingToHeal:
+    return
 
 BattleScript_AttackerAbilityStatRaise::
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_AttackerAbilityStatRaise_End

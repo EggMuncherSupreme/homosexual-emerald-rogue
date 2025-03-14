@@ -11618,6 +11618,9 @@ u8 GetBattleMoveSplit(u32 moveId)
     if (GetBattlerAbility(gBattlerAttacker) == ABILITY_BALLIN && gBattleMoves[moveId].ballisticMove){
         return GetSplitBasedOnStats(gBattlerAttacker);
     }
+    if (gBattleMoves[moveId].effect == EFFECT_RELIC_SONG){
+        return GetSplitBasedOnStats(gBattlerAttacker);
+    }
     if (B_PHYSICAL_SPECIAL_SPLIT >= GEN_4)
         return gBattleMoves[moveId].split;
     if (IS_MOVE_STATUS(moveId))

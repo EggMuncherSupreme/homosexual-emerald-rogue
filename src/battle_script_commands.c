@@ -1272,7 +1272,7 @@ static bool32 TryAegiFormChange(void)
         gBattleMons[gBattlerAttacker].species = SPECIES_AEGISLASH_BLADE;
         break;
     case SPECIES_AEGISLASH_BLADE: // Blade -> Shield
-        if (gCurrentMove != MOVE_KINGS_SHIELD)
+        if (gCurrentMove != MOVE_KINGS_SHIELD && gCurrentMove != MOVE_BEHEMOTH_BASH)
             return FALSE;
         gBattleMons[gBattlerAttacker].species = SPECIES_AEGISLASH_SHIELD;
         break;
@@ -9697,6 +9697,23 @@ static void Cmd_various(void)
         }
         break;
     }
+    case VARIOUS_TRY_ACTIVATE_LIFETAKER:    // and chilling neigh + as one ice rider
+    {
+        VARIOUS_ARGS();
+
+        u16 battlerAbility = GetBattlerAbility(battler);
+
+        if ((battlerAbility == ABILITY_LIFETAKER)
+          && HasAttackerFaintedTarget()
+          && !NoAliveMonsForEitherParty())
+        {
+            BattleScriptPush(cmd->nextInstr);
+            gLastUsedAbility = battlerAbility;
+            gBattlescriptCurrInstr = BattleScript_LifetakerEffect;
+            return;
+        }
+        break;
+    }
     case VARIOUS_TRY_ACTIVATE_GRIM_NEIGH:   // and as one shadow rider
     {
         VARIOUS_ARGS();
@@ -10551,6 +10568,19 @@ static void Cmd_various(void)
             gBattleMoveDamage = 1;
         gBattleMoveDamage *= -1;
 
+        if (gBattleMons[battler].hp == gBattleMons[battler].maxHP)
+            gBattlescriptCurrInstr = cmd->failInstr;    // fail
+        else
+            gBattlescriptCurrInstr = cmd->nextInstr;   // can heal
+        return;
+    }
+    case VARIOUS_TRY_HEAL_THIRD_HP:
+    {
+        VARIOUS_ARGS(const u8 *failInstr);
+        gBattleMoveDamage = GetNonDynamaxMaxHP(battler) / 3;
+        if (gBattleMoveDamage == 0)
+            gBattleMoveDamage = 1;
+        gBattleMoveDamage *= -1;
         if (gBattleMons[battler].hp == gBattleMons[battler].maxHP)
             gBattlescriptCurrInstr = cmd->failInstr;    // fail
         else
