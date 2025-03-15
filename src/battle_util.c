@@ -3991,6 +3991,10 @@ u8 AtkCanceller_UnableToUseMove(u32 moveType)
                 gBattleStruct->beatUpSlot = 0;
                 PREPARE_BYTE_NUMBER_BUFFER(gBattleScripting.multihitString, 1, 0)
             }
+            else if (GetBattlerAbility(gBattlerAttacker) == ABILITY_TRIPLE_THREAT && !IS_MOVE_STATUS(gCurrentMove)){
+                gMultiHitCounter = 3;
+                PREPARE_BYTE_NUMBER_BUFFER(gBattleScripting.multihitString, 1, 0)
+            }
             else
             {
                 gMultiHitCounter = 0;
@@ -10104,6 +10108,9 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
             modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(1.5));
         }
         break;
+    case ABILITY_TRIPLE_THREAT:
+        modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.4));
+        break;
     }
 
     // target's abilities
@@ -12171,9 +12178,13 @@ u32 CalcSecondaryEffectChance(u32 battler, u8 secondaryEffectChance, u16 moveEff
 {
     bool8 hasSereneGrace = (GetBattlerAbility(battler) == ABILITY_SERENE_GRACE);
     bool8 hasRainbow = (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_RAINBOW) != 0;
+    bool8 hasTripleThreat = (GetBattlerAbility(battler) == ABILITY_TRIPLE_THREAT);
 
     if (hasRainbow && hasSereneGrace && moveEffect == EFFECT_FLINCH_HIT)
         return secondaryEffectChance *= 2;
+
+    if (hasTripleThreat)
+        secondaryEffectChance *= 0.5;
 
     if (hasSereneGrace)
         secondaryEffectChance *= 2;
