@@ -9985,6 +9985,74 @@ BattleScript_WeakArmorSpeedAnim:
 BattleScript_WeakArmorActivatesEnd:
 	return
 
+BattleScript_MachineLearningPlusDefMinusSpDef::
+	call BattleScript_AbilityPopUp
+	setstatchanger STAT_SPDEF, 1, TRUE
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_MachineLearningPlusDef
+	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_MachineLearningMinusSpDefAnim
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_FELL_EMPTY, BattleScript_MachineLearningPlusDef
+	pause B_WAIT_TIME_SHORTEST
+	printfromtable gStatDownStringIds
+	bichalfword gMoveResultFlags, MOVE_RESULT_MISSED @ Set by statbuffchange when stat can't be decreased
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MachineLearningPlusDef
+BattleScript_MachineLearningMinusSpDefAnim:
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_TARGETABILITYSTATLOWER
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_MachineLearningPlusDef:
+	setstatchanger STAT_DEF, 1, FALSE
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_MachineLearningEnd
+	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MachineLearningPlusDefAnim
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_ROSE_EMPTY, BattleScript_MachineLearningEnd
+	pause B_WAIT_TIME_SHORTEST
+	printstring STRINGID_TARGETSTATWONTGOHIGHER
+	bichalfword gMoveResultFlags, MOVE_RESULT_MISSED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MachineLearningEnd
+BattleScript_MachineLearningPlusDefAnim:
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_TARGETABILITYSTATRAISE
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_MachineLearningEnd:
+	return
+
+BattleScript_MachineLearningPlusSpDefMinusDef::
+	call BattleScript_AbilityPopUp
+	setstatchanger STAT_DEF, 1, TRUE
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_MachineLearningPlusSpDef
+	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_DECREASE, BattleScript_MachineLearningMinusDefAnim
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_FELL_EMPTY, BattleScript_MachineLearningPlusSpDef
+	pause B_WAIT_TIME_SHORTEST
+	printfromtable gStatDownStringIds
+	bichalfword gMoveResultFlags, MOVE_RESULT_MISSED @ Set by statbuffchange when stat can't be decreased
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MachineLearningPlusDef
+BattleScript_MachineLearningMinusDefAnim:
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_TARGETABILITYSTATLOWER
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_MachineLearningPlusSpDef:
+	setstatchanger STAT_SPDEF, 1, FALSE
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_MachineLearningEnd2
+	jumpifbyte CMP_LESS_THAN, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_MachineLearningPlusSpDefAnim
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_ROSE_EMPTY, BattleScript_MachineLearningEnd2
+	pause B_WAIT_TIME_SHORTEST
+	printstring STRINGID_TARGETSTATWONTGOHIGHER
+	bichalfword gMoveResultFlags, MOVE_RESULT_MISSED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MachineLearningEnd2
+BattleScript_MachineLearningPlusSpDefAnim:
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_TARGETABILITYSTATRAISE
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_MachineLearningEnd2:
+	return
+
 BattleScript_RaiseStatOnFaintingTarget::
 	statbuffchange MOVE_EFFECT_AFFECTS_USER | STAT_CHANGE_ALLOW_PTR, BattleScript_RaiseStatOnFaintingTarget_End
 	copybyte gBattlerAbility, gBattlerAttacker

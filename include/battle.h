@@ -119,6 +119,8 @@ struct DisableStruct
     u8 weatherAbilityDone:1;
     u8 terrainAbilityDone:1;
     u8 usedProteanLibero:1;
+    u8 machineLearningPhys:1;
+    u8 machineLearningSpec:1;
 };
 
 struct ProtectStruct

@@ -5694,6 +5694,44 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
             break;
+        case ABILITY_MACHINE_LEARNING:
+        if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && gBattlerAttacker != gBattlerTarget
+             && TARGET_TURN_DAMAGED
+             && IsBattlerAlive(battler))
+            {
+                if(IS_MOVE_PHYSICAL(gCurrentMove) && CompareStat(battler, STAT_DEF, MAX_STAT_STAGE, CMP_LESS_THAN) && !gDisableStructs[battler].machineLearningPhys){
+                    gDisableStructs[battler].machineLearningPhys = TRUE;
+                    if(gDisableStructs[battler].machineLearningSpec) {
+                        gDisableStructs[battler].machineLearningSpec = FALSE;
+                        BattleScriptPushCursor();
+                        gBattlescriptCurrInstr = BattleScript_MachineLearningPlusDefMinusSpDef;
+                        effect++;
+                    } else {
+                        gEffectBattler = battler;
+                        SET_STATCHANGER(STAT_DEF, 1, FALSE);
+                        BattleScriptPushCursor();
+                        gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
+                        effect++;
+                    }
+                }
+                else if(IS_MOVE_SPECIAL(gCurrentMove) && CompareStat(battler, STAT_SPDEF, MAX_STAT_STAGE, CMP_LESS_THAN) && !gDisableStructs[battler].machineLearningSpec){
+                    gDisableStructs[battler].machineLearningSpec = TRUE;
+                    if(gDisableStructs[battler].machineLearningPhys) {
+                        gDisableStructs[battler].machineLearningPhys = FALSE;
+                        BattleScriptPushCursor();
+                        gBattlescriptCurrInstr = BattleScript_MachineLearningPlusSpDefMinusDef;
+                        effect++;
+                    } else {
+                        gEffectBattler = battler;
+                        SET_STATCHANGER(STAT_SPDEF, 1, FALSE);
+                        BattleScriptPushCursor();
+                        gBattlescriptCurrInstr = BattleScript_TargetAbilityStatRaiseRet;
+                        effect++;
+                    }
+                }
+            }
+            break;
         case ABILITY_BERSERK:
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg

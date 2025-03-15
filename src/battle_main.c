@@ -3209,6 +3209,8 @@ void SwitchInClearSetData(u32 battler)
     gMoveResultFlags = 0;
     gDisableStructs[battler].isFirstTurn = 2;
     gDisableStructs[battler].truantSwitchInHack = disableStructCopy.truantSwitchInHack;
+    gDisableStructs[battler].machineLearningPhys = FALSE;
+    gDisableStructs[battler].machineLearningSpec = FALSE;
     gLastMoves[battler] = MOVE_NONE;
     gLastLandedMoves[battler] = MOVE_NONE;
     gLastHitByType[battler] = 0;

@@ -328,6 +328,7 @@ static const u8 sMindSurferDescription[] = _("Faster on weird.");
 static const u8 sLifetakerDescription[] = _("Restores HP on KO.");
 static const u8 sTripleThreatDescription[] = _("Moves hit thrice.");
 static const u8 sMysticFistDescription[] = _("Punching moves are special.");
+static const u8 sMachineLearningDescription[] = _("Adapts to hits taken.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -672,6 +673,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_LIFETAKER] = _("Lifetaker"),
     [ABILITY_TRIPLE_THREAT] = _("Triple Threat"),
     [ABILITY_MYSTIC_FIST] = _("Mystic Fist"),
+    [ABILITY_MACHINE_LEARNING] = _("Machine Learning"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1016,6 +1018,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_LIFETAKER] = _("Lifetaker"),
     [ABILITY_TRIPLE_THREAT] = _("TripleThreat"),
     [ABILITY_MYSTIC_FIST] = _("Mystic Fist"),
+    [ABILITY_MACHINE_LEARNING] = _("MachineLearn"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1361,6 +1364,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_LIFETAKER] = sLifetakerDescription,
     [ABILITY_TRIPLE_THREAT] = sTripleThreatDescription,
     [ABILITY_MYSTIC_FIST] = sMysticFistDescription,
+    [ABILITY_MACHINE_LEARNING] = sMachineLearningDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
