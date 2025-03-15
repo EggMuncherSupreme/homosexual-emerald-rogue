@@ -9681,6 +9681,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
         if (gBattleMoves[move].hammerMove)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
         break;    
+    case ABILITY_MYSTIC_FIST:
+        if (gBattleMoves[move].punchingMove)
+           modifier = uq4_12_multiply(modifier, UQ_4_12(1.1));
+        break;
     case ABILITY_JUST_THE_TIP:
         if (gBattleMoves[move].drillMove)
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
@@ -11624,6 +11628,9 @@ u8 GetBattleMoveSplit(u32 moveId)
         return SPLIT_PHYSICAL;
     if (GetBattlerAbility(gBattlerAttacker) == ABILITY_BALLIN && gBattleMoves[moveId].ballisticMove){
         return GetSplitBasedOnStats(gBattlerAttacker);
+    }
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_MYSTIC_FIST && gBattleMoves[moveId].punchingMove){
+        return SPLIT_SPECIAL;
     }
     if (gBattleMoves[moveId].effect == EFFECT_RELIC_SONG){
         return GetSplitBasedOnStats(gBattlerAttacker);
