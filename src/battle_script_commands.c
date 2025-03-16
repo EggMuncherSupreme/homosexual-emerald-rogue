@@ -1276,6 +1276,7 @@ static bool32 TryAegiFormChange(void)
             return FALSE;
         gBattleMons[gBattlerAttacker].species = SPECIES_AEGISLASH_SHIELD;
         break;
+    case SPECIES_BURMY_PLANT_CLOAK:
     case SPECIES_WORMADAM_PLANT_CLOAK:
         if (IS_MOVE_STATUS(gCurrentMove)){
             if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
@@ -1289,6 +1290,7 @@ static bool32 TryAegiFormChange(void)
             return FALSE;
         }
         break;
+    case SPECIES_BURMY_SANDY_CLOAK:
     case SPECIES_WORMADAM_SANDY_CLOAK:
         if (IS_MOVE_STATUS(gCurrentMove)){
             if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
@@ -1302,6 +1304,7 @@ static bool32 TryAegiFormChange(void)
             return FALSE;
         }
         break;
+    case SPECIES_BURMY_TRASH_CLOAK:
     case SPECIES_WORMADAM_TRASH_CLOAK:
         if (IS_MOVE_SPECIAL(gCurrentMove)){
             if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
@@ -6538,6 +6541,33 @@ static void Cmd_moveend(void)
                     for (battler = 0; battler < MAX_BATTLERS_COUNT; battler++)
                     {
                         if (GetBattlerAbility(battler) == ABILITY_BALLIN && !gSpecialStatuses[battler].dancerUsedMove)
+                        {
+                            if (!nextDancer || (gBattleMons[battler].speed < gBattleMons[nextDancer & 0x3].speed))
+                                nextDancer = battler | 0x4;
+                        }
+                    }
+                    if (nextDancer && AbilityBattleEffects(ABILITYEFFECT_MOVE_END_OTHER, nextDancer & 0x3, 0, 0, 0))
+                        effect = TRUE;
+                }
+            }
+            if (gBattleMoves[gCurrentMove].windMove)
+            {
+                u8 battler, nextDancer = 0;
+
+                if (!(gBattleStruct->lastMoveFailed & gBitTable[gBattlerAttacker]
+                    || (!gSpecialStatuses[gBattlerAttacker].dancerUsedMove
+                        && gProtectStructs[gBattlerAttacker].usesBouncedMove)))
+                {   // Dance move succeeds
+                    // Set target for other Dancer mons; set bit so that mon cannot activate Dancer off of its own move
+                    if (!gSpecialStatuses[gBattlerAttacker].dancerUsedMove)
+                    {
+                        gBattleScripting.savedBattler = gBattlerTarget | 0x4;
+                        gBattleScripting.savedBattler |= (gBattlerAttacker << 4);
+                        gSpecialStatuses[gBattlerAttacker].dancerUsedMove = TRUE;
+                    }
+                    for (battler = 0; battler < MAX_BATTLERS_COUNT; battler++)
+                    {
+                        if (GetBattlerAbility(battler) == ABILITY_WIND_CHIME && !gSpecialStatuses[battler].dancerUsedMove)
                         {
                             if (!nextDancer || (gBattleMons[battler].speed < gBattleMons[nextDancer & 0x3].speed))
                                 nextDancer = battler | 0x4;

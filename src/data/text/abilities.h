@@ -331,6 +331,8 @@ static const u8 sMysticFistDescription[] = _("Punching moves are special.");
 static const u8 sMachineLearningDescription[] = _("Adapts to hits taken.");
 static const u8 sRampageDescription[] = _("Unaffected by 'Outrage'.");
 static const u8 sFightingSpiritDescription[] = _("Gains a second wind.");
+static const u8 sTremorSenseDescription[] = _("Protects from Ground.");
+static const u8 sWindChimeDescription[] = _("Wind moves cause Echoed Voice.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -551,7 +553,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_POWER_CONSTRUCT] = _("Power Construct"),
     [ABILITY_CORROSION] = _("Corrosion"),
     [ABILITY_COMATOSE] = _("Comatose"),
-    [ABILITY_QUEENLY_MAJESTY] = _("Queenly Majesty"),
+    [ABILITY_QUEENLY_MAJESTY] = _("Regal Majesty"),
     [ABILITY_INNARDS_OUT] = _("Innards Out"),
     [ABILITY_DANCER] = _("Dancer"),
     [ABILITY_BATTERY] = _("Battery"),
@@ -678,6 +680,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MACHINE_LEARNING] = _("Machine Learning"),
     [ABILITY_RAMPAGE] = _("Rampage"),
     [ABILITY_FIGHTING_SPIRIT] = _("Fighting Spirit"),
+    [ABILITY_TREMOR_SENSE] = _("Tremor Sense"),
+    [ABILITY_WIND_CHIME] = _("Wind Chime"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -898,7 +902,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_POWER_CONSTRUCT] = _("PwrConstruct"),
     [ABILITY_CORROSION] = _("Corrosion"),
     [ABILITY_COMATOSE] = _("Comatose"),
-    [ABILITY_QUEENLY_MAJESTY] = _("QueenlyMjsty"),
+    [ABILITY_QUEENLY_MAJESTY] = _("RegalMajesty"),
     [ABILITY_INNARDS_OUT] = _("Innards Out"),
     [ABILITY_DANCER] = _("Dancer"),
     [ABILITY_BATTERY] = _("Battery"),
@@ -1025,6 +1029,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MACHINE_LEARNING] = _("MachineLearn"),
     [ABILITY_RAMPAGE] = _("Rampage"),
     [ABILITY_FIGHTING_SPIRIT] = _("FightnSpirit"),
+    [ABILITY_TREMOR_SENSE] = _("Tremor Sense"),
+    [ABILITY_WIND_CHIME] = _("Wind Chime"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1373,6 +1379,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_MACHINE_LEARNING] = sMachineLearningDescription,
     [ABILITY_RAMPAGE] = sRampageDescription,
     [ABILITY_FIGHTING_SPIRIT] = sFightingSpiritDescription,
+    [ABILITY_TREMOR_SENSE] = sTremorSenseDescription,
+    [ABILITY_WIND_CHIME] = sWindChimeDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
