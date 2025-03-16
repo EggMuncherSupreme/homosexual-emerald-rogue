@@ -473,6 +473,7 @@ extern const u8 BattleScript_DoubleShockRemoveType[];
 extern const u8 BattleScript_SeedSowerActivates[];
 extern const u8 BattleScript_AngerShellActivates[];
 extern const u8 BattleScript_BerserkActivates[];
+extern const u8 BattleScript_FightingSpiritActivates[];
 extern const u8 BattleScript_WellBakedBodyActivates[];
 extern const u8 BattleScript_WindRiderActivatesMoveEnd[];
 extern const u8 BattleScript_WindPowerActivates[];

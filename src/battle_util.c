@@ -4383,6 +4383,17 @@ static inline bool32 HadMoreThanHalfHpNowHasLess(u32 battler)
              && gBattleMons[battler].hp < cutoff);
 }
 
+static inline bool32 HadMoreThanQuarterHpNowHasLess(u32 battler)
+{
+    u32 cutoff = gBattleMons[battler].maxHP / 4;
+    if (gBattleMons[battler].maxHP % 4 != 0)
+        cutoff++;
+    // Had more than half of hp before, now has less
+     return (gBattleStruct->hpBefore[battler] >= cutoff
+             && gBattleMons[battler].hp < cutoff);
+}
+
+
 u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 moveArg)
 {
     u32 effect = 0;
@@ -5763,6 +5774,23 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
              && !(gStatuses3[battler] & STATUS3_SKY_DROPPED))
             {
                 gBattleResources->flags->flags[battler] |= RESOURCE_FLAG_EMERGENCY_EXIT;
+                effect++;
+            }
+            break;
+        case ABILITY_FIGHTING_SPIRIT:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+            && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+            && TARGET_TURN_DAMAGED
+            && (gMultiHitCounter == 0 || gMultiHitCounter == 1) // Activates after all hits from a multi-hit move.
+            && IsBattlerAlive(gBattlerTarget)
+            && HadMoreThanQuarterHpNowHasLess(gBattlerTarget)
+            && !(TestSheerForceFlag(gBattlerAttacker, gCurrentMove))
+            && !(gBattleStruct->fightingSpiritBoost[GetBattlerSide(gBattlerTarget)] & gBitTable[gBattlerPartyIndexes[gBattlerTarget]]))    
+            {
+                gBattleStruct->fightingSpiritBoost[GetBattlerSide(gBattlerTarget)] |= gBitTable[gBattlerPartyIndexes[gBattlerTarget]];
+                gBattlerAttacker = gBattlerTarget;
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_FightingSpiritActivates;
                 effect++;
             }
             break;

@@ -246,6 +246,7 @@
 #define VARIOUS_JUMP_IF_NOT_WEATHER_AFFECTED         153
 #define VARIOUS_TRY_ACTIVATE_LIFETAKER               154
 #define VARIOUS_TRY_HEAL_THIRD_HP                    155
+#define VARIOUS_TRY_HEAL_FULL_HP                     156
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0

@@ -4105,6 +4105,7 @@ BattleScript_EffectBide::
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectRampage::
+	jumpifability BS_ATTACKER, ABILITY_RAMPAGE, BattleScript_EffectHit
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
@@ -7852,6 +7853,25 @@ BattleScript_BerserkTrySpAtk:
 	modifybattlerstatstage BS_ATTACKER, STAT_SPATK, INCREASE, 1, BattleScript_BerserkRet, ANIM_ON
 BattleScript_BerserkRet:
 	return
+
+BattleScript_FightingSpiritActivates::
+	call BattleScript_AbilityPopUp
+	jumpifstat BS_TARGET, CMP_EQUAL, STAT_ATK, MAX_STAT_STAGE, BattleScript_FightingSpiritTryHeal
+BattleScript_FIghtingSpiritTryAttack:
+	setbyte sSTAT_ANIM_PLAYED, FALSE
+	modifybattlerstatstage BS_ATTACKER, STAT_ATK, INCREASE, 1, BattleScript_FightingSpiritTryHeal, ANIM_ON
+BattleScript_FightingSpiritTryHeal:
+	copybyte gBattlerAbility, gBattlerAttacker
+	call BattleScript_AbilityPopUp
+	tryhealfullhealth BS_ATTACKER, BattleScript_FightingSpirit_NothingToHeal
+	playanimation BS_ATTACKER, B_ANIM_WISH_HEAL
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_ATTACKERSECONDWIND
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_FightingSpirit_NothingToHeal:
+    return
+
 
 BattleScript_WindPowerActivates::
 	call BattleScript_AbilityPopUp

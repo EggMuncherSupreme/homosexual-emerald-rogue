@@ -329,7 +329,8 @@ static const u8 sLifetakerDescription[] = _("Restores HP on KO.");
 static const u8 sTripleThreatDescription[] = _("Moves hit thrice.");
 static const u8 sMysticFistDescription[] = _("Punching moves are special.");
 static const u8 sMachineLearningDescription[] = _("Adapts to hits taken.");
-static const u8 sRampageDescription[] = _("KOs ignore downsides.");
+static const u8 sRampageDescription[] = _("Unaffected by 'Outrage'.");
+static const u8 sFightingSpiritDescription[] = _("Gains a second wind.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -676,6 +677,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MYSTIC_FIST] = _("Mystic Fist"),
     [ABILITY_MACHINE_LEARNING] = _("Machine Learning"),
     [ABILITY_RAMPAGE] = _("Rampage"),
+    [ABILITY_FIGHTING_SPIRIT] = _("Fighting Spirit"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1022,6 +1024,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MYSTIC_FIST] = _("Mystic Fist"),
     [ABILITY_MACHINE_LEARNING] = _("MachineLearn"),
     [ABILITY_RAMPAGE] = _("Rampage"),
+    [ABILITY_FIGHTING_SPIRIT] = _("FightnSpirit"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1369,6 +1372,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_MYSTIC_FIST] = sMysticFistDescription,
     [ABILITY_MACHINE_LEARNING] = sMachineLearningDescription,
     [ABILITY_RAMPAGE] = sRampageDescription,
+    [ABILITY_FIGHTING_SPIRIT] = sFightingSpiritDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
