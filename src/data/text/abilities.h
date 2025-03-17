@@ -335,6 +335,7 @@ static const u8 sTremorSenseDescription[] = _("Protects from Ground.");
 static const u8 sWindChimeDescription[] = _("Wind moves cause Echoed Voice.");
 static const u8 sSuperDuperLuckDescription[] = _("Critical hits land oftener.");
 static const u8 sWideEyedDescription[] = _("Status moves hit both.");
+static const u8 sMonkeyBusinessDescription[] = _("Ups Sp.Atk and locks move.");
 
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
@@ -687,6 +688,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_WIND_CHIME] = _("Wind Chime"),
     [ABILITY_SUPER_DUPER_LUCK] = _("Super Duper Luck"),
     [ABILITY_WIDE_EYED] = _("Wide Eyed"),
+    [ABILITY_MONKEY_BUSINESS] = _("Monkey Business"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1038,6 +1040,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_WIND_CHIME] = _("Wind Chime"),
     [ABILITY_SUPER_DUPER_LUCK] = _("SuprDuprLuck"),
     [ABILITY_WIDE_EYED] = _("Wide Eyed"),
+    [ABILITY_MONKEY_BUSINESS] = _("MonkeyBiznis"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1390,6 +1393,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_WIND_CHIME] = sWindChimeDescription,
     [ABILITY_SUPER_DUPER_LUCK] = sSuperDuperLuckDescription,
     [ABILITY_WIDE_EYED] = sWideEyedDescription,
+    [ABILITY_MONKEY_BUSINESS] = sMonkeyBusinessDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
