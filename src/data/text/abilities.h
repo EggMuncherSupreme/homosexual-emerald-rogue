@@ -333,6 +333,9 @@ static const u8 sRampageDescription[] = _("Unaffected by 'Outrage'.");
 static const u8 sFightingSpiritDescription[] = _("Gains a second wind.");
 static const u8 sTremorSenseDescription[] = _("Protects from Ground.");
 static const u8 sWindChimeDescription[] = _("Wind moves cause Echoed Voice.");
+static const u8 sSuperDuperLuckDescription[] = _("Critical hits land oftener.");
+static const u8 sWideEyedDescription[] = _("Status moves hit both.");
+
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -682,6 +685,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_FIGHTING_SPIRIT] = _("Fighting Spirit"),
     [ABILITY_TREMOR_SENSE] = _("Tremor Sense"),
     [ABILITY_WIND_CHIME] = _("Wind Chime"),
+    [ABILITY_SUPER_DUPER_LUCK] = _("Super Duper Luck"),
+    [ABILITY_WIDE_EYED] = _("Wide Eyed"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1031,6 +1036,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_FIGHTING_SPIRIT] = _("FightnSpirit"),
     [ABILITY_TREMOR_SENSE] = _("Tremor Sense"),
     [ABILITY_WIND_CHIME] = _("Wind Chime"),
+    [ABILITY_SUPER_DUPER_LUCK] = _("SuprDuprLuck"),
+    [ABILITY_WIDE_EYED] = _("Wide Eyed"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1381,6 +1388,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_FIGHTING_SPIRIT] = sFightingSpiritDescription,
     [ABILITY_TREMOR_SENSE] = sTremorSenseDescription,
     [ABILITY_WIND_CHIME] = sWindChimeDescription,
+    [ABILITY_SUPER_DUPER_LUCK] = sSuperDuperLuckDescription,
+    [ABILITY_WIDE_EYED] = sWideEyedDescription,
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };

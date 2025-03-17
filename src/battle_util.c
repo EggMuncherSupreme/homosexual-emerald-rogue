@@ -12183,6 +12183,8 @@ u32 GetBattlerMoveTargetType(u32 battler, u32 move)
         return MOVE_TARGET_BOTH;
     else if (gBattleMoves[move].type == TYPE_FLYING && GetBattlerAbility(battler) == ABILITY_LARGE_WINGSPAN)
         return MOVE_TARGET_BOTH;
+    else if (IS_MOVE_STATUS(move) && GetBattlerAbility(battler) == ABILITY_WIDE_EYED)
+        return MOVE_TARGET_BOTH;
     else if (gBattleMoves[move].effect == EFFECT_TERA_STARSTORM
         && gBattleMons[battler].species == SPECIES_TERAPAGOS_STELLAR)
         return MOVE_TARGET_BOTH;
