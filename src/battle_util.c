@@ -1020,6 +1020,7 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_DISGUISE] = 1,
     [ABILITY_FLUFFY] = 1,
     [ABILITY_QUEENLY_MAJESTY] = 1,
+    [ABILITY_TIME_LORD] = 1,
     [ABILITY_WATER_BUBBLE] = 1,
     [ABILITY_MIRROR_ARMOR] = 1,
     [ABILITY_PUNK_ROCK] = 1,
@@ -1883,7 +1884,7 @@ u8 CheckMoveLimitations(u32 battler, u8 unusableMoves, u16 check)
         else if (check & MOVE_LIMITATION_CHOICE_ITEM && GetBattlerAbility(battler) == ABILITY_GORILLA_TACTICS && *choicedMove != MOVE_NONE && *choicedMove != MOVE_UNAVAILABLE && *choicedMove != gBattleMons[battler].moves[i])
             unusableMoves |= gBitTable[i];
         else if (check & MOVE_LIMITATION_CHOICE_ITEM && GetBattlerAbility(battler) == ABILITY_MONKEY_BUSINESS && *choicedMove != MOVE_NONE && *choicedMove != MOVE_UNAVAILABLE && *choicedMove != gBattleMons[battler].moves[i])
-            unusableMoves |= gBitTable[i]
+            unusableMoves |= gBitTable[i];
         // Can't Use Twice flag
         else if (check & MOVE_LIMITATION_CANT_USE_TWICE && gBattleMoves[gBattleMons[battler].moves[i]].cantUseTwice && gBattleMons[battler].moves[i] == gLastResultingMoves[battler])
             unusableMoves |= gBitTable[i];
@@ -5504,7 +5505,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect = 1;
             }
             else if ((gLastUsedAbility == ABILITY_DAZZLING || gLastUsedAbility == ABILITY_QUEENLY_MAJESTY || gLastUsedAbility == ABILITY_ARMOR_TAIL || IsBattlerAlive(battler ^= BIT_FLANK))
-                  && (battlerAbility == ABILITY_DAZZLING || battlerAbility == ABILITY_QUEENLY_MAJESTY || battlerAbility == ABILITY_ARMOR_TAIL)
+                  && (battlerAbility == ABILITY_DAZZLING || battlerAbility == ABILITY_QUEENLY_MAJESTY || battlerAbility == ABILITY_ARMOR_TAIL || battlerAbility == ABILITY_TIME_LORD)
                   && GetChosenMovePriority(gBattlerAttacker) > 0
                   && GetBattlerSide(gBattlerAttacker) != GetBattlerSide(battler))
             {
@@ -9354,6 +9355,9 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
 
     if(move == MOVE_VEEVEE_VOLLEY)
         basePower = 10 * (gBattleMons[battlerAtk].friendship) / 25;
+    
+    if(move == MOVE_LICK && (gBattleMons[battlerAtk].species == SPECIES_LICKITUNG || gBattleMons[battlerAtk].species == SPECIES_LICKILICKY) )
+        basePower *= 4;
     
     switch (gBattleMoves[move].effect)
     {
