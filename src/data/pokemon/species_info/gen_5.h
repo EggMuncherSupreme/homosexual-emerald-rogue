@@ -6876,12 +6876,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     [SPECIES_STUNFISK_GALARIAN] =
     {
         STUNFISK_MISC_INFO,
-        .baseHP        = 109,
-        .baseAttack    = 81,
-        .baseDefense   = 99,
+        .baseHP        = 119,
+        .baseAttack    = 91,
+        .baseDefense   = 108,
         .baseSpeed     = 32,
-        .baseSpAttack  = 66,
-        .baseSpDefense = 84,
+        .baseSpAttack  = 76,
+        .baseSpDefense = 94,
         .types = { TYPE_GROUND, TYPE_STEEL },
         .friendship = STANDARD_FRIENDSHIP,
         .abilities = { ABILITY_MIMICRY, ABILITY_NONE },

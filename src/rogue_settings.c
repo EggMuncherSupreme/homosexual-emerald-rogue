@@ -592,7 +592,7 @@ u8 Rogue_GetDifficultyRewardLevel()
 
 u8 Rogue_GetStartingMonCapacity()
 {
-    u8 partySize = 1;
+    u8 partySize = 2;
 
     if(Rogue_GetConfigRange(CONFIG_RANGE_BATTLE_FORMAT) == BATTLE_FORMAT_DOUBLES || Rogue_GetConfigRange(CONFIG_RANGE_BATTLE_FORMAT) == BATTLE_FORMAT_MIXED)
         partySize = 2;
