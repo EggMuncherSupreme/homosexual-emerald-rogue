@@ -13,8 +13,13 @@
     \
     method(100, "", 0) \
     method(101, "Hack Creator", CREDITS_FLAG_TITLE) \
-    method(102, "Pokabbie", 0) \
+    method(102, "Debug", 0) \
     method(103, "", CREDITS_FLAG_BREAK) \
+    \
+    method(104, "", 0) \
+    method(105, "Emerald Rogue Creator", CREDITS_FLAG_TITLE) \
+    method(106, "Pokabbie", 0) \
+    method(107, "", CREDITS_FLAG_BREAK) \
     \
     method(200, "", 0) \
     method(201, "Pokémon Emerald", CREDITS_FLAG_TITLE) \
@@ -25,15 +30,15 @@
     method(301, "Made possible by...", CREDITS_FLAG_TITLE) \
     method(302, "", CREDITS_FLAG_BREAK) \
     \
-    method(400, "Community Moderators", CREDITS_FLAG_TITLE) \
-    method(401, "Erma", 0) \
-    method(402, "Raven", 0) \
-    method(403, "TailsMK4", 0) \
-    method(404, "LightningStrike7", 0) \
-    method(405, "Nacholord", 0) \
+    method(400, "Community Gigachads", CREDITS_FLAG_TITLE) \
+    method(401, "ElecP", 0) \
+    method(402, "ZeStinky", 0) \
+    method(403, "Cactus", 0) \
+    method(404, "TLord", 0) \
+    method(405, "Qamina", 0) \
     method(406, "", CREDITS_FLAG_BREAK) \
     \
-    method(500, "Community Artists", CREDITS_FLAG_TITLE) \
+    method(500, "Emerald Rogue Artists", CREDITS_FLAG_TITLE) \
     method(501, "Zefa", 0) \
     method(502, "SuperBren614", 0) \
     method(503, "LightningStrike7", 0) \
@@ -128,8 +133,17 @@
     \
     method(1301, "", 0) \
     method(1302, "Special Thanks to", CREDITS_FLAG_TITLE) \
-    method(1303, "Kate", 0) \
+    method(1303, "Sauce", 0) \
     method(1304, "", CREDITS_FLAG_BREAK) \
+    \
+    method(1305, "", 0) \
+    method(1306, "For making VGC Platinum", 0) \
+    method(1307, "", CREDITS_FLAG_BREAK) \
+    \
+    method(1308, "", 0) \
+    method(1309, "Without which this never", 0) \
+    method(1310, "would have happened.", 0) \
+    method(1311, "", CREDITS_FLAG_BREAK) \
     \
     method(1400, "", 0) \
     method(1401, "And to you, the community", 0) \
@@ -140,7 +154,7 @@
     method(1405, "", CREDITS_FLAG_BREAK) \
     \
     method(1406, "", 0) \
-    method(1407, "For making Rogue larger than", 0) \
+    method(1407, "For making Rogue gayer than", 0) \
     method(1408, "I could ever have imagined!", 0) \
     method(1409, "", CREDITS_FLAG_BREAK) \
     \
@@ -150,7 +164,12 @@
     method(1413, "", CREDITS_FLAG_BREAK) \
     \
     method(1500, "", 0) \
-    method(1501, "", CREDITS_FLAG_BREAK) \
+    method(1501, "For Shiva", 0) \
+    method(1502, "{EMOJI_HEART}", 0) \
+    method(1503, "", CREDITS_FLAG_BREAK) \
+    \
+    method(1600, "", 0) \
+    method(1601, "", CREDITS_FLAG_BREAK) \
 
 #define CREDITS_DECLARE_STRINGS(idx, str, flags) static const u8 sCreditsText_ ## idx [] = _(str);
 FOR_EACH_CREDIT(CREDITS_DECLARE_STRINGS)

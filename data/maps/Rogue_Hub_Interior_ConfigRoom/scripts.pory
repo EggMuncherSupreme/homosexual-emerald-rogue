@@ -451,7 +451,7 @@ script Rogue_ConfigRoom_MeetPokabbie
 
     if(flag(FLAG_IS_CHAMPION))
     {
-        msgbox(format("POKABBIE: Ah {PLAYER}!\pWelcome to my LAB!\nOr what I like to dub...\pThe EXPANSION ROOM!"))
+        msgbox(format("DEBUG: Ah {PLAYER}!\pWelcome to my LAB!\nOr what I like to dub...\pThe EXPANSION ROOM!"))
         msgbox(format("You can use this ROOM to enable SPECIAL MODES and although there's not too many now, I'll be sure to add more in future!\pFeel free to look around!"))
     }
     else
@@ -471,9 +471,9 @@ script Rogue_ConfigRoom_MeetPokabbie
         applymovement(OBJ_POKABBIE_ID, ConfigRoom_Pokabbie_Spin)
         waitmovement(0)
 
-        msgbox(format("The name's Abbie!\nBut you can call me Pokabbie!"))
+        msgbox(format("The name's Zoe!\nBut you can call me Debug!"))
 
-        msgbox(format("POKABBIE: I'm the DEV behind EMERALD ROGUE!\pWelcome to my LAB!\nOr what I like to dub...\pThe EXPANSION ROOM!"))
+        msgbox(format("DEBUG: I'm the DEV behind HOMO EMERALD ROGUE!\pWelcome to my LAB!\nOr what I like to dub...\pThe EXPANSION ROOM!"))
         msgbox(format("You can use this ROOM to enable SPECIAL MODES and although there's not too many now, I'll be sure to add more in future!\pFeel free to look around!"))
     }
 
@@ -489,7 +489,7 @@ script Rogue_ConfigRoom_TalkPokabbie
     lockall
 
     faceplayer
-    msgbox(format("POKABBIE: I hope you're enjoying EMERALD ROGUE!\pFeel free to enable any SPECIAL MODES from this room!\pI'll be sure to add some more in future!"), MSGBOX_DEFAULT)
+    msgbox(format("DEBUG: I hope you're enjoying HOMO EMERALD ROGUE!\pFeel free to enable any SPECIAL MODES from this room!\pI'll be sure to add some more in future!"), MSGBOX_DEFAULT)
 
     applymovement(OBJ_POKABBIE_ID, ConfigRoom_Pokabbie_Spin)
     waitmovement(0)

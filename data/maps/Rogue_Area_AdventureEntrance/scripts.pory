@@ -662,12 +662,12 @@ script Rogue_Area_AdventureEntrance_MeetPokabbie
     call(Rogue_Area_AdventureEntrance_PokabbieEnterMovement)
     waitmovement(0)
 
-    msgbox(format("{PLAYER}, that was amazing!\pThat last battle was just- WOW!\pOh… sorry, I'm getting ahead of myself.\pMy name's Pokabbie.\nI'm the Developer of Emerald Rogue!"))
+    msgbox(format("{PLAYER}, that was amazing!\pThat last battle was just- WOW!\pOh… sorry, I'm getting ahead of myself.\pMy name's Debug.\nI'm the Developer of Homo Emerald Rogue!"))
 
     applymovement(OBJ_EVENT_POKABBIE, Pokabbie_Spin_FaceUp)
     waitmovement(0)
 
-    msgbox(format("POKABBIE: Ta-da!\pNow that you're the Champion, there's sooooo much more fun stuff for you!\pSpeaking of…\nCan you lend me your Pokédex for one second, please."))
+    msgbox(format("DEBUG: Ta-da!\pNow that you're the Champion, there's sooooo much more fun stuff for you!\pSpeaking of…\nCan you lend me your Pokédex for one second, please."))
     closemessage
 
     call(Rogue_Area_AdventureEntrance_PokabbieExitMovement)
@@ -696,7 +696,7 @@ script Rogue_Area_AdventureEntrance_MeetPokabbie
     call(Rogue_Area_AdventureEntrance_PokabbieEnterMovement)
     waitmovement(0)
 
-    msgbox(format("POKABBIE: Phew…\nAll done!\pI've got a few upgrades for you!\pFirstly, your Pokédex can now change it's mode to different Regions.\pHere, take a look."))
+    msgbox(format("DEBUG: Phew…\nAll done!\pI've got a few upgrades for you!\pFirstly, your Pokédex can now change it's mode to different Regions.\pHere, take a look."))
 
     waitse
     special(Special_ViewRoguePokedex)

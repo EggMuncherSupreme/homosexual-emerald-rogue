@@ -146,7 +146,7 @@ script Rogue_Interior_ConfigLab_TriggerMeetPokabbie
     applymovement(OBJ_EVENT_POKABBIE, Pokabbie_Spin_FaceLeft)
     waitmovement(0)
 
-    msgbox(format("POKABBIE: Ta-da!\pI must admit, I didn't expect to be speaking to you until after you had become Champion and entered the Hall of Fame.\pBut I guess we can sequence break a bit…\nLet me remember my speech.\pEhem.\pNow that you're the, {FONT_NARROW}hopefully soon to be{FONT_NORMAL}, Champion, there's sooooo much more fun stuff for you!\pSpeaking of…\nCan you lend me your Pokédex for one second, please."))
+    msgbox(format("DEBUG: Ta-da!\pI must admit, I didn't expect to be speaking to you until after you had become Champion and entered the Hall of Fame.\pBut I guess we can sequence break a bit…\nLet me remember my speech.\pEhem.\pNow that you're the, {FONT_NARROW}hopefully soon to be{FONT_NORMAL}, Champion, there's sooooo much more fun stuff for you!\pSpeaking of…\nCan you lend me your Pokédex for one second, please."))
 
     if(!flag(FLAG_SYS_POKEDEX_GET))
     {
@@ -186,7 +186,7 @@ script Rogue_Interior_ConfigLab_TriggerMeetPokabbie
     applymovement(OBJ_EVENT_POKABBIE, Rogue_Interior_ConfigLab_Pokabbie2)
     waitmovement(0)
 
-    msgbox(format("POKABBIE: Phew…\nAll done!\pI've got a few upgrades for you!\pFirstly, your Pokédex can now change it's mode to different Regions.\pHere, take a look."))
+    msgbox(format("DEBUG: Phew…\nAll done!\pI've got a few upgrades for you!\pFirstly, your Pokédex can now change it's mode to different Regions.\pHere, take a look."))
 
     waitse
     special(Special_ViewRoguePokedex)
@@ -238,7 +238,7 @@ script Rogue_Interior_ConfigLab_TalkPokabbie
     if(var(VAR_RESULT) == YES)
     {
         setflag(FLAG_ROGUE_UNLOCKED_PIKIN_EASTER_EGG)
-        msgbox(format("POKABBIE: Hi {PLAYER}!\pIs that-\pThat is!\nIt's one of my Mareep!\pSo it ended up with you, huh?\pI guess you'll at least be able to show it some exciting Adventures!"))
+        msgbox(format("DEBUG: Hi {PLAYER}!\pIs that-\pThat is!\nIt's one of Pokabbie's Mareep!\pSo it ended up with you, huh?\pI guess you'll at least be able to show it some exciting Adventures!"))
 
         poryswitch(ROGUE_VERSION)
         {
@@ -248,13 +248,13 @@ script Rogue_Interior_ConfigLab_TalkPokabbie
             }
             ROGUE_VERSION_EXPANSION
             {
-                msgbox(format("You know I once made a challenge hack for a friend of mine where I gave Pikin it's very own Mega!\pA Mega Mareep!\pIt was a bit insane in that ROM hack though…\pOh I forgot, doh!\pYou can Mega Evolve Pikin in Emerald Rogue too!\pYou need to teach it Hurricane and then it will be able to Mega Evolve.\p… … …\pYes… like Mega Rayquaza…\pLook… I love Mareep alright!\pThere!\pYou should be able to teach Pikin Hurricane now from the Learn Moves menu.\pWhy not give Mega Mareep a try for yourself!\pJust be careful not to evolve it, otherwise you're going to have to hunt down yet another Pikin…\pTo be fair…\nThere are many Pikins…\pI hope you show Pikin some exciting Adventures!"))
+                msgbox(format("You know Pokabbie once made a challenge hack for a friend of mine where she gave Pikin it's very own Mega!\pA Mega Mareep!\pI heard it was a bit insane in that ROM hack though…\pOh I forgot, doh!\pYou can Mega Evolve Pikin in Emerald Rogue too!\pYou need to teach it Hurricane and then it will be able to Mega Evolve.\p… … …\pYes… like Mega Rayquaza…\pLook… she love Mareep alright!\pThere!\pYou should be able to teach Pikin Hurricane now from the Learn Moves menu.\pWhy not give Mega Mareep a try for yourself!\pJust be careful not to evolve it, otherwise you're going to have to hunt down yet another Pikin…\pTo be fair…\nThere are many Pikins…\pI hope you show Pikin some exciting Adventures!"))
             }
         }
     }
     else
     {
-        msgbox(format("POKABBIE: Hi {PLAYER}!\pI hope you're enjoying Emerald Rogue!\pIf not…\nI dunno?\lSorry I guess?"))
+        msgbox(format("DEBUG: Hi {PLAYER}!\pI hope you're enjoying\nHomosexual Emerald Rogue!\pIf not…\nI dunno?\lSorry I guess?"))
     }
 
     release
