@@ -5384,7 +5384,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 }
                 partner = BATTLE_PARTNER(battler);
 
-                if (IsDoubleBattle() && gBattleMons[partner].hp < gBattleMons[partner].maxHP)
+                if (IsDoubleBattle() && gBattleMons[partner].hp < gBattleMons[partner].maxHP && IsBattlerAlive(partner))
                 {
                     gBattlerTarget = partner;
                     gBattlerAttacker = battler;
