@@ -1277,6 +1277,18 @@ static bool32 TryAegiFormChange(void)
         gBattleMons[gBattlerAttacker].species = SPECIES_AEGISLASH_SHIELD;
         break;
     case SPECIES_BURMY_PLANT_CLOAK:
+        if (IS_MOVE_STATUS(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_BURMY_TRASH_CLOAK;
+        } else if (IS_MOVE_PHYSICAL(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_BURMY_SANDY_CLOAK;
+        } else {
+            return FALSE;
+        }
+        break;
     case SPECIES_WORMADAM_PLANT_CLOAK:
         if (IS_MOVE_STATUS(gCurrentMove)){
             if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
@@ -1291,6 +1303,18 @@ static bool32 TryAegiFormChange(void)
         }
         break;
     case SPECIES_BURMY_SANDY_CLOAK:
+        if (IS_MOVE_STATUS(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_BURMY_TRASH_CLOAK;
+        } else if (IS_MOVE_SPECIAL(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_BURMY_PLANT_CLOAK;
+        } else {
+            return FALSE;
+        }
+        break;
     case SPECIES_WORMADAM_SANDY_CLOAK:
         if (IS_MOVE_STATUS(gCurrentMove)){
             if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
@@ -1305,6 +1329,18 @@ static bool32 TryAegiFormChange(void)
         }
         break;
     case SPECIES_BURMY_TRASH_CLOAK:
+        if (IS_MOVE_PHYSICAL(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_BURMY_SANDY_CLOAK;
+        } else if (IS_MOVE_SPECIAL(gCurrentMove)){
+            if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
+                gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] = gBattleMons[gBattlerAttacker].species;
+            gBattleMons[gBattlerAttacker].species = SPECIES_BURMY_PLANT_CLOAK;
+        } else {
+            return FALSE;
+        }
+        break;
     case SPECIES_WORMADAM_TRASH_CLOAK:
         if (IS_MOVE_SPECIAL(gCurrentMove)){
             if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
