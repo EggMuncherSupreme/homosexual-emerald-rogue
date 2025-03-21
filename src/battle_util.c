@@ -10213,7 +10213,9 @@ static inline u32 CalcAttackStat(u32 move, u32 battlerAtk, u32 battlerDef, u32 m
         }
         break;
     case ABILITY_TRIPLE_THREAT:
-        modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.4));
+        if (gBattleMoves[gCurrentMove].effect != EFFECT_MULTI_HIT && gBattleMoves[gCurrentMove].effect != EFFECT_MULTI_HIT_FLAME_BURST){
+            modifier = uq4_12_multiply_half_down(modifier, UQ_4_12(0.4));
+        }
         break;
     }
 
@@ -11744,6 +11746,12 @@ u8 GetBattleMoveSplit(u32 moveId)
     }
     if (gBattleMoves[moveId].effect == EFFECT_RELIC_SONG){
         return GetSplitBasedOnStats(gBattlerAttacker);
+    }
+    if (gBattleMoves[moveId].effect == EFFECT_HIDDEN_POWER){
+        if (gBattleMoves[moveId].type < TYPE_MYSTERY)
+            return SPLIT_PHYSICAL;
+        else
+            return SPLIT_SPECIAL;
     }
     if (B_PHYSICAL_SPECIAL_SPLIT >= GEN_4)
         return gBattleMoves[moveId].split;

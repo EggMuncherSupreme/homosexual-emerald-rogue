@@ -1647,7 +1647,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_CONFUSION] =
     {
         .effect = EFFECT_CONFUSE_HIT,
-        .power = 30,
+        .power = 50,
         .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 25,
