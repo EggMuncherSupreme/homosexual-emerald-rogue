@@ -3247,7 +3247,7 @@ static bool8 SelectNextPreset(struct TrainerPartyScratch* scratch, u16 species, 
                 return FALSE;
             }
         }
-
+/*
         // Swap out limited count items, if they already exist
         //
         if(outPreset->heldItem == ITEM_LEFTOVERS && scratch->heldItems.hasLeftovers)
@@ -3261,8 +3261,8 @@ static bool8 SelectNextPreset(struct TrainerPartyScratch* scratch, u16 species, 
             // Swap shell bell to NONE (i.e. berry)
             outPreset->heldItem = ITEM_NONE;
         }
-        
-        if(IsChoiceItem(outPreset->heldItem) && scratch->heldItems.hasChoiceItem)
+        */
+        /*if(IsChoiceItem(outPreset->heldItem) && scratch->heldItems.hasChoiceItem) cowardice
         {
             // Swap choice items for weaker versions
             switch (outPreset->heldItem)
@@ -3285,14 +3285,14 @@ static bool8 SelectNextPreset(struct TrainerPartyScratch* scratch, u16 species, 
                 outPreset->heldItem = ITEM_NONE;
                 break;
             }
-        }
+        }*/
 
 #ifdef ROGUE_EXPANSION
-        if(outPreset->heldItem == ITEM_BLACK_SLUDGE && scratch->heldItems.hasBlackSludge)
+        /*if(outPreset->heldItem == ITEM_BLACK_SLUDGE && scratch->heldItems.hasBlackSludge)
         {
             // Swap left overs to shell bell
             outPreset->heldItem = ITEM_SHELL_BELL;
-        }
+        }*/
 
         if(!IsMegaEvolutionEnabled())
         {
