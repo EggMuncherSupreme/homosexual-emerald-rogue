@@ -9601,7 +9601,7 @@ BattleScript_ElectricSurgeActivates::
 	waitmessage B_WAIT_TIME_LONG
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG
 	call BattleScript_ActivateTerrainEffects
-	return
+	end3
 
 BattleScript_MistySurgeActivates::
 	pause B_WAIT_TIME_SHORT
@@ -9610,7 +9610,7 @@ BattleScript_MistySurgeActivates::
 	waitmessage B_WAIT_TIME_LONG
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG
 	call BattleScript_ActivateTerrainEffects
-	return
+	end3
 
 BattleScript_GrassySurgeActivates::
 	pause B_WAIT_TIME_SHORT
@@ -9619,7 +9619,7 @@ BattleScript_GrassySurgeActivates::
 	waitmessage B_WAIT_TIME_LONG
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG
 	call BattleScript_ActivateTerrainEffects
-	return
+	end3
 
 BattleScript_PsychicSurgeActivates::
 	pause B_WAIT_TIME_SHORT
@@ -9628,7 +9628,7 @@ BattleScript_PsychicSurgeActivates::
 	waitmessage B_WAIT_TIME_LONG
 	playanimation BS_SCRIPTING, B_ANIM_RESTORE_BG
 	call BattleScript_ActivateTerrainEffects
-	return
+	end3
 
 BattleScript_BadDreamsActivates::
 	setbyte gBattlerTarget, 0
