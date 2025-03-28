@@ -776,7 +776,7 @@ SINGLE_BATTLE_TEST("(DYNAMAX) Max Hailstorm sets up hail")
         TURN { MOVE(player, MOVE_POWDER_SNOW, dynamax: TRUE); MOVE(opponent, MOVE_CELEBRATE); }
     } SCENE {
         MESSAGE("Wobbuffet used Max Hailstorm!");
-        MESSAGE("It started to hail!");
+        MESSAGE("It started to snow!");
         MESSAGE("Foe Wobbuffet used Celebrate!");
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_HAIL_CONTINUES);
     }

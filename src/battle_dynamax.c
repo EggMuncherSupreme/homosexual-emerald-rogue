@@ -672,8 +672,8 @@ void BS_SetMaxMoveEffect(void)
                     msg = B_MSG_STARTED_SANDSTORM;
                     break;
                 case MAX_EFFECT_HAIL:
-                    weather = ENUM_WEATHER_HAIL;
-                    msg = B_MSG_STARTED_HAIL;
+                    weather = ENUM_WEATHER_SNOW;
+                    msg = B_MSG_STARTED_SNOW;
                     break;
             }
             if (TryChangeBattleWeather(gBattlerAttacker, weather, FALSE))

@@ -35133,7 +35133,7 @@ General_SetWeather::
 	jumpreteq 1, General_Sun
 	jumpreteq 2, General_Rain
 	jumpreteq 3, General_Sandstorm
-	jumpreteq 4, General_Hail
+	jumpreteq 4, General_Snow
 	end
 
 Move_MAX_GUARD:
