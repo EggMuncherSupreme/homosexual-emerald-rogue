@@ -699,7 +699,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_POISON_STING] =
     {
         .effect = EFFECT_POISON_HIT,
-        .power = 15,
+        .power = 50,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 35,
