@@ -6099,15 +6099,8 @@ static void SetupTrainerBattleInternal(u16 trainerNum)
 
     switch(Rogue_GetConfigRange(CONFIG_RANGE_BATTLE_FORMAT))
     {
-        case BATTLE_FORMAT_SINGLES:
-            shouldDoubleBattle = TRUE;
-            break;
 
         case BATTLE_FORMAT_DOUBLES:
-            shouldDoubleBattle = TRUE;
-            break;
-
-        case BATTLE_FORMAT_MIXED:
             shouldDoubleBattle = TRUE;
             break;
 
