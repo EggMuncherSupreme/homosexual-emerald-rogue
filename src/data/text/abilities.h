@@ -337,7 +337,7 @@ static const u8 sSuperDuperLuckDescription[] = _("Critical hits land oftener.");
 static const u8 sWideEyedDescription[] = _("Status moves hit both.");
 static const u8 sMonkeyBusinessDescription[] = _("Ups Sp.Atk and locks move.");
 static const u8 sTimeLordDescription[] = _("Protects self from priority.");
-static const u8 sStuckInThePastDescription[] _("Sp. Attacks use Sp. Def.");
+static const u8 sStuckInThePastDescription[] = _("Sp. Attacks use Sp. Def.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -691,7 +691,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_WIDE_EYED] = _("Wide Eyed"),
     [ABILITY_MONKEY_BUSINESS] = _("Monkey Business"),
     [ABILITY_TIME_LORD] = _("Time Lord"),
-    [ABILITY_STUCK_IN_THE_PAST] = _("Stuck In The Past"),
+    [ABILITY_STUCK_IN_THE_PAST] = _("StuckInThePast"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
