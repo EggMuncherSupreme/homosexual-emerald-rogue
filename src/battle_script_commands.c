@@ -1263,7 +1263,7 @@ static bool32 TryAegiFormChange(void)
     default:
         return FALSE;
     case SPECIES_AEGISLASH_SHIELD: // Shield -> Blade
-        if (IS_MOVE_STATUS(gCurrentMove))
+        if (IS_MOVE_STATUS(gCurrentMove) || gCurrentMove == MOVE_BEHEMOTH_BASH)
             return FALSE;
     
         if (gBattleStruct->changedSpecies[side][gBattlerPartyIndexes[gBattlerAttacker]] == SPECIES_NONE)
