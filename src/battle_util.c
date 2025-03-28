@@ -9481,7 +9481,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         if (GetBattlerAbility(battlerAtk) == ABILITY_THICK_FAT){
             basePower = 120;
         }
-        if (weight >= ARRAY_COUNT(sHeatCrashPowerTable))
+        else if (weight >= ARRAY_COUNT(sHeatCrashPowerTable))
             basePower = sHeatCrashPowerTable[ARRAY_COUNT(sHeatCrashPowerTable) - 1];
         else
             basePower = sHeatCrashPowerTable[weight];
