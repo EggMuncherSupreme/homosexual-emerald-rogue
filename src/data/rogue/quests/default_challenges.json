@@ -590,7 +590,7 @@
             },
             {
                 "name": "Iron Mono",
-                "description": "Win a full Run with: 5x Capacity Curses.",
+                "description": "Win a full Run with: 4x Capacity Curses.",
                 "triggers":
                 [
                     {
@@ -601,7 +601,7 @@
                 ],
                 "requirements":
                 [
-                    { "item": "ITEM_PARTY_CURSE", "count": 5 }
+                    { "item": "ITEM_PARTY_CURSE", "count": 4 }
                 ],
                 "rewards":
                 [
@@ -616,7 +616,7 @@
             },
             {
                 "name": "Iron Kaizo",
-                "description": "Win a full Run with: Fresh Start enabled, Random Starter, Embargo Curse, 5x Capacity Curses & 99x Discount Curses.",
+                "description": "Win a full Run with: Fresh Start enabled, Random Starter, Embargo Curse, 4x Capacity Curses & 99x Discount Curses.",
                 "triggers":
                 [
                     {
@@ -630,7 +630,7 @@
                     { "flag": "FLAG_ROGUE_HAS_RANDOM_STARTER", "state": true },
                     { "config_toggle": "CONFIG_TOGGLE_BAG_WIPE", "state": true },
                     { "item": "ITEM_BATTLE_ITEM_CURSE", "count": 1 },
-                    { "item": "ITEM_PARTY_CURSE", "count": 5 },
+                    { "item": "ITEM_PARTY_CURSE", "count": 4 },
                     { "item": "ITEM_SHOP_PRICE_CURSE", "count": 99 }
                 ],
                 "rewards":
