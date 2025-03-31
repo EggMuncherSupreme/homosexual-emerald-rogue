@@ -82,6 +82,7 @@ static const s8 sAiAbilityRatings[ABILITIES_COUNT] =
     [ABILITY_DRIZZLE] = 9,
     [ABILITY_DROUGHT] = 9,
     [ABILITY_DRY_SKIN] = 6,
+    [ABILITY_MOLTEN_DOWN] = 6,
     [ABILITY_EARLY_BIRD] = 4,
     [ABILITY_EFFECT_SPORE] = 4,
     [ABILITY_ELECTRIC_SURGE] = 8,
@@ -201,6 +202,7 @@ static const s8 sAiAbilityRatings[ABILITIES_COUNT] =
     [ABILITY_SAP_SIPPER] = 7,
     [ABILITY_SCHOOLING] = 6,
     [ABILITY_SCRAPPY] = 6,
+    [ABILITY_DAUNTLESS] = 5,
     [ABILITY_SERENE_GRACE] = 8,
     [ABILITY_SHADOW_SHIELD] = 8,
     [ABILITY_SHADOW_TAG] = 10,
@@ -350,6 +352,7 @@ static const u16 sEncouragedEncoreEffects[] =
     EFFECT_SNOWSCAPE,
     EFFECT_TORMENT,
     EFFECT_WILL_O_WISP,
+    EFFECT_FLASH_FREEZE,
     EFFECT_FOLLOW_ME,
     EFFECT_CHARGE,
     EFFECT_TRICK,
@@ -1432,6 +1435,7 @@ bool32 IsNonVolatileStatusMoveEffect(u32 moveEffect)
     case EFFECT_POISON:
     case EFFECT_PARALYZE:
     case EFFECT_WILL_O_WISP:
+    case EFFECT_FLASH_FREEZE:
     case EFFECT_YAWN:
         return TRUE;
     default:
@@ -1646,6 +1650,7 @@ bool32 ShouldSetSun(u32 battlerAtk, u32 atkAbility, u32 holdEffect)
       || atkAbility == ABILITY_LEAF_GUARD
       || atkAbility == ABILITY_SOLAR_POWER
       || atkAbility == ABILITY_HARVEST
+      || atkAbility == ABILITY_MOLTEN_DOWN
       || HasMoveEffect(battlerAtk, EFFECT_SOLAR_BEAM)
       || HasMoveEffect(battlerAtk, EFFECT_MORNING_SUN)
       || HasMoveEffect(battlerAtk, EFFECT_SYNTHESIS)
@@ -3232,6 +3237,7 @@ bool32 PartnerMoveEffectIsStatusSameTarget(u32 battlerAtkPartner, u32 battlerDef
        || gBattleMoves[partnerMove].effect == EFFECT_TOXIC
        || gBattleMoves[partnerMove].effect == EFFECT_PARALYZE
        || gBattleMoves[partnerMove].effect == EFFECT_WILL_O_WISP
+       || gBattleMoves[partnerMove].effect == EFFECT_FLASH_FREEZE
        || gBattleMoves[partnerMove].effect == EFFECT_YAWN))
         return TRUE;
     return FALSE;

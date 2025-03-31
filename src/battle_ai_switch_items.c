@@ -108,7 +108,7 @@ static bool8 HasBadOdds(u32 battler)
             if (aiMoveEffect == EFFECT_REFLECT || aiMoveEffect == EFFECT_LIGHT_SCREEN
             || aiMoveEffect == EFFECT_SPIKES || aiMoveEffect == EFFECT_TOXIC_SPIKES || aiMoveEffect == EFFECT_STEALTH_ROCK || aiMoveEffect == EFFECT_STICKY_WEB || aiMoveEffect == EFFECT_LEECH_SEED
             || aiMoveEffect == EFFECT_EXPLOSION
-            || aiMoveEffect == EFFECT_SLEEP || aiMoveEffect == EFFECT_YAWN || aiMoveEffect == EFFECT_TOXIC || aiMoveEffect == EFFECT_WILL_O_WISP || aiMoveEffect == EFFECT_PARALYZE
+            || aiMoveEffect == EFFECT_SLEEP || aiMoveEffect == EFFECT_YAWN || aiMoveEffect == EFFECT_TOXIC || aiMoveEffect == EFFECT_WILL_O_WISP || aiMoveEffect == EFFECT_PARALYZE || aiMoveEffect == EFFECT_FLASH_FREEZE
             || aiMoveEffect == EFFECT_TRICK || aiMoveEffect == EFFECT_TRICK_ROOM || aiMoveEffect== EFFECT_WONDER_ROOM || aiMoveEffect ==  EFFECT_PSYCHO_SHIFT || aiMoveEffect == EFFECT_FAKE_OUT
             )
             {
@@ -336,7 +336,8 @@ static bool8 FindMonThatAbsorbsOpponentsMove(u32 battler)
     {
         absorbingTypeAbilities[0] = ABILITY_FLASH_FIRE;
         absorbingTypeAbilities[1] = ABILITY_HEAT_SINK;
-        numAbsorbingAbilities = 2;
+        absorbingTypeAbilities[2] = ABILITY_MOLTEN_DOWN;
+        numAbsorbingAbilities = 3;
     }
     else if (gBattleMoves[gLastLandedMoves[battler]].type == TYPE_WATER)
     {
@@ -1348,7 +1349,12 @@ static s32 GetSwitchinWeatherImpact(void)
             if (weatherImpact == 0)
                 weatherImpact = 1;
         }
-
+        if ((gBattleWeather & B_WEATHER_RAIN) && (ability == ABILITY_SOLAR_POWER || ability == ABILITY_MOLTEN_DOWN))
+        {
+            weatherImpact = maxHP / 8;
+            if (weatherImpact == 0)
+                weatherImpact = 1;
+        }
         // Healing
         if (gBattleWeather & B_WEATHER_RAIN)
         {
@@ -1361,6 +1367,14 @@ static s32 GetSwitchinWeatherImpact(void)
             else if (ability == ABILITY_RAIN_DISH)
             {
                 weatherImpact = maxHP / 16;
+                if (weatherImpact == 0)
+                    weatherImpact = 1;
+            }
+        }
+        if (gBattleWeather & B_WEATHER_SUN){
+            if (ability == ABILITY_MOLTEN_DOWN)
+            {
+                weatherImpact = maxHP / 8;
                 if (weatherImpact == 0)
                     weatherImpact = 1;
             }
