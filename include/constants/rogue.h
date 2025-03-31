@@ -555,8 +555,13 @@
 #define DEBUG_RANGE_FORCED_EVIL_TEAM                (DEBUG_START_VALUE + 3)
 #define DEBUG_RANGE_COUNT                           4
 
-#define BATTLE_FORMAT_DOUBLES   0
-#define BATTLE_FORMAT_COUNT     1
+
+
+
+#define BATTLE_FORMAT_SINGLES   0
+#define BATTLE_FORMAT_DOUBLES   1
+#define BATTLE_FORMAT_MIXED     2
+#define BATTLE_FORMAT_COUNT     3
 
 
 // Game Modes

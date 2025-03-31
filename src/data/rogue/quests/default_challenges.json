@@ -572,7 +572,6 @@
                 "requirements":
                 [
                     { "flag": "FLAG_ROGUE_HAS_RANDOM_STARTER", "state": true },
-                    { "config_range": "CONFIG_RANGE_BATTLE_FORMAT", "value": "BATTLE_FORMAT_DOUBLES" },
                     { "config_toggle": "CONFIG_TOGGLE_BAG_WIPE", "state": true },
                     { "item": "ITEM_BATTLE_ITEM_CURSE", "count": 1 },
                     { "item": "ITEM_SPECIES_CLAUSE_CURSE", "count": 1 },

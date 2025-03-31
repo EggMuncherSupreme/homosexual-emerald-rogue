@@ -198,7 +198,9 @@ static u8 const sMenuNameDesc_BattleFormatMixed[] = _(
 );
 static u8 const* const sMenuNameDesc_BattleFormat[] = 
 {
+    [BATTLE_FORMAT_SINGLES] = sMenuNameDesc_BattleFormatDoubles,
     [BATTLE_FORMAT_DOUBLES] = sMenuNameDesc_BattleFormatDoubles,
+    [BATTLE_FORMAT_MIXED] = sMenuNameDesc_BattleFormatDoubles,
 };
 
 const u8 sMenuNameDesc_Affection[] = _(
@@ -1757,12 +1759,17 @@ static void BattleFormat_DrawChoices(u8 menuOffset, u8 selection)
 
     switch (selection)
     {
-
+    case BATTLE_FORMAT_SINGLES:
+        text = sMenuName_BattleFormatDoubles;
+        break;
     case BATTLE_FORMAT_DOUBLES:
         text = sMenuName_BattleFormatDoubles;
         break;
+    case BATTLE_FORMAT_MIXED:
+        text = sMenuName_BattleFormatDoubles;
+        break;
     }
-
+    
     DrawOptionMenuChoice(text, XPOS_CHOICES, menuOffset * YPOS_SPACING, style);
 }
 

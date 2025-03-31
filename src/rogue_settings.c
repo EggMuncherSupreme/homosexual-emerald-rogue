@@ -594,7 +594,7 @@ u8 Rogue_GetStartingMonCapacity()
 {
     u8 partySize = 2;
 
-    if(Rogue_GetConfigRange(CONFIG_RANGE_BATTLE_FORMAT) == BATTLE_FORMAT_DOUBLES || Rogue_GetConfigRange(CONFIG_RANGE_BATTLE_FORMAT) == BATTLE_FORMAT_MIXED)
+    if(Rogue_GetConfigRange(CONFIG_RANGE_BATTLE_FORMAT) == BATTLE_FORMAT_DOUBLES)
         partySize = 2;
 
     partySize = max(partySize, Rogue_GetModeRules()->enterPartySize);
