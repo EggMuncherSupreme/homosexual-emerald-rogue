@@ -105,6 +105,7 @@ static const u16 sSkillSwapBannedAbilities[] =
     ABILITY_MULTITYPE,
     ABILITY_ILLUSION,
     ABILITY_STANCE_CHANGE,
+    ABILITY_MIMICRY,
     ABILITY_SCHOOLING,
     ABILITY_COMATOSE,
     ABILITY_SHIELDS_DOWN,
@@ -120,6 +121,8 @@ static const u16 sSkillSwapBannedAbilities[] =
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
     ABILITY_GROWING_PUMPKIN,
+    ABILITY_MEGA_SHIFT_X,
+    ABILITY_MEGA_SHIFT_Y,
 };
 
 static const u16 sRolePlayBannedAbilities[] =
@@ -149,6 +152,9 @@ static const u16 sRolePlayBannedAbilities[] =
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
     ABILITY_GROWING_PUMPKIN,
+    ABILITY_MIMICRY,
+    ABILITY_MEGA_SHIFT_X,
+    ABILITY_MEGA_SHIFT_Y,
 
     ABILITY_FORECAST_PRIORITY,
 };
@@ -170,6 +176,9 @@ static const u16 sRolePlayBannedAttackerAbilities[] =
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
+    ABILITY_MIMICRY,
+    ABILITY_MEGA_SHIFT_X,
+    ABILITY_MEGA_SHIFT_Y,
 };
 
 static const u16 sWorrySeedBannedAbilities[] =
@@ -189,6 +198,9 @@ static const u16 sWorrySeedBannedAbilities[] =
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
+    ABILITY_MIMICRY,
+    ABILITY_MEGA_SHIFT_X,
+    ABILITY_MEGA_SHIFT_Y,
 };
 
 static const u16 sGastroAcidBannedAbilities[] =
@@ -210,6 +222,9 @@ static const u16 sGastroAcidBannedAbilities[] =
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
+    ABILITY_MIMICRY,
+    ABILITY_MEGA_SHIFT_X,
+    ABILITY_MEGA_SHIFT_Y,
 };
 
 static const u16 sEntrainmentBannedAttackerAbilities[] =
@@ -232,6 +247,9 @@ static const u16 sEntrainmentBannedAttackerAbilities[] =
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
     ABILITY_GROWING_PUMPKIN,
+    ABILITY_MIMICRY,
+    ABILITY_MEGA_SHIFT_X,
+    ABILITY_MEGA_SHIFT_Y,
 
     ABILITY_FORECAST_PRIORITY,
 };
@@ -252,6 +270,9 @@ static const u16 sEntrainmentTargetSimpleBeamBannedAbilities[] =
     ABILITY_ZERO_TO_HERO,
     ABILITY_TERA_SHIFT,
     ABILITY_CLOAK_CHANGE,
+    ABILITY_MIMICRY,
+    ABILITY_MEGA_SHIFT_X,
+    ABILITY_MEGA_SHIFT_Y,
 };
 
 static u8 CalcBeatUpPower(void)
@@ -962,6 +983,7 @@ static const u8 sAbilitiesAffectedByMoldBreaker[] =
     [ABILITY_CLEAR_BODY] = 1,
     [ABILITY_DAMP] = 1,
     [ABILITY_DRY_SKIN] = 1,
+    [ABILITY_MOLTEN_DOWN] = 1,
     [ABILITY_FILTER] = 1,
     [ABILITY_FLASH_FIRE] = 1,
     [ABILITY_FLOWER_GIFT] = 1,
@@ -1066,6 +1088,8 @@ static const u8 sAbilitiesNotTraced[ABILITIES_COUNT] =
     [ABILITY_TERA_SHIFT] = 1,
     [ABILITY_CLOAK_CHANGE] = 1,
     [ABILITY_GROWING_PUMPKIN] = 1,
+    [ABILITY_MEGA_SHIFT_X] = 1,
+    [ABILITY_MEGA_SHIFT_Y] = 1,
 
     [ABILITY_FORECAST_PRIORITY] = 1,
 };
@@ -5270,6 +5294,21 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     effect++;
                 }
                 break;
+            case ABILITY_MOLTEN_DOWN:
+                if (IsBattlerWeatherAffected(battler, B_WEATHER_RAIN))
+                    goto SOLAR_POWER_HP_DROP;
+                if (IsBattlerWeatherAffected(battler, B_WEATHER_SUN)
+                 && !BATTLER_MAX_HP(battler)
+                 && !(gStatuses3[battler] & STATUS3_HEAL_BLOCK))
+                {
+                    BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                    gBattleMoveDamage = GetNonDynamaxMaxHP(battler) /  8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    gBattleMoveDamage *= -1;
+                    effect++;
+                }
+                break;
             case ABILITY_EARTH_EATER:
                 if ((gStatuses3[battler] & STATUS3_UNDERGROUND)
                 && !BATTLER_MAX_HP(battler)
@@ -5549,6 +5588,10 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             case ABILITY_WATER_ABSORB:
             case ABILITY_DRY_SKIN:
                 if (moveType == TYPE_WATER)
+                    effect = 1;
+                break;
+            case ABILITY_MOLTEN_DOWN:
+                if (moveType == TYPE_FIRE)
                     effect = 1;
                 break;
             case ABILITY_MOTOR_DRIVE:
@@ -5893,6 +5936,8 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 case ABILITY_ZERO_TO_HERO:
                 case ABILITY_CLOAK_CHANGE:
                 case ABILITY_GROWING_PUMPKIN:
+                case ABILITY_MEGA_SHIFT_X:
+                case ABILITY_MEGA_SHIFT_Y:
                     break;
                 default:
                     if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_ABILITY_SHIELD)
@@ -6897,6 +6942,8 @@ bool32 IsNeutralizingGasBannedAbility(u32 ability)
     case ABILITY_ZERO_TO_HERO:
     case ABILITY_TERA_SHIFT:
     case ABILITY_CLOAK_CHANGE:
+    case ABILITY_MEGA_SHIFT_X:
+    case ABILITY_MEGA_SHIFT_Y:
         return TRUE;
     default:
         return FALSE;
@@ -9938,6 +9985,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
         if (moveType == TYPE_FIRE)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.25));
         break;
+    case ABILITY_MOLTEN_DOWN:
+        if (moveType == TYPE_WATER)
+            modifier = uq4_12_multiply(modifier, UQ_4_12(1.25));
+        break;
     case ABILITY_PROTOSYNTHESIS:
         {
             u8 defHighestStat = GetHighestStatId(battlerDef);
@@ -10926,6 +10977,14 @@ static inline void MulByTypeEffectiveness(uq4_12_t *modifier, u32 move, u32 move
         && mod == UQ_4_12(0.0))
     {
         mod = UQ_4_12(1.0);
+        if (recordAbilities)
+            RecordAbilityBattle(battlerAtk, abilityAtk);
+    }
+    else if ((moveType == TYPE_PSYCHIC) && defType == TYPE_DARK
+    && (abilityAtk == ABILITY_DAUNTLESS)
+    && mod == UQ_4_12(0.0))
+    {
+        mod = UQ_4_12(0.5);
         if (recordAbilities)
             RecordAbilityBattle(battlerAtk, abilityAtk);
     }

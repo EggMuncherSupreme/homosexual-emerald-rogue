@@ -9825,6 +9825,9 @@ static void Cmd_various(void)
             case ABILITY_SHIELDS_DOWN:      case ABILITY_DISGUISE:
             case ABILITY_RKS_SYSTEM:        case ABILITY_TRACE:
             case ABILITY_ZERO_TO_HERO:      case ABILITY_CLOAK_CHANGE:
+            case ABILITY_MIMICRY:           case ABILITY_MEGA_SHIFT_X:
+            case ABILITY_MEGA_SHIFT_Y:
+
             case ABILITY_FORECAST_PRIORITY:
                 break;
             default:

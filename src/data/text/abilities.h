@@ -338,6 +338,10 @@ static const u8 sWideEyedDescription[] = _("Status moves hit both.");
 static const u8 sMonkeyBusinessDescription[] = _("Ups Sp.Atk and locks move.");
 static const u8 sTimeLordDescription[] = _("Protects self from priority.");
 static const u8 sStuckInThePastDescription[] = _("Sp. Attacks use Sp. Def.");
+static const u8 sMoltenDownDescription[] = _("Prefers heat to moisture.");
+static const u8 sMegaShiftXDescription[] = _("Mega evolves on switch out.");
+static const u8 sMegaShiftYDescription[] = _("Mega evolves on switch out.");
+static const u8 sDauntlessDescription[] = _("Hits Dark-type Pokémon.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -692,6 +696,10 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MONKEY_BUSINESS] = _("Monkey Business"),
     [ABILITY_TIME_LORD] = _("Time Lord"),
     [ABILITY_STUCK_IN_THE_PAST] = _("StuckInThePast"),
+    [ABILITY_MOLTEN_DOWN]  = _("Molten Down"),
+    [ABILITY_MEGA_SHIFT_X] = _("Mega Shift X"),
+    [ABILITY_MEGA_SHIFT_Y] = _("Mega Shift Y"),
+    [ABILITY_DAUNTLESS] = _("Dauntless"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1046,6 +1054,10 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MONKEY_BUSINESS] = _("MonkeyBiznis"),
     [ABILITY_TIME_LORD] = _("Time Lord"),
     [ABILITY_STUCK_IN_THE_PAST] = _("StuckInPast"),
+    [ABILITY_MOLTEN_DOWN] = _("Molten Down"),
+    [ABILITY_MEGA_SHIFT_X] = _("Mega Shift X"),
+    [ABILITY_MEGA_SHIFT_Y] = _("Mega Shift Y"),
+    [ABILITY_DAUNTLESS] = _("Dauntless"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1401,6 +1413,11 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_MONKEY_BUSINESS] = sMonkeyBusinessDescription,
     [ABILITY_TIME_LORD] = sTimeLordDescription,
     [ABILITY_STUCK_IN_THE_PAST] = sStuckInThePastDescription,
+    [ABILITY_MOLTEN_DOWN] = sMoltenDownDescription,
+    [ABILITY_MEGA_SHIFT_X]= sMegaShiftXDescription,
+    [ABILITY_MEGA_SHIFT_Y]= sMegaShiftYDescription,
+    [ABILITY_DAUNTLESS] = sDauntlessDescription,
+
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
 };
