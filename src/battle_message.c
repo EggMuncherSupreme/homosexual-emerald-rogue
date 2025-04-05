@@ -805,7 +805,7 @@ static const u8 sText_AttackerLostElectricType[] = _("{B_ATK_NAME_WITH_PREFIX} u
 static const u8 sText_AttackerSwitchedStatWithTarget[] = _("{B_ATK_NAME_WITH_PREFIX} switched {B_BUFF1}\nwith its target!");
 static const u8 sText_BeingHitChargedPkmnWithPower[] = _("Being hit by {B_CURRENT_MOVE}\ncharged {B_DEF_NAME_WITH_PREFIX} with power!");
 static const u8 sText_SunlightActivatedAbility[] = _("The harsh sunlight activated\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ABILITY}!");
-static const u8 sText_StatWasHeightened[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_BUFF1} was heightened!");
+static const u8 sText_StatWasHeightened[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_BUFF1}\nwas heightened!");
 static const u8 sText_ElectricTerrainActivatedAbility[] = _("The Electric Terrain activated\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_LAST_ABILITY}!");
 static const u8 sText_AbilityWeakenedSurroundingMonsStat[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nweakened the {B_BUFF1} of\lall surrounding Pokémon!\p");
 static const u8 sText_AttackerGainedStrengthFromTheFallen[] = _("{B_ATK_NAME_WITH_PREFIX} gained strength\nfrom the fallen!");
@@ -864,6 +864,7 @@ static const u8 sText_IceRinkHeal[] = _("Ice Rink restored\n{B_ATK_NAME_WITH_PRE
 static const u8 sText_QuarryHeal[] = _("Quarry restored\n{B_ATK_NAME_WITH_PREFIX}'s HP!");
 static const u8 sText_SmelteryHeal[] = _("Smeltery restored\n{B_ATK_NAME_WITH_PREFIX}'s HP!");
 static const u8 sText_HealerRestoration[] = _("{B_ATK_PARTNER_NAME} was patched up\nby {B_ATK_NAME_WITH_PREFIX}!");
+static const u8 sText_BoosterEnergyActivates[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s used its\n{B_LAST_ITEM} to activate\n{B_SCR_ACTIVE_ABILITY}!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1578,6 +1579,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_ICERINKHEAL - BATTLESTRINGS_TABLE_START] = sText_IceRinkHeal,
     [STRINGID_QUARRYHEAL - BATTLESTRINGS_TABLE_START] = sText_QuarryHeal,
     [STRINGID_SMELTERYHEAL - BATTLESTRINGS_TABLE_START] = sText_SmelteryHeal,
+    [STRINGID_BOOSTERENERGYACTIVATES - BATTLESTRINGS_TABLE_START] = sText_BoosterEnergyActivates,
 };
 
 const u16 gTrainerUsedItemStringIds[] =

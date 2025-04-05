@@ -3226,6 +3226,7 @@ void SwitchInClearSetData(u32 battler)
     gBattleStruct->lastTakenMoveFrom[battler][3] = 0;
     gBattleStruct->lastMoveFailed &= ~(gBitTable[battler]);
     gBattleStruct->palaceFlags &= ~(gBitTable[battler]);
+    gBattleStruct->boosterEnergyActivates &= ~(gBitTable[battler]);
 
     for (i = 0; i < ARRAY_COUNT(gSideTimers); i++)
     {
@@ -3356,6 +3357,8 @@ const u8* FaintClearSetData(u32 battler)
     gBattleStruct->lastTakenMoveFrom[battler][3] = 0;
 
     gBattleStruct->palaceFlags &= ~(gBitTable[battler]);
+
+    gBattleStruct->boosterEnergyActivates &= ~(gBitTable[battler]);
 
     for (i = 0; i < ARRAY_COUNT(gSideTimers); i++)
     {
@@ -4722,9 +4725,9 @@ u32 GetBattlerTotalSpeedStatArgs(u32 battler, u32 ability, u32 holdEffect)
         speed *= 2;
     else if (ability == ABILITY_SLOW_START && gDisableStructs[battler].slowStartTimer != 0)
         speed /= 2;
-    else if (ability == ABILITY_PROTOSYNTHESIS && gBattleWeather & B_WEATHER_SUN && highestStat == STAT_SPEED)
+    else if (ability == ABILITY_PROTOSYNTHESIS && (gBattleWeather & B_WEATHER_SUN || gBattleStruct->boosterEnergyActivates & gBitTable[battler]) && highestStat == STAT_SPEED )
         speed = (speed * 150) / 100;
-    else if (ability == ABILITY_QUARK_DRIVE && gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN && highestStat == STAT_SPEED)
+    else if (ability == ABILITY_QUARK_DRIVE && (gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN || gBattleStruct->boosterEnergyActivates & gBitTable[battler]) && highestStat == STAT_SPEED)
         speed = (speed * 150) / 100;
 
     // stat stages
