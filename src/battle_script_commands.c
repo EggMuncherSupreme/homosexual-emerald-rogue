@@ -1434,25 +1434,25 @@ bool32 ColorChangeTryChangeType(u32 battler, u32 ability, u32 move, u32 moveType
 bool32 MimicryTryChangeTerrain(u32 battler, u32 ability, u32 move, u32 moveType)
 {
     if(ability == ABILITY_MIMICRY && gBattleMons[battler].type1 != moveType && move != MOVE_STRUGGLE){
-        if(moveType == TYPE_ELECTRIC){
+        if(moveType == TYPE_ELECTRIC && !(gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN)){
             TryChangeBattleTerrain(battler, STATUS_FIELD_ELECTRIC_TERRAIN, &gFieldTimers.terrainTimer);
             gBattlerAbility = gBattlerAttacker;
             BattleScriptPushCursor();
             gBattlescriptCurrInstr = BattleScript_ElectricSurgeActivates;
             return TRUE;
-        } else if(moveType == TYPE_GRASS){
+        } else if(moveType == TYPE_GRASS && !(gFieldStatuses & STATUS_FIELD_GRASSY_TERRAIN)){
             TryChangeBattleTerrain(battler, STATUS_FIELD_GRASSY_TERRAIN, &gFieldTimers.terrainTimer);
             gBattlerAbility = gBattlerAttacker;
             BattleScriptPushCursor();
             gBattlescriptCurrInstr = BattleScript_GrassySurgeActivates;
             return TRUE;
-        } else if(moveType == TYPE_PSYCHIC){
+        } else if(moveType == TYPE_PSYCHIC && !(gFieldStatuses & STATUS_FIELD_PSYCHIC_TERRAIN)){
             TryChangeBattleTerrain(battler, STATUS_FIELD_PSYCHIC_TERRAIN, &gFieldTimers.terrainTimer);
             gBattlerAbility = gBattlerAttacker;
             BattleScriptPushCursor();
             gBattlescriptCurrInstr = BattleScript_PsychicSurgeActivates;
             return TRUE;
-        } else if(moveType == TYPE_FAIRY){
+        } else if(moveType == TYPE_FAIRY && !(gFieldStatuses & STATUS_FIELD_MISTY_TERRAIN)){
             TryChangeBattleTerrain(battler, STATUS_FIELD_MISTY_TERRAIN, &gFieldTimers.terrainTimer);
             gBattlerAbility = gBattlerAttacker;
             BattleScriptPushCursor();
@@ -10201,7 +10201,7 @@ static void Cmd_various(void)
     {
         VARIOUS_ARGS(const u8 *failInstr);
         u16 move = gLastPrintedMoves[gBattlerTarget];
-        if (move == MOVE_NONE || move == MOVE_UNAVAILABLE || gBattleMoves[move].effect == EFFECT_RECHARGE
+        if (move == MOVE_NONE || move == MOVE_UNAVAILABLE || gBattleMoves[move].effect == EFFECT_RECHARGE ||  gBattleMoves[move].effect == EFFECT_RECHARGE_PHYS_SPEC
          || gBattleMoves[move].instructBanned || gBattleMoves[move].twoTurnMove || IsDynamaxed(gBattlerTarget))
         {
             gBattlescriptCurrInstr = cmd->failInstr;
@@ -15025,20 +15025,20 @@ static void Cmd_trysetsnatch(void)
 static void Cmd_setwrapped(void)
 {
     CMD_ARGS();
-    if (gBattleMons[gEffectBattler].status2 & STATUS2_WRAPPED)
+    if (gBattleMons[gBattlerTarget].status2 & STATUS2_WRAPPED)
     {
         gBattlescriptCurrInstr++;
     }
     else
     {
-        gBattleMons[gEffectBattler].status2 |= STATUS2_WRAPPED;
+        gBattleMons[gBattlerTarget].status2 |= STATUS2_WRAPPED;
         if (GetBattlerHoldEffect(gBattlerAttacker, TRUE) == HOLD_EFFECT_GRIP_CLAW)
-            gDisableStructs[gEffectBattler].wrapTurns = B_BINDING_TURNS >= GEN_5 ? 7 : 5;
+            gDisableStructs[gBattlerTarget].wrapTurns = B_BINDING_TURNS >= GEN_5 ? 7 : 5;
         else
-            gDisableStructs[gEffectBattler].wrapTurns = B_BINDING_TURNS >= GEN_5 ? (Random() % 2) + 4 : (Random() % 4) + 2;
+            gDisableStructs[gBattlerTarget].wrapTurns = B_BINDING_TURNS >= GEN_5 ? (Random() % 2) + 4 : (Random() % 4) + 2;
 
-        gBattleStruct->wrappedMove[gEffectBattler] = gCurrentMove;
-        gBattleStruct->wrappedBy[gEffectBattler] = gBattlerAttacker;
+        gBattleStruct->wrappedMove[gBattlerTarget] = gCurrentMove;
+        gBattleStruct->wrappedBy[gBattlerTarget] = gBattlerAttacker;
 
         BattleScriptPush(gBattlescriptCurrInstr + 1);
         gBattlescriptCurrInstr = sMoveEffectBS_Ptrs[gBattleScripting.moveEffect];
