@@ -6843,12 +6843,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     [SPECIES_STUNFISK] =
     {
         STUNFISK_MISC_INFO,
-        .baseHP        = 109,
-        .baseAttack    = 66,
-        .baseDefense   = 84,
+        .baseHP        = 119,
+        .baseAttack    = 91,
+        .baseDefense   = 108,
         .baseSpeed     = 32,
-        .baseSpAttack  = 81,
-        .baseSpDefense = 99,
+        .baseSpAttack  = 76,
+        .baseSpDefense = 94,
         .types = { TYPE_GROUND, TYPE_ELECTRIC },
         .itemRare = ITEM_SOFT_SAND,
         .friendship = 70,
@@ -7735,7 +7735,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Deino, 2),
         .footprint = gMonFootprint_Deino,
         LEARNSETS(Deino),
-        .evolutions = EVOLUTION({EVO_LEVEL, 50, SPECIES_ZWEILOUS}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 40, SPECIES_ZWEILOUS}),
     },
 
     [SPECIES_ZWEILOUS] =
@@ -7783,7 +7783,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         ICON(Zweilous, 2),
         .footprint = gMonFootprint_Zweilous,
         LEARNSETS(Zweilous),
-        .evolutions = EVOLUTION({EVO_LEVEL, 64, SPECIES_HYDREIGON}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 54, SPECIES_HYDREIGON}),
     },
 
     [SPECIES_HYDREIGON] =

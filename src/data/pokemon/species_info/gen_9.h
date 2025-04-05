@@ -1948,12 +1948,12 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 #if P_FAMILY_SHROODLE
     [SPECIES_SHROODLE] =
     {
-        .baseHP        = 40,
-        .baseAttack    = 65,
-        .baseDefense   = 35,
-        .baseSpeed     = 75,
-        .baseSpAttack  = 40,
-        .baseSpDefense = 35,
+        .baseHP        = 5,
+        .baseAttack    = 5,
+        .baseDefense   = 5,
+        .baseSpeed     = 5,
+        .baseSpAttack  = 5,
+        .baseSpDefense = 5,
         .types = { TYPE_POISON, TYPE_NORMAL },
         .catchRate = 190,
         .expYield = 58,
@@ -1996,12 +1996,12 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
 
     [SPECIES_GRAFAIAI] =
     {
-        .baseHP        = 63,
-        .baseAttack    = 95,
-        .baseDefense   = 65,
-        .baseSpeed     = 110,
-        .baseSpAttack  = 80,
-        .baseSpDefense = 72,
+        .baseHP        = 10,
+        .baseAttack    = 10,
+        .baseDefense   = 10,
+        .baseSpeed     = 10,
+        .baseSpAttack  = 10,
+        .baseSpDefense = 10,
         .types = { TYPE_POISON, TYPE_NORMAL },
         .catchRate = 90,
         .expYield = 170,
