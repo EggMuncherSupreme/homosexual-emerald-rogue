@@ -3246,19 +3246,24 @@ static const u8 sAquaCutterDescription[] = _(
     "high critical-hit ratio.");
 
 static const u8 sBlazingTorqueDescription[] = _(
-    "---");
+    "Invokes the Schedar Mobile.\n"
+    "May leave the target burned.");
 
 static const u8 sWickedTorqueDescription[] = _(
-    "---");
+    "Invokes the Segin Mobile.\n"
+    "May leave the target asleep.");
 
 static const u8 sNoxiousTorqueDescription[] = _(
-    "---");
+    "Invokes the Navi Mobile.\n"
+    "May leave the target poisoned.");
 
 static const u8 sCombatTorqueDescription[] = _(
-    "---");
+    "Invokes the Caph Mobile.\n"
+    "May leave the target paralysed.");
 
 static const u8 sMagicalTorqueDescription[] = _(
-    "---");
+    "Invokes the Ruchbah Mobile.\n"
+    "May leave the target confused.");
 
 static const u8 sPsybladeDescription[] = _(
     "This move's power increases\n"
