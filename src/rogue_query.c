@@ -1058,6 +1058,9 @@ static bool8 Query_IsSpeciesEnabledInternal(u16 species, bool32 forceDexCheck)
                 return Query_IsSpeciesEnabledInDexInternal(species, forceDexCheck);
 
             // Alt forms
+            // Gen3
+            if(species >= SPECIES_DEOXYS_ATTACK && species <= SPECIES_DEOXYS_SPEED)
+                return Query_IsSpeciesEnabledInDexInternal(species, forceDexCheck);
             // Gen4
             if(species >= SPECIES_BURMY_SANDY_CLOAK && species <= SPECIES_SHAYMIN_SKY)
                 return Query_IsSpeciesEnabledInDexInternal(species, forceDexCheck);
