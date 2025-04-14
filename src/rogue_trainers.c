@@ -2773,9 +2773,6 @@ static u16 SampleNextSpeciesInternal(struct TrainerPartyScratch* scratch)
             RogueMonQuery_IsOfType(QUERY_FUNC_INCLUDE, fallbackTypeFlags);
         }
 
-        // Never give trainers unown
-        RogueMiscQuery_EditElement(QUERY_FUNC_EXCLUDE, SPECIES_UNOWN);
-
         // Only give Shedinja if at E4 stage as it's just unfun to deal with otherwise
         if(Rogue_GetCurrentDifficulty() < ROGUE_ELITE_START_DIFFICULTY)
             RogueMiscQuery_EditElement(QUERY_FUNC_EXCLUDE, SPECIES_SHEDINJA);
