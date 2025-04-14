@@ -9019,11 +9019,11 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
     [SPECIES_KINGDRA] =
     {
         .baseHP        = 80,
-        .baseAttack    = 95,
-        .baseDefense   = 95,
+        .baseAttack    = 100,
+        .baseDefense   = 100,
         .baseSpeed     = 85,
-        .baseSpAttack  = 95,
-        .baseSpDefense = 95,
+        .baseSpAttack  = 100,
+        .baseSpDefense = 100,
         .types = { TYPE_WATER, TYPE_DRAGON },
         .catchRate = 45,
         .expYield = 243,
@@ -11108,7 +11108,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
 #if P_GEN_2_CROSS_EVOS
     [SPECIES_PORYGON2] =
     {
-        .baseHP        = 75,
+        .baseHP        = 85,
         .baseAttack    = 80,
         .baseDefense   = 90,
         .baseSpeed     = 60,
