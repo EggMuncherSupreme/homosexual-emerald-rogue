@@ -3707,7 +3707,7 @@ static const struct RideMonInfo sRideMonInfo[NUM_SPECIES] =
     },
     [SPECIES_PALKIA] =
     {
-        .flags = RIDE_MON_FLAG_CAN_RIDE | RIDE_MON_FLAG_CAN_SWIM | RIDE_MON_FLAG_CAN_FLY,
+        .flags = RIDE_MON_FLAG_CAN_RIDE | RIDE_MON_FLAG_CAN_CLIMB | RIDE_MON_FLAG_CAN_SWIM | RIDE_MON_FLAG_CAN_FLY,
         .spriteInfo = 
         {
             [RIDE_SPRITE_DIR_UP] =
@@ -8557,7 +8557,7 @@ static const struct RideMonInfo sRideMonInfo[NUM_SPECIES] =
     },
     [SPECIES_PALKIA_ORIGIN] =
     {
-        .flags = RIDE_MON_FLAG_CAN_RIDE | RIDE_MON_FLAG_CAN_SWIM | RIDE_MON_FLAG_CAN_FLY,
+        .flags = RIDE_MON_FLAG_CAN_RIDE | RIDE_MON_FLAG_CAN_CLIMB | RIDE_MON_FLAG_CAN_SWIM | RIDE_MON_FLAG_CAN_FLY,
         .spriteInfo = 
         {
             [RIDE_SPRITE_DIR_UP] =
