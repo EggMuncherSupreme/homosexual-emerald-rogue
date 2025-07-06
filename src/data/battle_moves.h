@@ -15729,14 +15729,14 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_G_MAX_BEFUDDLE] =
     {
         .effect = EFFECT_MAX_MOVE,
-        .power = 10,
+        .power = 80,
         .type = TYPE_BUG,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 100,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .split = SPLIT_PHYSICAL,
+        .split = SPLIT_SPECIAL,
         .argument = MAX_EFFECT_EFFECT_SPORE_FOES,
     },
 
