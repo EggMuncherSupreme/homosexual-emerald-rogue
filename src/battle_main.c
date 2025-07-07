@@ -4839,6 +4839,11 @@ s8 GetMovePriority(u32 battler, u16 move)
     {
         priority++;
     }
+    if (ability == ABILITY_PHANTOM_THIEF
+        && gBattleMoves[move].type == TYPE_DARK)
+    {
+        priority++;
+    }
     else if (ability == ABILITY_LINGERING_AROMA && gBattleMons[battler].species != SPECIES_LECHONK && gBattleMons[battler].species != SPECIES_OINKOLOGNE_MALE && gBattleMons[battler].species != SPECIES_OINKOLOGNE_FEMALE){
         priority--;
     }

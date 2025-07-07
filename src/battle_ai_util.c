@@ -102,6 +102,7 @@ static const s8 sAiAbilityRatings[ABILITIES_COUNT] =
     [ABILITY_FULL_METAL_BODY] = 4,
     [ABILITY_FUR_COAT] = 7,
     [ABILITY_GALE_WINGS] = 6,
+    [ABILITY_PHANTOM_THIEF] = 7,
     [ABILITY_GALVANIZE] = 8,
     [ABILITY_GLUTTONY] = 3,
     [ABILITY_GOOEY] = 5,
@@ -1627,6 +1628,8 @@ bool32 ShouldSetRain(u32 battlerAtk, u32 atkAbility, u32 holdEffect)
       || atkAbility == ABILITY_HYDRATION
       || atkAbility == ABILITY_RAIN_DISH
       || atkAbility == ABILITY_DRY_SKIN
+      || atkAbility == ABILITY_ARCTIC_RUSH
+      || atkAbility == ABILITY_WATER_PRESSURE
       || HasMoveEffect(battlerAtk, EFFECT_ELECTRO_SHOT)
       || HasMoveEffect(battlerAtk, EFFECT_THUNDER)
       || HasMoveEffect(battlerAtk, EFFECT_HURRICANE)

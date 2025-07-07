@@ -1282,7 +1282,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     [SPECIES_WORMADAM_PLANT_CLOAK] =
     {
         WORMADAM_MISC_INFO,
-        .baseHP        = 80,
+        .baseHP        = 85,
         .baseAttack    = 69,
         .baseDefense   = 85,
         .baseSpeed     = 36,
@@ -1306,7 +1306,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     [SPECIES_WORMADAM_SANDY_CLOAK] =
     {
         WORMADAM_MISC_INFO,
-        .baseHP        = 80,
+        .baseHP        = 85,
         .baseAttack    = 129,
         .baseDefense   = 115,
         .baseSpeed     = 36,
@@ -1330,7 +1330,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     [SPECIES_WORMADAM_TRASH_CLOAK] =
     {
         WORMADAM_MISC_INFO,
-        .baseHP        = 80,
+        .baseHP        = 85,
         .baseAttack    = 69,
         .baseDefense   = 130,
         .baseSpeed     = 36,
@@ -1356,10 +1356,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     {
         .baseHP        = 80,
         .baseAttack    = 134,
-        .baseDefense   = 70,
-        .baseSpeed     = 76,
+        .baseDefense   = 50,
+        .baseSpeed     = 101,
         .baseSpAttack  = 134,
-        .baseSpDefense = 70,
+        .baseSpDefense = 50,
         .types = { TYPE_BUG, TYPE_FLYING },
         .catchRate = 45,
         .expYield = 148,
@@ -2504,7 +2504,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
 #if P_FAMILY_SPIRITOMB
     [SPECIES_SPIRITOMB] =
     {
-        .baseHP        = 50,
+        .baseHP        = 108,
         .baseAttack    = 92,
         .baseDefense   = 108,
         .baseSpeed     = 35,
@@ -2520,7 +2520,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_AMORPHOUS, EGG_GROUP_AMORPHOUS },
-        .abilities = { ABILITY_PRESSURE, ABILITY_NONE, ABILITY_INFILTRATOR },
+        .abilities = { ABILITY_PRESSURE, ABILITY_BAD_DREAMS, ABILITY_INFILTRATOR },
         .bodyColor = BODY_COLOR_PURPLE,
         .speciesName = _("Spiritomb"),
         .cryId = CRY_SPIRITOMB,

@@ -1459,7 +1459,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     [SPECIES_ZEBSTRIKA] =
     {
         .baseHP        = 80,
-        .baseAttack    = 110,
+        .baseAttack    = 115,
         .baseDefense   = 63,
         .baseSpeed     = 126,
         .baseSpAttack  = 80,
@@ -3039,9 +3039,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     {
         BASCULEGION_MISC_INFO,
         .baseHP        = 120,
-        .baseAttack    = 112,
+        .baseAttack    = 107,
         .baseDefense   = 65,
-        .baseSpeed     = 78,
+        .baseSpeed     = 73,
         .baseSpAttack  = 100,
         .baseSpDefense = 75,
         .genderRatio = MON_MALE,
@@ -3060,9 +3060,9 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     {
         BASCULEGION_MISC_INFO,
         .baseHP        = 120,
-        .baseAttack    = 112,
+        .baseAttack    = 107,
         .baseDefense   = 65,
-        .baseSpeed     = 78,
+        .baseSpeed     = 73,
         .baseSpAttack  = 100,
         .baseSpDefense = 75,
         .genderRatio = MON_FEMALE,
@@ -3666,10 +3666,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_SCRAFTY] =
     {
-        .baseHP        = 65,
-        .baseAttack    = 90,
+        .baseHP        = 75,
+        .baseAttack    = 95,
         .baseDefense   = 115,
-        .baseSpeed     = 58,
+        .baseSpeed     = 63,
         .baseSpAttack  = 45,
         .baseSpDefense = 115,
         .types = { TYPE_DARK, TYPE_FIGHTING },
@@ -6120,12 +6120,12 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
 
     [SPECIES_EELEKTROSS] =
     {
-        .baseHP        = 90,
+        .baseHP        = 95,
         .baseAttack    = 125,
-        .baseDefense   = 85,
+        .baseDefense   = 90,
         .baseSpeed     = 50,
         .baseSpAttack  = 125,
-        .baseSpDefense = 85,
+        .baseSpDefense = 90,
         .types = { TYPE_ELECTRIC, TYPE_ELECTRIC },
         .catchRate = 30,
         .expYield = 232,

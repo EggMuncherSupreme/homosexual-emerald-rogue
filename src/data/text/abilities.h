@@ -342,6 +342,8 @@ static const u8 sMoltenDownDescription[] = _("Prefers heat to moisture.");
 static const u8 sMegaShiftXDescription[] = _("Mega evolves on switch out.");
 static const u8 sMegaShiftYDescription[] = _("Mega evolves on switch out.");
 static const u8 sDauntlessDescription[] = _("Hits Dark-type Pokémon.");
+static const u8 sWaterPressureDescription[] = _("Takes half in rain.");
+static const u8 sPhantomThiefDescription[] = _("Dark moves go first.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -700,6 +702,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MEGA_SHIFT_X] = _("Mega Shift X"),
     [ABILITY_MEGA_SHIFT_Y] = _("Mega Shift Y"),
     [ABILITY_DAUNTLESS] = _("Dauntless"),
+    [ABILITY_DAUNTLESS] = _("Water Pressure"),
+    [ABILITY_PHANTOM_THIEF] = _("Phantom Thief"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1058,6 +1062,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MEGA_SHIFT_X] = _("Mega Shift X"),
     [ABILITY_MEGA_SHIFT_Y] = _("Mega Shift Y"),
     [ABILITY_DAUNTLESS] = _("Dauntless"),
+    [ABILITY_DAUNTLESS] = _("WatrPressure"),
+    [ABILITY_PHANTOM_THIEF] = _("PhantomThief"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1417,6 +1423,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_MEGA_SHIFT_X]= sMegaShiftXDescription,
     [ABILITY_MEGA_SHIFT_Y]= sMegaShiftYDescription,
     [ABILITY_DAUNTLESS] = sDauntlessDescription,
+    [ABILITY_WATER_PRESSURE] = sWaterPressureDescription,
+    [ABILITY_PHANTOM_THIEF] = sPhantomThiefDescription,
 
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,

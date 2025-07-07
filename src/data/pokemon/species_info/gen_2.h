@@ -1941,7 +1941,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
 #if P_GEN_4_CROSS_EVOS
     [SPECIES_AMBIPOM] =
     {
-        .baseHP        = 80,
+        .baseHP        = 75,
         .baseAttack    = 110,
         .baseDefense   = 71,
         .baseSpeed     = 115,

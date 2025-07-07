@@ -1993,7 +1993,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
         .baseHP        = 78,
         .baseAttack    = 64,
         .baseDefense   = 60,
-        .baseSpeed     = 127,
+        .baseSpeed     = 132,
         .baseSpAttack  = 116,
         .baseSpDefense = 60,
         .types = { TYPE_POISON, TYPE_FIRE },
@@ -3116,8 +3116,8 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
 #if P_FAMILY_BRUXISH
     [SPECIES_BRUXISH] =
     {
-        .baseHP        = 78,
-        .baseAttack    = 115,
+        .baseHP        = 68,
+        .baseAttack    = 100,
         .baseDefense   = 70,
         .baseSpeed     = 97,
         .baseSpAttack  = 70,

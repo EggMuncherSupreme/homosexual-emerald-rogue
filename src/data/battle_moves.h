@@ -251,8 +251,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_CUT] =
     {
         .effect = EFFECT_HIT,
-        .power = 50,
-        .type = TYPE_NORMAL,
+        .power = 70,
+        .type = TYPE_STEEL,
         .accuracy = 95,
         .pp = 30,
         .secondaryEffectChance = 0,
@@ -1230,7 +1230,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_HIT,
         .power = 80,
-        .type = TYPE_NORMAL,
+        .type = TYPE_FIGHTING
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
@@ -1269,7 +1269,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
             .pp = 10,
         #endif
         .effect = EFFECT_ABSORB,
-        .power = 40,
+        .power = 60,
         .type = TYPE_GRASS,
         .accuracy = 100,
         .secondaryEffectChance = 0,
@@ -1436,7 +1436,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         #endif
         .power = 0,
         .type = TYPE_BUG,
-        .accuracy = 95,
+        .accuracy = 100,
         .pp = 40,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_BOTH,
@@ -2193,7 +2193,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_SLUDGE] =
     {
         .effect = EFFECT_POISON_HIT,
-        .power = 65,
+        .power = 60,
         .type = TYPE_POISON,
         .accuracy = 100,
         .pp = 20,
@@ -3916,8 +3916,8 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     {
         .effect = EFFECT_PRESENT,
         .power = 1,
-        .type = TYPE_NORMAL,
-        .accuracy = 90,
+        .type = TYPE_ICE,
+        .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
@@ -7638,9 +7638,9 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_ROCK_CLIMB] =
     {
         .effect = EFFECT_CONFUSE_HIT,
-        .power = 90,
-        .type = TYPE_NORMAL,
-        .accuracy = 85,
+        .power = 85,
+        .type = TYPE_ROCK,
+        .accuracy = 95,
         .pp = 20,
         .secondaryEffectChance = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -12027,12 +12027,12 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_DOUBLE_IRON_BASH] =
     {
-        .effect = EFFECT_HIT,
-        .power = 50,
+        .effect = EFFECT_FLINCH_HIT,
+        .power = 60,
         .type = TYPE_STEEL,
         .accuracy = 100,
         .pp = 5,
-        .secondaryEffectChance = 0,
+        .secondaryEffectChance = 30,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .split = SPLIT_PHYSICAL,
@@ -12777,7 +12777,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_SKITTER_SMACK] =
     {
         .effect = EFFECT_SPECIAL_ATTACK_DOWN_HIT,
-        .power = 90,
+        .power = 80,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 10,
@@ -14952,6 +14952,24 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .split = SPLIT_STATUS,
         .zMoveEffect = Z_EFFECT_NONE,
         .twoTurnMove = TRUE,
+    },
+
+    [MOVE_ABDUCTION] =
+    {
+        .effect = EFFECT_SKY_DROP,
+        .power = 60,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .split = SPLIT_SPECIAL,
+        .zMoveEffect = Z_EFFECT_NONE,
+        .twoTurnMove = TRUE,
+        .sleepTalkBanned = TRUE,
+        .instructBanned = TRUE,
+        .assistBanned = TRUE,
     },
 
     // Z-Moves

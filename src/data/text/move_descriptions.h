@@ -3247,23 +3247,23 @@ static const u8 sAquaCutterDescription[] = _(
 
 static const u8 sBlazingTorqueDescription[] = _(
     "Invokes the Schedar Mobile.\n"
-    "May leave the target burned.");
+    "May inflict a burn.");
 
 static const u8 sWickedTorqueDescription[] = _(
     "Invokes the Segin Mobile.\n"
-    "May leave the target asleep.");
+    "May inflict sleepiness.");
 
 static const u8 sNoxiousTorqueDescription[] = _(
     "Invokes the Navi Mobile.\n"
-    "May leave the target poisoned.");
+    "May inflict poison.");
 
 static const u8 sCombatTorqueDescription[] = _(
     "Invokes the Caph Mobile.\n"
-    "May leave the target paralysed.");
+    "May inflict paralysis.");
 
 static const u8 sMagicalTorqueDescription[] = _(
     "Invokes the Ruchbah Mobile.\n"
-    "May leave the target confused.");
+    "May inflict confusion.");
 
 static const u8 sPsybladeDescription[] = _(
     "This move's power increases\n"
@@ -3388,6 +3388,10 @@ static const u8 sStalacbiteDescription[] = _(
 static const u8 sExtremeEvoboostDescription[] = _(
     "Calls upon its ancestors\n"
     "to sharply boost all stats.");
+
+static const u8 sAbductionDescription[] = _(
+    "Takes the foe into the sky\n"
+    "then drops it the next turn.");
 
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
@@ -4261,4 +4265,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_PURIFYING_WATER - 1] = sPurifyingWaterDescription,
     [MOVE_STALACBITE - 1] = sStalacbiteDescription,
     [MOVE_EXTREME_EVOBOOST_2 - 1] = sExtremeEvoboostDescription,
+    [MOVE_ABDUCTION - 1] = sAbductionDescription,
 };

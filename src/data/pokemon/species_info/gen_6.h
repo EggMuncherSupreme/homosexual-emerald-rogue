@@ -1069,7 +1069,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_UNNERVE, ABILITY_MOXIE },
+        .abilities = { ABILITY_RIVALRY, ABILITY_UNNERVE, ABILITY_MOXIE },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Litleo"),
         .cryId = CRY_LITLEO,
@@ -1117,7 +1117,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_INTIMIDATE, ABILITY_UNNERVE, ABILITY_MOXIE },
+        .abilities = { ABILITY_RIVALRY, ABILITY_UNNERVE, ABILITY_MOXIE },
         .bodyColor = BODY_COLOR_BROWN,
         .speciesName = _("Pyroar"),
         .cryId = CRY_PYROAR,
@@ -1831,11 +1831,11 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
     },
 
 #define MEOWSTIC_MISC_INFO                                  \
-        .baseHP        = 74,                                \
+        .baseHP        = 79,                                \
         .baseAttack    = 48,                                \
         .baseDefense   = 76,                                \
-        .baseSpeed     = 104,                               \
-        .baseSpAttack  = 83,                                \
+        .baseSpeed     = 109,                               \
+        .baseSpAttack  = 93,                                \
         .baseSpDefense = 81,                                \
         .types = { TYPE_PSYCHIC, TYPE_PSYCHIC },            \
         .catchRate = 75,                                    \
