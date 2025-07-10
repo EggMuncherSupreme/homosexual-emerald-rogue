@@ -3446,12 +3446,12 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
     [SPECIES_ABOMASNOW_MEGA] =
     {
         ABOMASNOW_MISC_INFO,
-        .baseHP        = 90,
-        .baseAttack    = 132,
-        .baseDefense   = 105,
-        .baseSpeed     = 30,
-        .baseSpAttack  = 132,
-        .baseSpDefense = 105,
+        .baseHP        = 95,
+        .baseAttack    = 142,
+        .baseDefense   = 115,
+        .baseSpeed     = 20,
+        .baseSpAttack  = 142,
+        .baseSpDefense = 110,
         .expYield = 208,
         .abilities = { ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING, ABILITY_SNOW_WARNING },
         .cryId = CRY_ABOMASNOW_MEGA,
