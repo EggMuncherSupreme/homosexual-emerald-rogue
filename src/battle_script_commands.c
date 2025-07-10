@@ -2201,7 +2201,7 @@ s32 CalcCritChanceStageArgs(u32 battlerAtk, u32 battlerDef, u32 move, bool32 rec
                     + (gBattleMoves[gCurrentMove].highCritRatio)
                     + (gCurrentMove == MOVE_SNIPE_SHOT)
                     + (holdEffectAtk == HOLD_EFFECT_SCOPE_LENS)
-                    + 2 * (holdEffectAtk == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[battlerAtk].species == SPECIES_CHANSEY)
+                    + 2 * (holdEffectAtk == HOLD_EFFECT_LUCKY_PUNCH && (gBattleMons[battlerAtk].species == SPECIES_CHANSEY || gBattleMons[battlerAtk].species == SPECIES_LEDIAN))
                     + 2 * BENEFITS_FROM_LEEK(battlerAtk, holdEffectAtk)
                     //+ 2 * (B_AFFECTION_MECHANICS == TRUE && GetBattlerAffectionHearts(battlerAtk) == AFFECTION_FIVE_HEARTS) // TODO -MAKE THIS A FLAT 10% BECAUSE THIS IS CRAZY
                     + (abilityAtk == ABILITY_SUPER_LUCK)
