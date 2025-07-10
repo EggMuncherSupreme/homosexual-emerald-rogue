@@ -9917,7 +9917,15 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_ROCKY_PAYLOAD:
-        if (moveType == TYPE_ROCK)
+        if (moveType == TYPE_ROCK
+        || move == MOVE_DIVE_BOMB
+        || move == MOVE_EGG_BOMB
+        || move == MOVE_POPULATION_BOMB
+        || move == MOVE_SEED_BOMB
+        || move == MOVE_SLUDGE_BOMB
+        || move == MOVE_SYRUP_BOMB
+        || move == MOVE_MAGNET_BOMB
+        || move == MOVE_MUD_BOMB)
             modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_PROTOSYNTHESIS:
