@@ -702,7 +702,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MEGA_SHIFT_X] = _("Mega Shift X"),
     [ABILITY_MEGA_SHIFT_Y] = _("Mega Shift Y"),
     [ABILITY_DAUNTLESS] = _("Dauntless"),
-    [ABILITY_DAUNTLESS] = _("Water Pressure"),
+    [ABILITY_WATER_PRESSURE] = _("Water Pressure"),
     [ABILITY_PHANTOM_THIEF] = _("Phantom Thief"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
@@ -1062,7 +1062,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_MEGA_SHIFT_X] = _("Mega Shift X"),
     [ABILITY_MEGA_SHIFT_Y] = _("Mega Shift Y"),
     [ABILITY_DAUNTLESS] = _("Dauntless"),
-    [ABILITY_DAUNTLESS] = _("WatrPressure"),
+    [ABILITY_WATER_PRESSURE] = _("WatrPressure"),
     [ABILITY_PHANTOM_THIEF] = _("PhantomThief"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
