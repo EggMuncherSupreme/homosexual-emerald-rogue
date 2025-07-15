@@ -8506,6 +8506,8 @@ u8 ItemBattleEffects(u8 caseID, u32 battler, bool32 moveTurn)
                     u16 ability = GetBattlerAbility(gBattlerAttacker);
                     if (B_SERENE_GRACE_BOOST >= GEN_5 && ability == ABILITY_SERENE_GRACE)
                         atkHoldEffectParam *= 2;
+                    if (B_SERENE_GRACE_BOOST >= GEN_5 && ability == ABILITY_SERENE_GRACIDEA)
+                        atkHoldEffectParam *= 2.5;
                     if (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_RAINBOW && gCurrentMove != MOVE_SECRET_POWER)
                         atkHoldEffectParam *= 2;
                     if (gBattleMoveDamage != 0  // Need to have done damage
@@ -12411,10 +12413,11 @@ bool32 AreBattlersOfSameGender(u32 battler1, u32 battler2)
 u32 CalcSecondaryEffectChance(u32 battler, u8 secondaryEffectChance, u16 moveEffect)
 {
     bool8 hasSereneGrace = (GetBattlerAbility(battler) == ABILITY_SERENE_GRACE);
+    bool8 hasSereneGracidea = (GetBattlerAbility(battler) == ABILITY_SERENE_GRACIDEA);
     bool8 hasRainbow = (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_RAINBOW) != 0;
     bool8 hasTripleThreat = (GetBattlerAbility(battler) == ABILITY_TRIPLE_THREAT);
 
-    if (hasRainbow && hasSereneGrace && moveEffect == EFFECT_FLINCH_HIT)
+    if (hasRainbow && (hasSereneGrace || hasSereneGracidea) && moveEffect == EFFECT_FLINCH_HIT)
         return secondaryEffectChance *= 2;
 
     if (hasTripleThreat)
@@ -12422,6 +12425,8 @@ u32 CalcSecondaryEffectChance(u32 battler, u8 secondaryEffectChance, u16 moveEff
 
     if (hasSereneGrace)
         secondaryEffectChance *= 2;
+    if (hasSereneGracidea)
+        secondaryEffectChance *= 2.5;
     if (hasRainbow && moveEffect != EFFECT_SECRET_POWER)
         secondaryEffectChance *= 2;
 

@@ -344,6 +344,8 @@ static const u8 sMegaShiftYDescription[] = _("Mega evolves on switch out.");
 static const u8 sDauntlessDescription[] = _("Hits Dark-type Pokémon.");
 static const u8 sWaterPressureDescription[] = _("Takes half in rain.");
 static const u8 sPhantomThiefDescription[] = _("Dark moves go first.");
+static const u8 sSereneGracideaDescription[] = _("2.5x secondary effects.");
+static const u8 sSinnohanGritDescription[] = _("Protects against downsides.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -704,6 +706,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_DAUNTLESS] = _("Dauntless"),
     [ABILITY_WATER_PRESSURE] = _("Water Pressure"),
     [ABILITY_PHANTOM_THIEF] = _("Phantom Thief"),
+    [ABILITY_SERENE_GRACIDEA] = _("Serene Gracidea"),
+    [ABILITY_SINNOHAN_GRIT] = _("Sinnohan Grit"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1064,6 +1068,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_DAUNTLESS] = _("Dauntless"),
     [ABILITY_WATER_PRESSURE] = _("WatrPressure"),
     [ABILITY_PHANTOM_THIEF] = _("PhantomThief"),
+    [ABILITY_SERENE_GRACIDEA] = _("SrneGracidea"),
+    [ABILITY_SINNOHAN_GRIT] = _("SinnohanGrit"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1425,6 +1431,8 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_DAUNTLESS] = sDauntlessDescription,
     [ABILITY_WATER_PRESSURE] = sWaterPressureDescription,
     [ABILITY_PHANTOM_THIEF] = sPhantomThiefDescription,
+    [ABILITY_SERENE_GRACIDEA] = sSereneGracideaDescription,
+    [ABILITY_SINNOHAN_GRIT] = sSinnohanGritDescription,
 
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,

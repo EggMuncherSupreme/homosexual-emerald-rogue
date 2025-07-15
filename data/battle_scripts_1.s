@@ -873,6 +873,7 @@ BattleScript_MakeItRainContinuous:
 	setmoveeffect MOVE_EFFECT_PAYDAY
 	call BattleScript_EffectHit_Ret
 	tryfaintmon BS_TARGET
+	jumpifability BS_ATTACKER, ABILITY_SINNOHAN_GRIT, BattleScript_MoveEnd
 	setmoveeffect MOVE_EFFECT_SP_ATK_MINUS_1 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	seteffectprimary
 	goto BattleScript_MoveEnd
@@ -1521,6 +1522,7 @@ BattleScript_EffectHyperspaceFuryUnbound::
 	ppreduce
 	setmoveeffect MOVE_EFFECT_FEINT
 	seteffectwithchance
+	jumpifability BS_ATTACKER, ABILITY_SINNOHAN_GRIT, BattleScript_HitFromCritCalc
 	setmoveeffect MOVE_EFFECT_DEF_MINUS_1 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_HitFromCritCalc
 
@@ -1711,6 +1713,7 @@ BattleScript_JungleHealingTryRestoreAlly:
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectAttackerDefenseDownHit:
+	jumpifability BS_ATTACKER, ABILITY_SINNOHAN_GRIT, BattleScript_EffectHit
 	setmoveeffect MOVE_EFFECT_DEF_MINUS_1 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 BattleScript_NoMoveEffect:
@@ -6400,10 +6403,12 @@ BattleScript_EffectIngrain:
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectSuperpower:
+	jumpifability BS_ATTACKER, ABILITY_SINNOHAN_GRIT, BattleScript_EffectHit
 	setmoveeffect MOVE_EFFECT_ATK_DEF_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 
 BattleScript_EffectCloseCombat:
+	jumpifability BS_ATTACKER, ABILITY_SINNOHAN_GRIT, BattleScript_EffectHit
 	setmoveeffect MOVE_EFFECT_DEF_SPDEF_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 
@@ -6662,10 +6667,12 @@ BattleScript_EffectPoisonFang::
 	goto BattleScript_EffectHit
 
 BattleScript_EffectOverheat::
+	jumpifability BS_ATTACKER, ABILITY_SINNOHAN_GRIT, BattleScript_EffectHit
 	setmoveeffect MOVE_EFFECT_SP_ATK_TWO_DOWN | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 
 BattleScript_EffectHammerArm::
+	jumpifability BS_ATTACKER, ABILITY_SINNOHAN_GRIT, BattleScript_EffectHit
 	setmoveeffect MOVE_EFFECT_SPD_MINUS_1 | MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN
 	goto BattleScript_EffectHit
 
@@ -8998,6 +9005,7 @@ BattleScript_MoveEffectRecoilWithStatus::
 BattleScript_MoveEffectRecoil::
 	jumpifmove MOVE_STRUGGLE, BattleScript_DoRecoil
 	jumpifability BS_ATTACKER, ABILITY_ROCK_HEAD, BattleScript_RecoilEnd
+	jumpifability BS_ATTACKER, ABILITY_SINNOHAN_GRIT, BattleScript_RecoilEnd
 BattleScript_DoRecoil::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE | HITMARKER_IGNORE_DISGUISE
 	healthbarupdate BS_ATTACKER

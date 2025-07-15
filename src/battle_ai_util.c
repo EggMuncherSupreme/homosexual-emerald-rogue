@@ -864,7 +864,7 @@ s32 AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, u8 *typeEffectivenes
 bool32 AI_IsDamagedByRecoil(u32 battler)
 {
     u32 ability = AI_DATA->abilities[battler];
-    if (ability == ABILITY_MAGIC_GUARD || ability == ABILITY_ROCK_HEAD)
+    if (ability == ABILITY_MAGIC_GUARD || ability == ABILITY_ROCK_HEAD || ability == ABILITY_SINNOHAN_GRIT)
         return FALSE;
     return TRUE;
 }
@@ -2988,7 +2988,7 @@ u32 ShouldTryToFlinch(u32 battlerAtk, u32 battlerDef, u32 atkAbility, u32 defAbi
     {
         return 0;
     }
-    else if ((atkAbility == ABILITY_SERENE_GRACE
+    else if (((atkAbility == ABILITY_SERENE_GRACE || atkAbility == ABILITY_SERENE_GRACIDEA)
       || gBattleMons[battlerDef].status1 & STATUS1_PARALYSIS
       || gBattleMons[battlerDef].status2 & STATUS2_INFATUATION
       || gBattleMons[battlerDef].status2 & STATUS2_CONFUSION)
@@ -3760,7 +3760,7 @@ void IncreaseConfusionScore(u32 battlerAtk, u32 battlerDef, u32 move, s32 *score
     {
         if (gBattleMons[battlerDef].status1 & STATUS1_PARALYSIS
           || gBattleMons[battlerDef].status2 & STATUS2_INFATUATION
-          || (AI_DATA->abilities[battlerAtk] == ABILITY_SERENE_GRACE && HasMoveEffect(battlerAtk, EFFECT_FLINCH_HIT)))
+          || ((AI_DATA->abilities[battlerAtk] == ABILITY_SERENE_GRACE || AI_DATA->abilities[battlerAtk] == ABILITY_SERENE_GRACIDEA) && HasMoveEffect(battlerAtk, EFFECT_FLINCH_HIT)))
             ADJUST_SCORE_PTR(3);
         else
             ADJUST_SCORE_PTR(2);
@@ -3836,7 +3836,8 @@ u32 AI_CalcSecondaryEffectChance(u32 battler, u32 secondaryEffectChance)
 {
     if (AI_DATA->abilities[battler] == ABILITY_SERENE_GRACE)
         secondaryEffectChance *= 2;
-
+    else if (AI_DATA->abilities[battler] == ABILITY_SERENE_GRACIDEA)
+        secondaryEffectChance *= 2.5;
     return secondaryEffectChance;
 }
 
