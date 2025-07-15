@@ -889,6 +889,7 @@ gBattleAnims_Moves::
 	.4byte Move_PURIFYING_WATER
 	.4byte Move_STALACBITE
 	.4byte Move_EXTREME_EVOBOOST_2
+	.4byte Move_ABDUCTION
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -5905,6 +5906,7 @@ Move_HEX:
 	waitforvisualfinish
 	end
 
+Move_ABDUCTION:
 Move_SKY_DROP:
 	loadspritegfx ANIM_TAG_ROUND_SHADOW
 	loadspritegfx ANIM_TAG_IMPACT
