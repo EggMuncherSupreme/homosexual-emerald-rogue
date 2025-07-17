@@ -346,6 +346,7 @@ static const u8 sWaterPressureDescription[] = _("Takes half in rain.");
 static const u8 sPhantomThiefDescription[] = _("Dark moves go first.");
 static const u8 sSereneGracideaDescription[] = _("2.5x secondary effects.");
 static const u8 sSinnohanGritDescription[] = _("Protects against downsides.");
+static const u8 sRunningStartDescription[] = _("Can't use Flying first turn.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -708,6 +709,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_PHANTOM_THIEF] = _("Phantom Thief"),
     [ABILITY_SERENE_GRACIDEA] = _("Serene Gracidea"),
     [ABILITY_SINNOHAN_GRIT] = _("Sinnohan Grit"),
+    [ABILITY_RUNNING_START] = _("Running Start"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1070,6 +1072,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_PHANTOM_THIEF] = _("PhantomThief"),
     [ABILITY_SERENE_GRACIDEA] = _("SrneGracidea"),
     [ABILITY_SINNOHAN_GRIT] = _("SinnohanGrit"),
+    [ABILITY_RUNNING_START] = _("RunningStart"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1433,6 +1436,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_PHANTOM_THIEF] = sPhantomThiefDescription,
     [ABILITY_SERENE_GRACIDEA] = sSereneGracideaDescription,
     [ABILITY_SINNOHAN_GRIT] = sSinnohanGritDescription,
+    [ABILITY_RUNNING_START] = sRunningStartDescription,
 
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,

@@ -8133,6 +8133,10 @@ BattleScript_SelectingNotAllowedMoveGravity::
 	printselectionstring STRINGID_GRAVITYPREVENTSUSAGE
 	endselectionscript
 
+BattleScript_SelectingNotAllowedRunningStart::
+	printselectionstring STRINGID_RUNNINGSTARTPREVENTSUSAGE
+	endselectionscript
+
 BattleScript_SelectingNotAllowedStuffCheeks::
 	printselectionstring STRINGID_STUFFCHEEKSCANTSELECT
 	endselectionscript
@@ -8154,8 +8158,17 @@ BattleScript_MoveUsedGravityPrevents::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_MoveRunningStartPrevents::
+	printstring STRINGID_RUNNINGSTARTPREVENTSUSAGE
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+
 BattleScript_SelectingNotAllowedMoveGravityInPalace::
 	printstring STRINGID_GRAVITYPREVENTSUSAGE
+	goto BattleScript_SelectingUnusableMoveInPalace
+
+BattleScript_SelectingNotAllowedRunningStartInPalace::
+	printstring STRINGID_RUNNINGSTARTPREVENTSUSAGE
 	goto BattleScript_SelectingUnusableMoveInPalace
 
 BattleScript_SelectingNotAllowedMoveHealBlock::

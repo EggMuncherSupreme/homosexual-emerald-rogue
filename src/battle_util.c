@@ -1707,6 +1707,21 @@ u32 TrySetCantSelectMoveBattleScript(u32 battler)
         }
     }
 
+    if (gBattleMoves[move].type == TYPE_FLYING && GetBattlerAbility(battler) == ABILITY_RUNNING_START && (gBattleResources->flags->flags[battler] & RESOURCE_FLAG_ROOST))
+    {
+        gCurrentMove = move;
+        if (gBattleTypeFlags & BATTLE_TYPE_PALACE)
+        {
+            gPalaceSelectionBattleScripts[battler] = BattleScript_SelectingNotAllowedRunningStartInPalace;
+            gProtectStructs[battler].palaceUnableToUseMove = TRUE;
+        }
+        else
+        {
+            gSelectionBattleScripts[battler] = BattleScript_SelectingNotAllowedRunningStart;
+            limitations++;
+        }
+    }
+
     if (DYNAMAX_BYPASS_CHECK && gBattleStruct->zmove.toBeUsed[gBattlerAttacker] == MOVE_NONE && IsHealBlockPreventingMove(battler, move))
     {
         gCurrentMove = move;
@@ -1819,6 +1834,7 @@ u32 TrySetCantSelectMoveBattleScript(u32 battler)
         }
     }
 
+
     if (gBattleMons[battler].pp[moveId] == 0)
     {
         if (gBattleTypeFlags & BATTLE_TYPE_PALACE)
@@ -1866,7 +1882,7 @@ u8 CheckMoveLimitations(u32 battler, u8 unusableMoves, u16 check)
         else if (check & MOVE_LIMITATION_PP && gBattleMons[battler].pp[i] == 0)
             unusableMoves |= gBitTable[i];
         // Placeholder
-        else if (check & MOVE_LIMITATION_PLACEHOLDER && gBattleMoves[gBattleMons[battler].moves[i]].effect == EFFECT_PLACEHOLDER)
+        else if (check & MOVE_LIMITATION_RUNNING_START && gBattleMoves[gBattleMons[battler].moves[i]].type == TYPE_FLYING && GetBattlerAbility(battler) == ABILITY_RUNNING_START && (gBattleResources->flags->flags[gBattlerAttacker] & RESOURCE_FLAG_ROOST))
             unusableMoves |= gBitTable[i];
         // Disable
         else if (check & MOVE_LIMITATION_DISABLED && gBattleMons[battler].moves[i] == gDisableStructs[battler].disabledMove)
@@ -3940,6 +3956,20 @@ u8 AtkCanceller_UnableToUseMove(u32 moveType)
             }
             gBattleStruct->atkCancellerTracker++;
             break;
+        case CANCELLER_RUNNING_START:
+            if (GetBattlerAbility(gBattlerAttacker) == ABILITY_RUNNING_START && (gBattleResources->flags->flags[gBattlerAttacker] & RESOURCE_FLAG_ROOST))
+            {
+                if(gBattleMoves[gCurrentMove].type == TYPE_FLYING){
+                    gProtectStructs[gBattlerAttacker].usedGravityPreventedMove = TRUE;
+                    gBattleScripting.battler = gBattlerAttacker;
+                    CancelMultiTurnMoves(gBattlerAttacker);
+                    gBattlescriptCurrInstr = BattleScript_MoveRunningStartPrevents;
+                    gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
+                    effect = 1;
+                }
+            }
+            gBattleStruct->atkCancellerTracker++;
+            break;
         case CANCELLER_Z_MOVES:
             if (gBattleStruct->zmove.toBeUsed[gBattlerAttacker] != MOVE_NONE)
             {
@@ -3967,6 +3997,7 @@ u8 AtkCanceller_UnableToUseMove(u32 moveType)
             }
             gBattleStruct->atkCancellerTracker++;
             break;
+        
         case CANCELLER_MULTIHIT_MOVES:
             if (gBattleMoves[gCurrentMove].effect == EFFECT_MULTI_HIT || gBattleMoves[gCurrentMove].effect == EFFECT_MULTI_HIT_FLAME_BURST)
             {
@@ -4601,6 +4632,18 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 gSideTimers[GetBattlerSide(battler)].followmeTimer = 1;
                 gSideTimers[GetBattlerSide(battler)].followmeTarget = battler;
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_GUARD_DOG;
+                gSpecialStatuses[battler].switchInAbilityDone = TRUE;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                effect++;
+            }
+            break;
+        case ABILITY_RUNNING_START:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gBattleResources->flags->flags[gBattlerAttacker] |= RESOURCE_FLAG_ROOST;
+                gBattleStruct->roostTypes[gBattlerAttacker][0] = gBattleMons[gBattlerAttacker].type1;
+                gBattleStruct->roostTypes[gBattlerAttacker][1] = gBattleMons[gBattlerAttacker].type2;
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_RUNNING_START;
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
                 BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
                 effect++;
