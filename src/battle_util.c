@@ -9181,6 +9181,9 @@ bool32 IsBattlerProtected(u32 battler, u32 move)
         && (gBattleMoves[move].makesContact || (gBattleMoves[move].effect == EFFECT_SHELL_SIDE_ARM && gBattleStruct->swapDamageCategory))
         && !gProtectStructs[battler].maxGuarded) // Max Guard cannot be bypassed by Unseen Fist
         return FALSE;
+    if (GetBattlerAbility(gBattlerAttacker) == ABILITY_LOOPHOLE
+        && !gProtectStructs[battler].maxGuarded) // Max Guard cannot be bypassed by Loophole
+        return FALSE;
     else if (gBattleMoves[move].ignoresProtect)
         return FALSE;
     else if (gProtectStructs[battler].protected)
@@ -9880,6 +9883,10 @@ static inline u32 CalcMoveBasePowerAfterModifiers(u32 move, u32 battlerAtk, u32 
     case ABILITY_TOUGH_CLAWS:
         if (IsMoveMakingContact(move, battlerAtk))
            modifier = uq4_12_multiply(modifier, UQ_4_12(1.3));
+        break;
+    case ABILITY_TRUE_AURORA:
+        if (move == MOVE_AURORA_BEAM)
+            modifier = uq4_12_multiply(modifier, UQ_4_12(1.5));
         break;
     case ABILITY_STRONG_JAW:
         if (gBattleMoves[move].bitingMove)

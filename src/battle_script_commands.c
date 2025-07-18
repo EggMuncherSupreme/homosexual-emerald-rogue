@@ -10420,7 +10420,7 @@ static void Cmd_various(void)
     {
         VARIOUS_ARGS();
         if (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_AURORA_VEIL
-            || !(WEATHER_HAS_EFFECT && gBattleWeather & (B_WEATHER_HAIL | B_WEATHER_SNOW)))
+            || (!(WEATHER_HAS_EFFECT && gBattleWeather & (B_WEATHER_HAIL | B_WEATHER_SNOW)) && GetBattlerAbility(battler) != ABILITY_TRUE_AURORA))
         {
             gMoveResultFlags |= MOVE_RESULT_MISSED;
             gBattleCommunication[MULTISTRING_CHOOSER] = 0;
@@ -10428,7 +10428,7 @@ static void Cmd_various(void)
         else
         {
             gSideStatuses[GetBattlerSide(battler)] |= SIDE_STATUS_AURORA_VEIL;
-            if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_LIGHT_CLAY)
+            if (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_LIGHT_CLAY || GetBattlerAbility(battler) == ABILITY_TRUE_AURORA)
                 gSideTimers[GetBattlerSide(battler)].auroraVeilTimer = 8;
             else
                 gSideTimers[GetBattlerSide(battler)].auroraVeilTimer = 5;
