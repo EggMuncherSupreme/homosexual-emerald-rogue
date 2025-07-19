@@ -4108,7 +4108,6 @@ BattleScript_EffectBide::
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectRampage::
-	jumpifability BS_ATTACKER, ABILITY_RAMPAGE, BattleScript_EffectHit
 	attackcanceler
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring

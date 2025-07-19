@@ -3788,20 +3788,30 @@ void SetMoveEffect(bool32 primary, u32 certain)
                 gBattlescriptCurrInstr = BattleScript_RapidSpinAway;
                 break;
             case MOVE_EFFECT_ATK_DEF_DOWN: // SuperPower
-                if (!NoAliveMonsForEitherParty())
+                if (((GetNonDynamaxHP(gBattlerTarget) == 0) && (GetBattlerAbility(gEffectBattler) == ABILITY_RAMPAGE))){
+                    
+                }
+                else if (!NoAliveMonsForEitherParty())
                 {
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = BattleScript_AtkDefDown;
                 }
                 break;
             case MOVE_EFFECT_DEF_SPDEF_DOWN: // Close Combat
-                if (!NoAliveMonsForEitherParty())
+                if (((GetNonDynamaxHP(gBattlerTarget) == 0) && (GetBattlerAbility(gEffectBattler) == ABILITY_RAMPAGE))){
+                    
+                }
+                else if (!NoAliveMonsForEitherParty())
                 {
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = BattleScript_DefSpDefDown;
                 }
                 break;
             case MOVE_EFFECT_RECOIL_HP_25: // Struggle
+                if (((GetNonDynamaxHP(gBattlerTarget) == 0) && (GetBattlerAbility(gEffectBattler) == ABILITY_RAMPAGE))){
+                    
+                }
+                else {
                 gBattleMoveDamage = (gBattleMons[gEffectBattler].maxHP) / 4;
                 if (gBattleMoveDamage == 0)
                     gBattleMoveDamage = 1;
@@ -3810,21 +3820,30 @@ void SetMoveEffect(bool32 primary, u32 certain)
 
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_MoveEffectRecoil;
+                }
                 break;
             case MOVE_EFFECT_THRASH:
-                if (gBattleMons[gEffectBattler].status2 & STATUS2_LOCK_CONFUSE)
-                {
-                    gBattlescriptCurrInstr++;
+                if (((GetNonDynamaxHP(gBattlerTarget) == 0) && (GetBattlerAbility(gEffectBattler) == ABILITY_RAMPAGE))){
+                    
                 }
-                else
-                {
-                    gBattleMons[gEffectBattler].status2 |= STATUS2_MULTIPLETURNS;
-                    gLockedMoves[gEffectBattler] = gCurrentMove;
-                    gBattleMons[gEffectBattler].status2 |= STATUS2_LOCK_CONFUSE_TURN(RandomUniform(RNG_RAMPAGE_TURNS, 2, 3));
+                else {
+                    if (gBattleMons[gEffectBattler].status2 & STATUS2_LOCK_CONFUSE)
+                    {
+                        gBattlescriptCurrInstr++;
+                    }
+                    else
+                    {
+                        gBattleMons[gEffectBattler].status2 |= STATUS2_MULTIPLETURNS;
+                        gLockedMoves[gEffectBattler] = gCurrentMove;
+                        gBattleMons[gEffectBattler].status2 |= STATUS2_LOCK_CONFUSE_TURN(RandomUniform(RNG_RAMPAGE_TURNS, 2, 3));
+                    }
                 }
                 break;
             case MOVE_EFFECT_SP_ATK_TWO_DOWN: // Overheat
-                if (!NoAliveMonsForEitherParty())
+                if (((GetNonDynamaxHP(gBattlerTarget) == 0) && (GetBattlerAbility(gEffectBattler) == ABILITY_RAMPAGE))){
+                    
+                }
+                else if (!NoAliveMonsForEitherParty())
                 {
                     BattleScriptPush(gBattlescriptCurrInstr + 1);
                     gBattlescriptCurrInstr = BattleScript_SAtkDown2;
@@ -5781,7 +5800,10 @@ static void Cmd_moveend(void)
             gBattleScripting.moveendState++;
             break;
         case MOVEEND_RECOIL:
-            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+            if (((GetNonDynamaxHP(gBattlerTarget) == 0) && (GetBattlerAbility(gBattlerAttacker) == ABILITY_RAMPAGE))){
+                    
+            }
+            else if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                 && !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE)
                 && IsBattlerAlive(gBattlerAttacker)
                 && gBattleScripting.savedDmg != 0) // Some checks may be redundant alongside this one
@@ -11682,7 +11704,12 @@ static void Cmd_manipulatedamage(void)
         gBattleMoveDamage = GetDrainedBigRootHp(gBattlerAttacker, gBattleMoveDamage);
         break;
     case DMG_1_2_ATTACKER_HP:
+        if (((GetNonDynamaxHP(gBattlerTarget) == 0) && (GetBattlerAbility(gBattlerAttacker) == ABILITY_RAMPAGE))){
+            
+        }
+        else {
         gBattleMoveDamage = (GetNonDynamaxMaxHP(gBattlerAttacker) + 1) / 2; // Half of Max HP Rounded UP
+        }
         break;
     case DMG_RECOIL_FROM_IMMUNE:
         gBattleMoveDamage = GetNonDynamaxMaxHP(gBattlerTarget) / 2;
