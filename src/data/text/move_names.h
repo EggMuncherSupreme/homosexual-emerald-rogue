@@ -865,6 +865,7 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_STALACBITE] = _("Stalacbite"),
     [MOVE_EXTREME_EVOBOOST_2] = _("Extreme Evoboost"),
     [MOVE_ABDUCTION] = _("Abduction"),
+    [MOVE_STUN_SHIELD] = _("Stun Shield"),
     // Max Moves
     [MOVE_MAX_GUARD] = _("Max Guard"),
     [MOVE_MAX_STRIKE] = _("Max Strike"),
@@ -1787,6 +1788,7 @@ const u8 gMoveNames[MOVES_COUNT_DYNAMAX][MOVE_NAME_LENGTH + 1] =
     [MOVE_STALACBITE] = _("Stalacbite"),
     [MOVE_EXTREME_EVOBOOST_2] = _("Ex. Evoboost"),
     [MOVE_ABDUCTION] = _("Abduction"),
+    [MOVE_STUN_SHIELD] = _("Stun Shield"),
     // Max Moves
     [MOVE_MAX_GUARD] = _("M-Guard"),
     [MOVE_MAX_STRIKE] = _("M-Strike"),

@@ -14972,6 +14972,26 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
         .assistBanned = TRUE,
     },
 
+  [MOVE_STUN_SHIELD] =
+    {
+        .effect = EFFECT_PROTECT,
+        .power = 0,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = MOVE_TARGET_USER,
+        .priority = 4,
+        .split = SPLIT_STATUS,
+        .zMoveEffect = Z_EFFECT_DEF_UP_1,
+        .protectionMove = TRUE,
+        .ignoresProtect = TRUE,
+        .mirrorMoveBanned = TRUE,
+        .metronomeBanned = TRUE,
+        .copycatBanned = TRUE,
+        .assistBanned = TRUE,
+    },
+
     // Z-Moves
     [MOVE_BREAKNECK_BLITZ] =
     {

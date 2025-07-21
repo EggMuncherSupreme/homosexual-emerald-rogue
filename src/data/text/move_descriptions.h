@@ -3393,6 +3393,10 @@ static const u8 sAbductionDescription[] = _(
     "Takes the foe into the sky\n"
     "then drops it the next turn.");
 
+static const u8 sStunShieldDescription[] = _(
+    "Protects user and paralyzes\n"
+    "foes on contact.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -4266,4 +4270,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_STALACBITE - 1] = sStalacbiteDescription,
     [MOVE_EXTREME_EVOBOOST_2 - 1] = sExtremeEvoboostDescription,
     [MOVE_ABDUCTION - 1] = sAbductionDescription,
+    [MOVE_STUN_SHIELD - 1] = sStunShieldDescription,
 };

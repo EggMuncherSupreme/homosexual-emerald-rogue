@@ -9194,6 +9194,8 @@ bool32 IsBattlerProtected(u32 battler, u32 move)
         return TRUE;
     else if (gProtectStructs[battler].banefulBunkered)
         return TRUE;
+    else if (gProtectStructs[battler].stunShielded)
+        return TRUE;
     else if (gProtectStructs[battler].burningBulwarked)
         return TRUE;
     else if ((gProtectStructs[battler].obstructed || gProtectStructs[battler].silkTrapped) && !IS_MOVE_STATUS(move))
@@ -12375,6 +12377,8 @@ u32 GetBattlerMoveTargetType(u32 battler, u32 move)
         return MOVE_TARGET_BOTH;
     else if (gBattleMoves[move].effect == EFFECT_TERA_STARSTORM
         && gBattleMons[battler].species == SPECIES_TERAPAGOS_STELLAR)
+        return MOVE_TARGET_BOTH;
+    else if (gBattleMoves[move].target == MOVE_TARGET_BOTH && GetBattlerAbility(battler) == ABILITY_TRIPLE_THREAT)
         return MOVE_TARGET_BOTH;
 
     return gBattleMoves[move].target;

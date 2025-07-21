@@ -3886,6 +3886,7 @@ void SetMoveEffect(bool32 primary, u32 certain)
                     gProtectStructs[gBattlerTarget].spikyShielded = FALSE;
                     gProtectStructs[gBattlerTarget].kingsShielded = FALSE;
                     gProtectStructs[gBattlerTarget].banefulBunkered = FALSE;
+                    gProtectStructs[gBattlerTarget].stunShielded = FALSE;
                     gProtectStructs[gBattlerTarget].obstructed = FALSE;
                     gProtectStructs[gBattlerTarget].silkTrapped = FALSE;
                     gProtectStructs[gBattlerAttacker].burningBulwarked = FALSE;
@@ -5736,6 +5737,15 @@ static void Cmd_moveend(void)
                     gBattlescriptCurrInstr = BattleScript_BanefulBunkerEffect;
                     effect = 1;
                 }
+                else if (gProtectStructs[gBattlerTarget].stunShielded)
+                {
+                    gProtectStructs[gBattlerAttacker].touchedProtectLike = FALSE;
+                    gBattleScripting.moveEffect = MOVE_EFFECT_PARALYSIS | MOVE_EFFECT_AFFECTS_USER;
+                    PREPARE_MOVE_BUFFER(gBattleTextBuff1, MOVE_STUN_SHIELD);
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_BanefulBunkerEffect;
+                    effect = 1;
+                }
                 // Not strictly a protect effect, but works the same way
                 else if (gProtectStructs[gBattlerTarget].beakBlastCharge
                          && CanBeBurned(gBattlerAttacker)
@@ -6219,12 +6229,10 @@ static void Cmd_moveend(void)
                 && gBattleTypeFlags & BATTLE_TYPE_DOUBLE
                 && !gProtectStructs[gBattlerAttacker].chargingTurn
                 && (moveTarget == MOVE_TARGET_BOTH
-                    || moveTarget == MOVE_TARGET_FOES_AND_ALLY)
-                && !(gHitMarker & HITMARKER_NO_ATTACKSTRING))
+                    || moveTarget == MOVE_TARGET_FOES_AND_ALLY))
             {
                 u32 nextTarget = GetNextTarget(moveTarget);
                 gHitMarker |= HITMARKER_NO_PPDEDUCT;
-
                 if (nextTarget != MAX_BATTLERS_COUNT)
                 {
                     gBattleStruct->moveTarget[gBattlerAttacker] = gBattlerTarget = nextTarget; // Fix for moxie spread moves
@@ -6267,6 +6275,7 @@ static void Cmd_moveend(void)
         }
         case MOVEEND_MULTIHIT_MOVE:
         {
+            u16 moveTarget = GetBattlerMoveTargetType(gBattlerAttacker, gCurrentMove);
             if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
             && !(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE)
             && gMultiHitCounter
@@ -6286,10 +6295,21 @@ static void Cmd_moveend(void)
                     effect = TRUE;
                 }
                 else
-                {
+                {   
+                    
                     if (gCurrentMove == MOVE_DRAGON_DARTS)
                     {
                         // TODO
+                    }
+
+                    gBattleStruct->targetsDone[gBattlerAttacker] = 0;
+                    if (!(gHitMarker & HITMARKER_UNABLE_TO_USE_MOVE)
+                    && gBattleTypeFlags & BATTLE_TYPE_DOUBLE
+                    && !gProtectStructs[gBattlerAttacker].chargingTurn
+                    && (moveTarget == MOVE_TARGET_BOTH
+                        || moveTarget == MOVE_TARGET_FOES_AND_ALLY))
+                    {
+                        gBattleStruct->moveTarget[gBattlerAttacker] = gBattlerTarget = GetNextTarget(moveTarget);
                     }
 
                     if (gBattleMons[gBattlerAttacker].hp
@@ -6299,7 +6319,6 @@ static void Cmd_moveend(void)
                     {
                         if (gSpecialStatuses[gBattlerAttacker].parentalBondState)
                             gSpecialStatuses[gBattlerAttacker].parentalBondState--;
-
                         gHitMarker |= (HITMARKER_NO_PPDEDUCT | HITMARKER_NO_ATTACKSTRING);
                         gBattleScripting.animTargetsHit = 0;
                         gBattleScripting.moveendState = 0;
@@ -11416,6 +11435,11 @@ static void Cmd_setprotectlike(void)
             else if (gCurrentMove == MOVE_BURNING_BULWARK)
             {
                 gProtectStructs[gBattlerAttacker].burningBulwarked = TRUE;
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PROTECTED_ITSELF;
+            }
+            else if (gCurrentMove == MOVE_STUN_SHIELD)
+            {
+                gProtectStructs[gBattlerAttacker].stunShielded = TRUE;
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_PROTECTED_ITSELF;
             }
 

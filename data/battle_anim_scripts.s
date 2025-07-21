@@ -890,6 +890,7 @@ gBattleAnims_Moves::
 	.4byte Move_STALACBITE
 	.4byte Move_EXTREME_EVOBOOST_2
 	.4byte Move_ABDUCTION
+	.4byte Move_STUN_SHIELD
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -11020,6 +11021,27 @@ Move_BANEFUL_BUNKER::
 	createsprite gBanefulBunkerPoisonBubbleTemplate, ANIM_ATTACKER, 2, 0xffec, 0x14, 0x19, 0x0
 	delay 0x4
 	createsprite gBanefulBunkerPoisonBubbleTemplate, ANIM_ATTACKER, 2, 0xc, 0x0, 0x19, 0x0
+	waitforvisualfinish
+	clearmonbg ANIM_ATK_PARTNER
+	end
+
+Move_STUN_SHIELD::
+	loadspritegfx ANIM_TAG_PROTECT @protect
+	loadspritegfx ANIM_TAG_SPARK
+	loadspritegfx ANIM_TAG_SPARK_2
+	loadspritegfx ANIM_TAG_SPARK_H
+	monbg ANIM_ATK_PARTNER
+	splitbgprio ANIM_ATTACKER
+	waitplaysewithpan SE_M_REFLECT, SOUND_PAN_ATTACKER 0x10
+	createsprite gProtectSpriteTemplate, ANIM_ATTACKER, 2, 0x18, 0x0, 0x5a
+	loopsewithpan SE_M_THUNDERBOLT2, SOUND_PAN_TARGET, 10, 4
+	createsprite gThunderWaveSpriteTemplate, ANIM_TARGET, 2, -16, -16
+	delay 4
+	createsprite gThunderWaveSpriteTemplate, ANIM_TARGET, 2, -16, 0
+	delay 4
+	createsprite gThunderWaveSpriteTemplate, ANIM_TARGET, 2, -16, 16
+	waitforvisualfinish
+	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BG, 0, 6, 0, RGB_BLACK
 	waitforvisualfinish
 	clearmonbg ANIM_ATK_PARTNER
 	end
