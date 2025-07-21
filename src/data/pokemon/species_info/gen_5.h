@@ -6839,15 +6839,15 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
     {
         STUNFISK_MISC_INFO,
         .baseHP        = 119,
-        .baseAttack    = 91,
+        .baseAttack    = 31,
         .baseDefense   = 108,
         .baseSpeed     = 32,
-        .baseSpAttack  = 76,
+        .baseSpAttack  = 137,
         .baseSpDefense = 94,
         .types = { TYPE_GROUND, TYPE_ELECTRIC },
         .itemRare = ITEM_SOFT_SAND,
         .friendship = 70,
-        .abilities = { ABILITY_STATIC, ABILITY_LIMBER, ABILITY_SAND_VEIL },
+        .abilities = { ABILITY_STATIC, ABILITY_ELECTROMORPHOSIS, ABILITY_STAKEOUT },
         .bodyColor = BODY_COLOR_BROWN,
         .weight = 110,
         .description = POKEDEX_DESC_STRING(
