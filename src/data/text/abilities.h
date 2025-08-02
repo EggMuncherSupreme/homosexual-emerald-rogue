@@ -349,6 +349,7 @@ static const u8 sSinnohanGritDescription[] = _("Protects against downsides.");
 static const u8 sRunningStartDescription[] = _("Can't use Flying first turn.");
 static const u8 sTrueAuroraDescription[] = _("Boosts Aurora moves.");
 static const u8 sLoopholeDescription[] = _("Moves hit through Protect.");
+static const u8 sTheFlockDescription[] = _("Hustle+Intim+SheerForce+Guts.");
 
 static const u8 sForecastPriorityDescription[] = _("Weather moves go first.");
 
@@ -714,6 +715,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_RUNNING_START] = _("Running Start"),
     [ABILITY_TRUE_AURORA] = _("True Aurora"),
     [ABILITY_LOOPHOLE] = _("Loophole"),
+    [ABILITY_THE_FLOCK] = _("The Flock"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1079,6 +1081,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_RUNNING_START] = _("RunningStart"),
     [ABILITY_TRUE_AURORA] = _("True Aurora"),
     [ABILITY_LOOPHOLE] = _("Loophole"),
+    [ABILITY_THE_FLOCK] = _("The Flock"),
     
     [ABILITY_FORECAST_PRIORITY] = _("Instant Forecast"),
 };
@@ -1445,6 +1448,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_RUNNING_START] = sRunningStartDescription,
     [ABILITY_TRUE_AURORA] = sTrueAuroraDescription,
     [ABILITY_LOOPHOLE] = sLoopholeDescription,
+    [ABILITY_THE_FLOCK] = sTheFlockDescription,
 
 
     [ABILITY_FORECAST_PRIORITY] = sForecastPriorityDescription,
