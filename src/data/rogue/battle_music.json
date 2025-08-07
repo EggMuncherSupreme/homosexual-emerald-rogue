@@ -230,27 +230,27 @@
         },
         "rogue_elite":
         {
-            "encounter": "MUS_DP_ENCOUNTER_ELITE_FOUR",
-            "battle": "MUS_DP_VS_ELITE_FOUR",
-            "victory": "MUS_DP_VICTORY_ELITE_FOUR"
+            "encounter": "MUS_ENCOUNTER_ELITE_FOUR",
+            "battle": "MUS_VS_ELITE_FOUR",
+            "victory": "MUS_VICTORY_LEAGUE"
         },
         "rogue_champion":
         {
-            "encounter": "MUS_RG_ENCOUNTER_GYM_LEADER",
-            "battle": "MUS_RG_VS_CHAMPION",
-            "victory": "MUS_DP_VICTORY_CHAMPION"
+            "encounter": "MUS_ENCOUNTER_CHAMPION",
+            "battle": "MUS_VS_CHAMPION",
+            "victory": "MUS_VICTORY_LEAGUE"
         },
         "rogue_rival":
         {
             "encounter": "MUS_PL_MYSTERY_GIFT",
-            "battle": "MUS_HG_VS_TRAINER_KANTO",
+            "battle": "MUS_HG_VS_SUICUNE",
             "victory": "MUS_DP_VICTORY_TRAINER"
         },
         "rogue_final_champion":
         {
-            "encounter": "MUS_NONE",
-            "battle": "MUS_HG_VS_FRONTIER_BRAIN",
-            "victory": "MUS_HG_VICTORY_FRONTIER_BRAIN"
+            "encounter": "MUS_ENCOUNTER_CHAMPION",
+            "battle": "MUS_RG_VS_CHAMPION",
+            "victory": "MUS_VICTORY_LEAGUE"
         },
 
         "route_trainer":
