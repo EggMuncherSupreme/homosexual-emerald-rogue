@@ -4568,6 +4568,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                     effect++;
                 }
                 break;
+            case WEATHER_LEAVES:
             case WEATHER_DROUGHT:
                 if (!(gBattleWeather & B_WEATHER_SUN))
                 {
