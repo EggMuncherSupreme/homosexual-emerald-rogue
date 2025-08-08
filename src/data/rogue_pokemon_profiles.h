@@ -4156,6 +4156,96 @@ static u16 const sTutorMoves_SPECIES_SANDSHREW[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_SANDSHREW[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6ZU),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_SAND_RUSH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_KNOCK_OFF,
+			MOVE_EARTHQUAKE,
+			MOVE_RAPID_SPIN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_SAND_RUSH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_RAPID_SPIN,
+			MOVE_EARTHQUAKE,
+			MOVE_KNOCK_OFF,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_SAND_RUSH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_RAPID_SPIN,
+			MOVE_KNOCK_OFF,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_SAND_RUSH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_RAPID_SPIN,
+			MOVE_STEALTH_ROCK,
+			MOVE_EARTHQUAKE,
+			MOVE_KNOCK_OFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_SAND_RUSH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_RAPID_SPIN,
+			MOVE_KNOCK_OFF,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_SAND_RUSH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_RAPID_SPIN,
+			MOVE_LEECH_LIFE,
+			MOVE_SWORDS_DANCE,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_SANDSLASH
@@ -4256,6 +4346,36 @@ static u16 const sTutorMoves_SPECIES_SANDSLASH[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_SANDSLASH[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_SAND_RUSH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_STONE_EDGE,
+			MOVE_KNOCK_OFF,
+			MOVE_SWORDS_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_TOUGH_CLAWS,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_SLASH,
+			MOVE_SWORDS_DANCE,
+			MOVE_KNOCK_OFF,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_NIDORAN_F
@@ -5207,6 +5327,900 @@ static u16 const sTutorMoves_SPECIES_CLEFABLE[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_CLEFABLE[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6UBERS),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_WISH,
+			MOVE_PROTECT,
+			MOVE_HEAL_BELL,
+			MOVE_MOONBLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UBERS),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_WISH,
+			MOVE_PROTECT,
+			MOVE_HEAL_BELL,
+			MOVE_MOONBLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6OU | MON_FLAGS_GEN7MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_FLAMETHROWER,
+			MOVE_SOFT_BOILED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_FLAMETHROWER,
+			MOVE_THUNDER_WAVE,
+			MOVE_SOFT_BOILED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6OU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_ICE_BEAM,
+			MOVE_SOFT_BOILED,
+			MOVE_CALM_MIND,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6OU | MON_FLAGS_GEN6MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_CALM_MIND,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6DOUBLESOU),
+		.heldItem=ITEM_SITRUS_BERRY,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_FOLLOW_ME,
+			MOVE_MOONBLAST,
+			MOVE_HELPING_HAND,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6BATTLESPOTSINGLES),
+		.heldItem=ITEM_KEE_BERRY,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_MINIMIZE,
+			MOVE_MOONLIGHT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6BATTLESPOTSINGLES),
+		.heldItem=ITEM_SITRUS_BERRY,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_THUNDER_WAVE,
+			MOVE_MOONLIGHT,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6BATTLESPOTSINGLES),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_MOONLIGHT,
+			MOVE_CALM_MIND,
+			MOVE_MINIMIZE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6BATTLESPOTDOUBLES),
+		.heldItem=ITEM_SITRUS_BERRY,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_FOLLOW_ME,
+			MOVE_ICE_BEAM,
+			MOVE_HELPING_HAND,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN61V1),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_CHARM,
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_ENCORE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN61V1),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_SOFT_BOILED,
+			MOVE_MOONLIGHT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6ANYTHINGGOES),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_COSMIC_POWER,
+			MOVE_MINIMIZE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_SOFT_BOILED,
+			MOVE_FIRE_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_STEALTH_ROCK,
+			MOVE_FIRE_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_CALM_MIND,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7OU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_THUNDERBOLT,
+			MOVE_FIRE_BLAST,
+			MOVE_SOFT_BOILED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_WISH,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_WISH,
+			MOVE_SOFT_BOILED,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7BATTLESPOTSINGLES),
+		.heldItem=ITEM_KEE_BERRY,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MINIMIZE,
+			MOVE_CALM_MIND,
+			MOVE_MOONLIGHT,
+			MOVE_MOONBLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7BATTLESPOTSINGLES),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_MOONLIGHT,
+			MOVE_CALM_MIND,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7BATTLESPOTDOUBLES),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_SASSY,
+		.moves=
+		{
+			MOVE_FOLLOW_ME,
+			MOVE_PROTECT,
+			MOVE_HEAL_PULSE,
+			MOVE_SAFEGUARD,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN71V1),
+		.heldItem=ITEM_PSYCHIUM_Z,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MAGIC_COAT,
+			MOVE_REFLECT,
+			MOVE_MOONLIGHT,
+			MOVE_MOONBLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN71V1),
+		.heldItem=ITEM_PSYCHIUM_Z,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_MOONLIGHT,
+			MOVE_MAGIC_COAT,
+			MOVE_REFLECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LETSGOOU),
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_MOONBLAST,
+			MOVE_FIRE_BLAST,
+			MOVE_THUNDER_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LETSGOOU),
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_FIRE_BLAST,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LETSGOOU),
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_STEALTH_ROCK,
+			MOVE_THUNDER_WAVE,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7MONOTYPE),
+		.heldItem=ITEM_BABIRI_BERRY,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_SOFT_BOILED,
+			MOVE_MOONBLAST,
+			MOVE_FIRE_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_FLAMETHROWER,
+			MOVE_CALM_MIND,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8UBERS),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_STEALTH_ROCK,
+			MOVE_KNOCK_OFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_KNOCK_OFF,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_SOFT_BOILED,
+			MOVE_AROMATHERAPY,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8OU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_SOFT_BOILED,
+			MOVE_THUNDERBOLT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8OU | MON_FLAGS_GEN8NATIONALDEX),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_CALM_MIND,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEX),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_THUNDER,
+			MOVE_SOFT_BOILED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEX),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_STEALTH_ROCK,
+			MOVE_CALM_MIND,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEX),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_SOFT_BOILED,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8DOUBLESOU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_LIFE_DEW,
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8BATTLESTADIUMSINGLES),
+		.heldItem=ITEM_KEE_BERRY,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_MOONLIGHT,
+			MOVE_CALM_MIND,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8BATTLESTADIUMSINGLES),
+		.heldItem=ITEM_FLAME_ORB,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_MOONLIGHT,
+			MOVE_TRICK,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8VGC2020),
+		.heldItem=ITEM_SITRUS_BERRY,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_FOLLOW_ME,
+			MOVE_PROTECT,
+			MOVE_MOONBLAST,
+			MOVE_HELPING_HAND,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_COUNTER,
+			MOVE_ENCORE,
+			MOVE_SOFT_BOILED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_SITRUS_BERRY,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_SOFT_BOILED,
+			MOVE_MOONBLAST,
+			MOVE_COUNTER,
+			MOVE_CALM_MIND,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_SOFT_BOILED,
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_COSMIC_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ANYTHINGGOES),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_BATON_PASS,
+			MOVE_MINIMIZE,
+			MOVE_COSMIC_POWER,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_MOONBLAST,
+			MOVE_KNOCK_OFF,
+			MOVE_SOFT_BOILED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_FLAMETHROWER,
+			MOVE_SOFT_BOILED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_SOFT_BOILED,
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_THUNDERBOLT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_CALM_MIND,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_MOONLIGHT,
+			MOVE_STEALTH_ROCK,
+			MOVE_KNOCK_OFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_MOONLIGHT,
+			MOVE_WISH,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEX),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_STEALTH_ROCK,
+			MOVE_THUNDER_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEX),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SOFT_BOILED,
+			MOVE_CALM_MIND,
+			MOVE_WISH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN91V1),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_MOONLIGHT,
+			MOVE_ICE_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ANYTHINGGOES),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_COSMIC_POWER,
+			MOVE_BATON_PASS,
+			MOVE_MOONBLAST,
+			MOVE_MOONLIGHT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEXAG),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_BATON_PASS,
+			MOVE_COSMIC_POWER,
+			MOVE_MINIMIZE,
+			MOVE_SOFT_BOILED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_THUNDERBOLT,
+			MOVE_MOONLIGHT,
+			MOVE_CALM_MIND,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_MOONLIGHT,
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGIC_GUARD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_THUNDERBOLT,
+			MOVE_SOFT_BOILED,
+			MOVE_CALM_MIND,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_VULPIX
@@ -6691,6 +7705,21 @@ static u16 const sTutorMoves_SPECIES_DIGLETT[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_DIGLETT[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_FOCUS_SASH,
+		.ability=ABILITY_ARENA_TRAP,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ROCK,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FOLLOW_ME,
+			MOVE_ROCK_SLIDE,
+			MOVE_HELPING_HAND,
+			MOVE_HIGH_HORSEPOWER,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_DUGTRIO
@@ -6773,6 +7802,21 @@ static u16 const sTutorMoves_SPECIES_DUGTRIO[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_DUGTRIO[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_FOCUS_SASH,
+		.ability=ABILITY_TRIPLE_THREAT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ROCK,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FOLLOW_ME,
+			MOVE_ROCK_SLIDE,
+			MOVE_HELPING_HAND,
+			MOVE_HIGH_HORSEPOWER,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_MEOWTH
@@ -7560,6 +8604,96 @@ static u16 const sTutorMoves_SPECIES_GROWLITHE[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_GROWLITHE[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_WILL_O_WISP,
+			MOVE_FLARE_BLITZ,
+			MOVE_MORNING_SUN,
+			MOVE_WILD_CHARGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_MORNING_SUN,
+			MOVE_WILL_O_WISP,
+			MOVE_WILD_CHARGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_WILL_O_WISP,
+			MOVE_MORNING_SUN,
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MORNING_SUN,
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+			MOVE_WILL_O_WISP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_MORNING_SUN,
+			MOVE_WILL_O_WISP,
+			MOVE_FLARE_BLITZ,
+			MOVE_CLOSE_COMBAT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_MORNING_SUN,
+			MOVE_CLOSE_COMBAT,
+			MOVE_WILL_O_WISP,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_ARCANINE
@@ -7653,6 +8787,21 @@ static u16 const sTutorMoves_SPECIES_ARCANINE[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_ARCANINE[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_SITRUS_BERRY,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GRASS,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_EXTREME_SPEED,
+			MOVE_SNARL,
+			MOVE_PROTECT,
+		},
+	},	
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_POLIWAG
@@ -9628,6 +10777,156 @@ static u16 const sTutorMoves_SPECIES_PONYTA[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_PONYTA[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_WILL_O_WISP,
+			MOVE_FLARE_BLITZ,
+			MOVE_FLAME_CHARGE,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_MORNING_SUN,
+			MOVE_WILL_O_WISP,
+			MOVE_WILD_CHARGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_FIRIUM_Z,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLAME_CHARGE,
+			MOVE_FLARE_BLITZ,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_WILL_O_WISP,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_GRASSIUM_Z,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SOLAR_BEAM,
+			MOVE_FLAMETHROWER,
+			MOVE_FLAME_CHARGE,
+			MOVE_HYPNOSIS,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FIRE_BLAST,
+			MOVE_SOLAR_BEAM,
+			MOVE_SUNNY_DAY,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_FIRIUM_Z,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_FLAME_CHARGE,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8LC),
+		.heldItem=ITEM_BERRY_JUICE,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+			MOVE_FLAME_CHARGE,
+			MOVE_HIGH_HORSEPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_WILL_O_WISP,
+			MOVE_MORNING_SUN,
+			MOVE_FLAME_CHARGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8LC),
+		.heldItem=ITEM_BERRY_JUICE,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_WILD_CHARGE,
+			MOVE_FLAME_CHARGE,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_RAPIDASH
@@ -9709,6 +11008,199 @@ static u16 const sTutorMoves_SPECIES_RAPIDASH[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_RAPIDASH[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_CHARCOAL,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_DRILL_RUN,
+			MOVE_WILD_CHARGE,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_CHARCOAL,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+			MOVE_WILL_O_WISP,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+			MOVE_DRILL_RUN,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_FIRIUM_Z,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+			MOVE_DRILL_RUN,
+			MOVE_HIGH_HORSEPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_WILL_O_WISP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_WILD_CHARGE,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LETSGOOU),
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_MEGAHORN,
+			MOVE_DRILL_RUN,
+			MOVE_WILL_O_WISP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8PU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_WILD_CHARGE,
+			MOVE_PLAY_ROUGH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_WILL_O_WISP,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_FLAME_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_FLARE_BLITZ,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_MORNING_SUN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_FLARE_BLITZ,
+			MOVE_SOLAR_BLADE,
+			MOVE_HIGH_HORSEPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_FLASH_FIRE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_MORNING_SUN,
+			MOVE_SWORDS_DANCE,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_SLOWPOKE
@@ -10223,6 +11715,51 @@ static u16 const sTutorMoves_SPECIES_FARFETCHD[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_FARFETCHD[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_LEEK,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_BRAVE_BIRD,
+			MOVE_LEAF_BLADE,
+			MOVE_QUICK_ATTACK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_LEEK,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_FIRST_IMPRESSION,
+			MOVE_BRAVE_BIRD,
+			MOVE_LEAF_BLADE,
+			MOVE_KNOCK_OFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_LEEK,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_CLOSE_COMBAT,
+			MOVE_KNOCK_OFF,
+			MOVE_FIRST_IMPRESSION,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_DODUO
@@ -10746,6 +12283,51 @@ static u16 const sTutorMoves_SPECIES_GRIMER[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_GRIMER[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_BERRY_JUICE,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_GUNK_SHOT,
+			MOVE_FIRE_PUNCH,
+			MOVE_SHADOW_SNEAK,
+			MOVE_THIEF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SHADOW_SNEAK,
+			MOVE_POISON_JAB,
+			MOVE_FIRE_PUNCH,
+			MOVE_GUNK_SHOT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_BERRY_JUICE,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BRAVE,
+		.moves=
+		{
+			MOVE_GUNK_SHOT,
+			MOVE_FIRE_PUNCH,
+			MOVE_GIGA_DRAIN,
+			MOVE_THIEF,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_MUK
@@ -10843,6 +12425,276 @@ static u16 const sTutorMoves_SPECIES_MUK[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_MUK[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_GUNK_SHOT,
+			MOVE_SHADOW_SNEAK,
+			MOVE_FOCUS_PUNCH,
+			MOVE_ICE_PUNCH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SHADOW_SNEAK,
+			MOVE_POISON_JAB,
+			MOVE_ICE_PUNCH,
+			MOVE_GUNK_SHOT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_CURSE,
+			MOVE_POISON_JAB,
+			MOVE_REST,
+			MOVE_SLEEP_TALK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_GUNK_SHOT,
+			MOVE_SHADOW_SNEAK,
+			MOVE_FIRE_PUNCH,
+			MOVE_ICE_PUNCH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_ASSAULT_VEST,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_GUNK_SHOT,
+			MOVE_SHADOW_SNEAK,
+			MOVE_FIRE_PUNCH,
+			MOVE_ICE_PUNCH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_POISON_JAB,
+			MOVE_SHADOW_SNEAK,
+			MOVE_ICE_PUNCH,
+			MOVE_CURSE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_CURSE,
+			MOVE_POISON_JAB,
+			MOVE_REST,
+			MOVE_SLEEP_TALK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_GUNK_SHOT,
+			MOVE_SHADOW_SNEAK,
+			MOVE_THUNDER_PUNCH,
+			MOVE_ICE_PUNCH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SHADOW_SNEAK,
+			MOVE_POISON_JAB,
+			MOVE_GUNK_SHOT,
+			MOVE_CURSE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_REST,
+			MOVE_SLEEP_TALK,
+			MOVE_CURSE,
+			MOVE_POISON_JAB,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_POISON_JAB,
+			MOVE_SHADOW_SNEAK,
+			MOVE_ICE_PUNCH,
+			MOVE_CURSE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9OU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_STEEL,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_POISON_JAB,
+			MOVE_KNOCK_OFF,
+			MOVE_REST,
+			MOVE_SLEEP_TALK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DARK,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_POISON_JAB,
+			MOVE_DRAIN_PUNCH,
+			MOVE_HAZE,
+			MOVE_TOXIC_SPIKES,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_CURSE,
+			MOVE_POISON_JAB,
+			MOVE_DRAIN_PUNCH,
+			MOVE_SHADOW_SNEAK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_POISON_TOUCH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_POISON_JAB,
+			MOVE_KNOCK_OFF,
+			MOVE_DRAIN_PUNCH,
+			MOVE_TOXIC_SPIKES,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DARK,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_KNOCK_OFF,
+			MOVE_DRAIN_PUNCH,
+			MOVE_POISON_JAB,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DARK,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_POISON_JAB,
+			MOVE_KNOCK_OFF,
+			MOVE_ZEN_HEADBUTT,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_ASSAULT_VEST,
+		.ability=ABILITY_STICKY_HOLD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DARK,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_POISON_JAB,
+			MOVE_KNOCK_OFF,
+			MOVE_ZEN_HEADBUTT,
+			MOVE_DRAIN_PUNCH,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_SHELLDER
@@ -12022,6 +13874,81 @@ static u16 const sTutorMoves_SPECIES_VOLTORB[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_VOLTORB[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_DAMP_ROCK,
+		.ability=ABILITY_STATIC,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_RAIN_DANCE,
+			MOVE_THUNDER,
+			MOVE_VOLT_SWITCH,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_STATIC,
+		.hiddenPowerType=TYPE_ICE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_TAUNT,
+			MOVE_THUNDERBOLT,
+			MOVE_VOLT_SWITCH,
+			MOVE_HIDDEN_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_STATIC,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_VOLT_SWITCH,
+			MOVE_THUNDERBOLT,
+			MOVE_TAUNT,
+			MOVE_SIGNAL_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_LIGHT_CLAY,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_REFLECT,
+			MOVE_LIGHT_SCREEN,
+			MOVE_VOLT_SWITCH,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_LIGHT_CLAY,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_VOLT_SWITCH,
+			MOVE_EXPLOSION,
+			MOVE_THUNDERBOLT,
+			MOVE_LIGHT_SCREEN,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_ELECTRODE
@@ -12099,6 +14026,227 @@ static u16 const sTutorMoves_SPECIES_ELECTRODE[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_ELECTRODE[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_SOUNDPROOF,
+		.hiddenPowerType=TYPE_GRASS,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_THUNDERBOLT,
+			MOVE_VOLT_SWITCH,
+			MOVE_HIDDEN_POWER,
+			MOVE_SIGNAL_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SIGNAL_BEAM,
+			MOVE_VOLT_SWITCH,
+			MOVE_THUNDERBOLT,
+			MOVE_THUNDER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_SOUNDPROOF,
+		.hiddenPowerType=TYPE_ICE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_THUNDERBOLT,
+			MOVE_VOLT_SWITCH,
+			MOVE_HIDDEN_POWER,
+			MOVE_SIGNAL_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_DAMP_ROCK,
+		.ability=ABILITY_SOUNDPROOF,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_RAIN_DANCE,
+			MOVE_TAUNT,
+			MOVE_THUNDER,
+			MOVE_EXPLOSION,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_VOLT_SWITCH,
+			MOVE_THUNDERBOLT,
+			MOVE_SIGNAL_BEAM,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_LIGHT_CLAY,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_LIGHT_SCREEN,
+			MOVE_REFLECT,
+			MOVE_TAUNT,
+			MOVE_EXPLOSION,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LIGHT_CLAY,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_REFLECT,
+			MOVE_LIGHT_SCREEN,
+			MOVE_TAUNT,
+			MOVE_EXPLOSION,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_LIGHT_CLAY,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_ICE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_VOLT_SWITCH,
+			MOVE_THUNDERBOLT,
+			MOVE_SIGNAL_BEAM,
+			MOVE_HIDDEN_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_SOUNDPROOF,
+		.hiddenPowerType=TYPE_WATER,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_VOLT_SWITCH,
+			MOVE_THUNDERBOLT,
+			MOVE_HIDDEN_POWER,
+			MOVE_SIGNAL_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LIGHT_CLAY,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_VOLT_SWITCH,
+			MOVE_TAUNT,
+			MOVE_REFLECT,
+			MOVE_LIGHT_SCREEN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LETSGOOU),
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_TAUNT,
+			MOVE_REFLECT,
+			MOVE_LIGHT_SCREEN,
+			MOVE_FOUL_PLAY,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LETSGOOU),
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_THUNDERBOLT,
+			MOVE_REFLECT,
+			MOVE_LIGHT_SCREEN,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ICE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_THUNDERBOLT,
+			MOVE_VOLT_SWITCH,
+			MOVE_TERA_BLAST,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_VOLT_SWITCH,
+			MOVE_TERA_BLAST,
+			MOVE_THUNDERBOLT,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_AFTERMATH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_VOLT_SWITCH,
+			MOVE_TERA_BLAST,
+			MOVE_THUNDERBOLT,
+			MOVE_TAUNT,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_EXEGGCUTE
@@ -12519,6 +14667,141 @@ static u16 const sTutorMoves_SPECIES_MAROWAK[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_MAROWAK[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_ROCK_HEAD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_BONEMERANG,
+			MOVE_DOUBLE_EDGE,
+			MOVE_SWORDS_DANCE,
+			MOVE_KNOCK_OFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_ROCK_HEAD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_BONEMERANG,
+			MOVE_KNOCK_OFF,
+			MOVE_DOUBLE_EDGE,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_ROCK_HEAD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_KNOCK_OFF,
+			MOVE_BONEMERANG,
+			MOVE_DOUBLE_EDGE,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_BATTLE_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BRAVE,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_STONE_EDGE,
+			MOVE_KNOCK_OFF,
+			MOVE_SWORDS_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_BATTLE_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_BONEMERANG,
+			MOVE_STONE_EDGE,
+			MOVE_KNOCK_OFF,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_ROCK_HEAD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BRAVE,
+		.moves=
+		{
+			MOVE_BONEMERANG,
+			MOVE_DOUBLE_EDGE,
+			MOVE_KNOCK_OFF,
+			MOVE_SWORDS_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_BATTLE_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_BONEMERANG,
+			MOVE_KNOCK_OFF,
+			MOVE_STONE_EDGE,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_BATTLE_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_BONEMERANG,
+			MOVE_KNOCK_OFF,
+			MOVE_STONE_EDGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_THICK_CLUB,
+		.ability=ABILITY_ROCK_HEAD,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_KNOCK_OFF,
+			MOVE_EARTHQUAKE,
+			MOVE_BONEMERANG,
+			MOVE_STONE_EDGE,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_HITMONLEE
@@ -13030,6 +15313,21 @@ static u16 const sTutorMoves_SPECIES_WEEZING[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_WEEZING[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_NEUTRALIZING_GAS,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FLYING,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_SLUDGE_BOMB,
+			MOVE_TAUNT,
+			MOVE_WILL_O_WISP,
+			MOVE_DESTINY_BOND,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_RHYHORN
@@ -18337,6 +20635,21 @@ static u16 const sTutorMoves_SPECIES_TYPHLOSION[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_TYPHLOSION[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SERENE_GRACE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FIRE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_ERUPTION,
+			MOVE_SEARING_SHOT,
+			MOVE_SCORCHING_SANDS,
+			MOVE_FOCUS_BLAST,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_TOTODILE
@@ -22484,6 +24797,51 @@ static u16 const sTutorMoves_SPECIES_WOOPER[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_WOOPER[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_WATER_ABSORB,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_SASSY,
+		.moves=
+		{
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_RECOVER,
+			MOVE_YAWN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_WATER_ABSORB,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_SASSY,
+		.moves=
+		{
+			MOVE_HYDRO_PUMP,
+			MOVE_RECOVER,
+			MOVE_EARTHQUAKE,
+			MOVE_YAWN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_EARTH_POWER,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_QUAGSIRE
@@ -22582,6 +24940,456 @@ static u16 const sTutorMoves_SPECIES_QUAGSIRE[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_QUAGSIRE[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_HYDRO_PUMP,
+			MOVE_RECOVER,
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6OU | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU | MON_FLAGS_GEN7OU | MON_FLAGS_GEN8OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+			MOVE_TOXIC,
+			MOVE_EARTHQUAKE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU | MON_FLAGS_GEN8NATIONALDEX),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_HYDRO_PUMP,
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6BATTLESPOTSINGLES),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_STOCKPILE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7OU | MON_FLAGS_GEN8UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7BATTLESPOTSINGLES),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN71V1),
+		.heldItem=ITEM_NORMALIUM_Z,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STOCKPILE,
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+			MOVE_HYDRO_PUMP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8OU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_EARTHQUAKE,
+			MOVE_HYDRO_PUMP,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+			MOVE_RECOVER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8RU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8RU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+			MOVE_TOXIC,
+			MOVE_EARTHQUAKE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+			MOVE_RECOVER,
+			MOVE_HYDRO_PUMP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NU | MON_FLAGS_GEN8ANYTHINGGOES | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+			MOVE_HYDRO_PUMP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8PU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+			MOVE_EARTHQUAKE,
+			MOVE_HYDRO_PUMP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8BATTLESTADIUMSINGLES),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_EARTHQUAKE,
+			MOVE_YAWN,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_COUNTER,
+			MOVE_AMNESIA,
+			MOVE_RECOVER,
+			MOVE_SEISMIC_TOSS,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ANYTHINGGOES),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_HYDRO_PUMP,
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_TOXIC,
+			MOVE_HYDRO_PUMP,
+			MOVE_EARTHQUAKE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_POISON,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+			MOVE_SPIKES,
+			MOVE_RECOVER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9UU | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_RECOVER,
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_WATER_ABSORB,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_POISON,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_TOXIC,
+			MOVE_EARTHQUAKE,
+			MOVE_RECOVER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_POISON,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+			MOVE_RECOVER,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_TOXIC,
+			MOVE_RECOVER,
+			MOVE_SPIKES,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_UNAWARE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_EARTHQUAKE,
+			MOVE_STEALTH_ROCK,
+			MOVE_TOXIC,
+			MOVE_RECOVER,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_ESPEON
@@ -24450,6 +27258,261 @@ static u16 const sTutorMoves_SPECIES_QWILFISH[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_QWILFISH[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_WATERFALL,
+			MOVE_TAUNT,
+			MOVE_THUNDER_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_SWIFT_SWIM,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_WATERFALL,
+			MOVE_POISON_JAB,
+			MOVE_EXPLOSION,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_TAUNT,
+			MOVE_HYDRO_PUMP,
+			MOVE_THUNDER_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_TAUNT,
+			MOVE_THUNDER_WAVE,
+			MOVE_TOXIC_SPIKES,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_LIQUIDATION,
+			MOVE_SPIKES,
+			MOVE_POISON_JAB,
+			MOVE_TOXIC_SPIKES,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_HYDRO_PUMP,
+			MOVE_TAUNT,
+			MOVE_DESTINY_BOND,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_TAUNT,
+			MOVE_TOXIC_SPIKES,
+			MOVE_HYDRO_PUMP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8PU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_TAUNT,
+			MOVE_WATERFALL,
+			MOVE_THUNDER_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8PU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_POISON_JAB,
+			MOVE_LIQUIDATION,
+			MOVE_AQUA_JET,
+			MOVE_SPIKES,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_LIQUIDATION,
+			MOVE_PAIN_SPLIT,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_LIQUIDATION,
+			MOVE_POISON_JAB,
+			MOVE_AQUA_JET,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_BLACK_SLUDGE,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_LIQUIDATION,
+			MOVE_POISON_JAB,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_POISON_POINT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GROUND,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_TOXIC,
+			MOVE_WATERFALL,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_SPIKES,
+			MOVE_FLIP_TURN,
+			MOVE_TAUNT,
+			MOVE_BARB_BARRAGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GROUND,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_FLIP_TURN,
+			MOVE_BARB_BARRAGE,
+			MOVE_SPIKES,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_GUNK_SHOT,
+			MOVE_LIQUIDATION,
+			MOVE_FLIP_TURN,
+			MOVE_SPIKES,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_INTIMIDATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_LIQUIDATION,
+			MOVE_GUNK_SHOT,
+			MOVE_AQUA_JET,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_SCIZOR
@@ -25656,6 +28719,126 @@ static u16 const sTutorMoves_SPECIES_CORSOLA[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_CORSOLA[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_REGENERATOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_RECOVER,
+			MOVE_SCALD,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_REGENERATOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_SCALD,
+			MOVE_RECOVER,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6ZU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_REGENERATOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_SCALD,
+			MOVE_RECOVER,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_REGENERATOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_RECOVER,
+			MOVE_SCALD,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_REGENERATOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_SCALD,
+			MOVE_STEALTH_ROCK,
+			MOVE_RECOVER,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_REGENERATOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_SCALD,
+			MOVE_SUBSTITUTE,
+			MOVE_STEALTH_ROCK,
+			MOVE_RECOVER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_REGENERATOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_SCALD,
+			MOVE_RECOVER,
+			MOVE_STEALTH_ROCK,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_ROCKY_HELMET,
+		.ability=ABILITY_REGENERATOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_ROCK_SLIDE,
+			MOVE_SUBSTITUTE,
+			MOVE_RECOVER,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_REMORAID
@@ -43512,6 +46695,21 @@ static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_LATIOS[]
 			MOVE_AURA_SPHERE,
 		},
 	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_LATIOSITE,
+		.ability=ABILITY_LEVITATE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ELECTRIC,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_LUSTER_PURGE,
+			MOVE_THUNDERBOLT,
+			MOVE_PROTECT,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_KYOGRE
@@ -55389,6 +58587,51 @@ static u16 const sTutorMoves_SPECIES_PHIONE[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_PHIONE[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_DAMP_ROCK,
+		.ability=ABILITY_HYDRATION,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_RAIN_DANCE,
+			MOVE_REST,
+			MOVE_SCALD,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_DAMP_ROCK,
+		.ability=ABILITY_HYDRATION,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_RELAXED,
+		.moves=
+		{
+			MOVE_RAIN_DANCE,
+			MOVE_HEAL_BELL,
+			MOVE_SCALD,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_HYDRATION,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_TAKE_HEART,
+			MOVE_SCALD,
+			MOVE_REST,
+			MOVE_ICE_BEAM,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_MANAPHY
@@ -55648,6 +58891,246 @@ static u16 const sTutorMoves_SPECIES_SHAYMIN[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_SHAYMIN[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_EARTH_POWER,
+			MOVE_PSYCHIC,
+			MOVE_SYNTHESIS,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_DAZZLING_GLEAM,
+			MOVE_PSYCHIC,
+			MOVE_HEALING_WISH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_LEECH_SEED,
+			MOVE_SEED_FLARE,
+			MOVE_PSYCHIC,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_SYNTHESIS,
+			MOVE_EARTH_POWER,
+			MOVE_LEECH_SEED,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_NORMALIUM_Z,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_FIRE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_CELEBRATE,
+			MOVE_SEED_FLARE,
+			MOVE_DAZZLING_GLEAM,
+			MOVE_HIDDEN_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_ICE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_EARTH_POWER,
+			MOVE_HIDDEN_POWER,
+			MOVE_SYNTHESIS,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_ICE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_HEALING_WISH,
+			MOVE_PSYCHIC,
+			MOVE_HIDDEN_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_LEECH_SEED,
+			MOVE_SUBSTITUTE,
+			MOVE_SEED_FLARE,
+			MOVE_AIR_SLASH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_NORMALIUM_Z,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_CELEBRATE,
+			MOVE_SEED_FLARE,
+			MOVE_AIR_SLASH,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_EARTH_POWER,
+			MOVE_LEECH_SEED,
+			MOVE_SYNTHESIS,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_AIR_SLASH,
+			MOVE_LEECH_SEED,
+			MOVE_SYNTHESIS,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_AIR_SLASH,
+			MOVE_EARTH_POWER,
+			MOVE_SYNTHESIS,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_AIR_SLASH,
+			MOVE_EARTH_POWER,
+			MOVE_HEALING_WISH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_DAZZLING_GLEAM,
+			MOVE_EARTH_POWER,
+			MOVE_HEALING_WISH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_EARTH_POWER,
+			MOVE_DAZZLING_GLEAM,
+			MOVE_AIR_SLASH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_NATURAL_CURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SEED_FLARE,
+			MOVE_EARTH_POWER,
+			MOVE_DAZZLING_GLEAM,
+			MOVE_HEALING_WISH,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_ARCEUS
@@ -56837,6 +60320,21 @@ static u16 const sTutorMoves_SPECIES_SAMUROTT[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_SAMUROTT[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_ASSAULT_VEST,
+		.ability=ABILITY_SHARPNESS,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FIGHTING,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SMART_STRIKE,
+			MOVE_RAZOR_SHELL,
+			MOVE_SACRED_SWORD,
+			MOVE_AQUA_JET,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_PATRAT
@@ -61403,6 +64901,215 @@ static u16 const sTutorMoves_SPECIES_LILLIGANT[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_LILLIGANT[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_ROCK,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_GIGA_DRAIN,
+			MOVE_HIDDEN_POWER,
+			MOVE_SLEEP_POWDER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_ROCK,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_LEAF_STORM,
+			MOVE_HIDDEN_POWER,
+			MOVE_SLEEP_POWDER,
+			MOVE_HEALING_WISH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6NU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_OWN_TEMPO,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_SLEEP_POWDER,
+			MOVE_GIGA_DRAIN,
+			MOVE_PETAL_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_NORMALIUM_Z,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_SLEEP_POWDER,
+			MOVE_GIGA_DRAIN,
+			MOVE_HYPER_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_NORMALIUM_Z,
+		.ability=ABILITY_OWN_TEMPO,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_GIGA_DRAIN,
+			MOVE_SLEEP_POWDER,
+			MOVE_PETAL_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7BATTLESPOTDOUBLES),
+		.heldItem=ITEM_GRASSIUM_Z,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_PROTECT,
+			MOVE_AFTER_YOU,
+			MOVE_SLEEP_POWDER,
+			MOVE_LEAF_STORM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7VGC2017),
+		.heldItem=ITEM_FOCUS_SASH,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_LEAF_STORM,
+			MOVE_SLEEP_POWDER,
+			MOVE_AFTER_YOU,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7VGC2017),
+		.heldItem=ITEM_GRASSIUM_Z,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_AFTER_YOU,
+			MOVE_SLEEP_POWDER,
+			MOVE_LEAF_STORM,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7VGC2018),
+		.heldItem=ITEM_WIDE_LENS,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SLEEP_POWDER,
+			MOVE_PROTECT,
+			MOVE_GIGA_DRAIN,
+			MOVE_ENCORE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8PU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_GIGA_DRAIN,
+			MOVE_SLEEP_POWDER,
+			MOVE_NATURE_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_CHLOROPHYLL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_GIGA_DRAIN,
+			MOVE_POLLEN_PUFF,
+			MOVE_SLEEP_POWDER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_OWN_TEMPO,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_SLEEP_POWDER,
+			MOVE_POLLEN_PUFF,
+			MOVE_PETAL_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_OWN_TEMPO,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ROCK,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_GIGA_DRAIN,
+			MOVE_TERA_BLAST,
+			MOVE_POLLEN_PUFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_OWN_TEMPO,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FIRE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_QUIVER_DANCE,
+			MOVE_GIGA_DRAIN,
+			MOVE_TERA_BLAST,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_BASCULIN
@@ -61479,6 +65186,156 @@ static u16 const sTutorMoves_SPECIES_BASCULIN[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_BASCULIN[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_NAIVE,
+		.moves=
+		{
+			MOVE_WATERFALL,
+			MOVE_ZEN_HEADBUTT,
+			MOVE_ICE_BEAM,
+			MOVE_AQUA_JET,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_AQUA_JET,
+			MOVE_WATERFALL,
+			MOVE_SUPERPOWER,
+			MOVE_CRUNCH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_WATERIUM_Z,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_NAIVE,
+		.moves=
+		{
+			MOVE_WATERFALL,
+			MOVE_AQUA_JET,
+			MOVE_ICE_BEAM,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_NAIVE,
+		.moves=
+		{
+			MOVE_LIQUIDATION,
+			MOVE_ICE_BEAM,
+			MOVE_SUPERPOWER,
+			MOVE_AQUA_JET,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_AQUA_JET,
+			MOVE_LIQUIDATION,
+			MOVE_SUPERPOWER,
+			MOVE_CRUNCH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8PU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_LIQUIDATION,
+			MOVE_FLIP_TURN,
+			MOVE_CRUNCH,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8PU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLIP_TURN,
+			MOVE_LIQUIDATION,
+			MOVE_AQUA_JET,
+			MOVE_CRUNCH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_RECKLESS,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_WAVE_CRASH,
+			MOVE_HEAD_SMASH,
+			MOVE_AQUA_JET,
+			MOVE_DOUBLE_EDGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_WAVE_CRASH,
+			MOVE_FLIP_TURN,
+			MOVE_AQUA_JET,
+			MOVE_HEAD_SMASH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_ADAPTABILITY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_AQUA_JET,
+			MOVE_WAVE_CRASH,
+			MOVE_PSYCHIC_FANGS,
+			MOVE_LIQUIDATION,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_SANDILE
@@ -61931,6 +65788,51 @@ static u16 const sTutorMoves_SPECIES_DARUMAKA[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_DARUMAKA[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_HUSTLE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_U_TURN,
+			MOVE_ROCK_SLIDE,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_HUSTLE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_U_TURN,
+			MOVE_SUPERPOWER,
+			MOVE_ROCK_SLIDE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8LC),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_HUSTLE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_U_TURN,
+			MOVE_FLAME_CHARGE,
+			MOVE_ZEN_HEADBUTT,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_DARMANITAN
@@ -62026,6 +65928,186 @@ static u16 const sTutorMoves_SPECIES_DARMANITAN[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_DARMANITAN[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6OU | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_U_TURN,
+			MOVE_EARTHQUAKE,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_ROCK_SLIDE,
+			MOVE_U_TURN,
+			MOVE_EARTHQUAKE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_ROCK_SLIDE,
+			MOVE_EARTHQUAKE,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU | MON_FLAGS_GEN8UU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_U_TURN,
+			MOVE_EARTHQUAKE,
+			MOVE_ROCK_SLIDE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6BATTLESPOTSINGLES | MON_FLAGS_GEN7MONOTYPE),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_EARTHQUAKE,
+			MOVE_U_TURN,
+			MOVE_ROCK_SLIDE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6MONOTYPE | MON_FLAGS_GEN6MONOTYPE | MON_FLAGS_GEN8UU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_U_TURN,
+			MOVE_ROCK_SLIDE,
+			MOVE_EARTHQUAKE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7OU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_EARTHQUAKE,
+			MOVE_U_TURN,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_U_TURN,
+			MOVE_EARTHQUAKE,
+			MOVE_ROCK_SLIDE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN71V1),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_SUPERPOWER,
+			MOVE_ROCK_SLIDE,
+			MOVE_FLING,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN71V1),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_EARTHQUAKE,
+			MOVE_SUPERPOWER,
+			MOVE_ROCK_SLIDE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_TRICK,
+			MOVE_EARTHQUAKE,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_SHEER_FORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_FLARE_BLITZ,
+			MOVE_SUPERPOWER,
+			MOVE_TRICK,
+			MOVE_REST,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_MARACTUS
@@ -68353,6 +72435,66 @@ static u16 const sTutorMoves_SPECIES_STUNFISK[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_STUNFISK[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU | MON_FLAGS_GEN7PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_STATIC,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_DISCHARGE,
+			MOVE_EARTH_POWER,
+			MOVE_THUNDER_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6PU | MON_FLAGS_GEN7ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_STATIC,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_EARTH_POWER,
+			MOVE_STEALTH_ROCK,
+			MOVE_DISCHARGE,
+			MOVE_THUNDER_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_STATIC,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_THUNDER_WAVE,
+			MOVE_EARTH_POWER,
+			MOVE_DISCHARGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_STATIC,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_EARTH_POWER,
+			MOVE_STEALTH_ROCK,
+			MOVE_THUNDER_WAVE,
+			MOVE_FOUL_PLAY,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_MIENFOO
@@ -69362,6 +73504,276 @@ static u16 const sTutorMoves_SPECIES_BRAVIARY[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_BRAVIARY[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_BULK_UP,
+			MOVE_BRAVE_BIRD,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_RETURN,
+			MOVE_SUPERPOWER,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_SUPERPOWER,
+			MOVE_U_TURN,
+			MOVE_RETURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_FIGHTINIUM_Z,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_SUPERPOWER,
+			MOVE_BULK_UP,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_BULK_UP,
+			MOVE_BRAVE_BIRD,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_SUPERPOWER,
+			MOVE_U_TURN,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7VGC2017),
+		.heldItem=ITEM_FLYINIUM_Z,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_TAILWIND,
+			MOVE_PROTECT,
+			MOVE_BRAVE_BIRD,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7VGC2018),
+		.heldItem=ITEM_FLYINIUM_Z,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_TAILWIND,
+			MOVE_PROTECT,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_CLOSE_COMBAT,
+			MOVE_ROOST,
+			MOVE_BULK_UP,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_CLOSE_COMBAT,
+			MOVE_U_TURN,
+			MOVE_IRON_HEAD,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8VGC2020),
+		.heldItem=ITEM_LUM_BERRY,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_CLOSE_COMBAT,
+			MOVE_PROTECT,
+			MOVE_ROCK_SLIDE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_CLOSE_COMBAT,
+			MOVE_DEFOG,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_ROOST,
+			MOVE_DEFOG,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_CLOSE_COMBAT,
+			MOVE_U_TURN,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DARK,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BULK_UP,
+			MOVE_BRAVE_BIRD,
+			MOVE_ROOST,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_CLOSE_COMBAT,
+			MOVE_U_TURN,
+			MOVE_DEFOG,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_CLOSE_COMBAT,
+			MOVE_U_TURN,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_DEFIANT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_BRAVE_BIRD,
+			MOVE_DEFOG,
+			MOVE_ROOST,
+			MOVE_U_TURN,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_VULLABY
@@ -71370,6 +75782,741 @@ static u16 const sTutorMoves_SPECIES_KYUREM[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_KYUREM[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6OU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_FIRE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_ICE_BEAM,
+			MOVE_DRACO_METEOR,
+			MOVE_EARTH_POWER,
+			MOVE_HIDDEN_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+			MOVE_FOCUS_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+			MOVE_DRAGON_PULSE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_ROOST,
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_HASTY,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+			MOVE_OUTRAGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_ICE_BEAM,
+			MOVE_DRACO_METEOR,
+			MOVE_EARTH_POWER,
+			MOVE_FLASH_CANNON,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7OU),
+		.heldItem=ITEM_METRONOME,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_ICE_BEAM,
+			MOVE_SUBSTITUTE,
+			MOVE_EARTH_POWER,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_FIRE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_HIDDEN_POWER,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+			MOVE_ROOST,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN71V1),
+		.heldItem=ITEM_ICIUM_Z,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_NOBLE_ROAR,
+			MOVE_ROOST,
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8UBERS),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_ROOST,
+			MOVE_ICICLE_SPEAR,
+			MOVE_DRAGON_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEX),
+		.heldItem=ITEM_NEVER_MELT_ICE,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_ICE_BEAM,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEX),
+		.heldItem=ITEM_METRONOME,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEX | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FREEZE_DRY,
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEX),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_ROOST,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_DRACO_METEOR,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_HABAN_BERRY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_NOBLE_ROAR,
+			MOVE_ROOST,
+			MOVE_GLACIATE,
+			MOVE_DRACO_METEOR,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_HABAN_BERRY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_GLACIATE,
+			MOVE_EARTH_POWER,
+			MOVE_FREEZE_DRY,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_ASSAULT_VEST,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_FREEZE_DRY,
+			MOVE_GLACIATE,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_CHOPLE_BERRY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_FREEZE_DRY,
+			MOVE_GLACIATE,
+			MOVE_FOCUS_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_FOCUS_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_ROSELI_BERRY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_LASER_FOCUS,
+			MOVE_FREEZE_DRY,
+			MOVE_NOBLE_ROAR,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_WEAKNESS_POLICY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_GLACIATE,
+			MOVE_EARTH_POWER,
+			MOVE_FREEZE_DRY,
+			MOVE_DRACO_METEOR,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_NOBLE_ROAR,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE | MON_FLAGS_GEN8MONOTYPE | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_ROOST,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FREEZE_DRY,
+			MOVE_ICE_BEAM,
+			MOVE_DRACO_METEOR,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_ROOST,
+			MOVE_DRAGON_DANCE,
+			MOVE_ICICLE_SPEAR,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_ICE_BEAM,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_DRAGON_DANCE,
+			MOVE_SUBSTITUTE,
+			MOVE_ICICLE_SPEAR,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_CHOPLE_BERRY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_ROOST,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_ROOST,
+			MOVE_DRAGON_DANCE,
+			MOVE_ICICLE_SPEAR,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_DRACO_METEOR,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NATIONALDEXMONOTYPE | MON_FLAGS_GEN9NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_DRACO_METEOR,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9OU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ICE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_DRACO_METEOR,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9OU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ICE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_DRACO_METEOR,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9OU),
+		.heldItem=ITEM_LOADED_DICE,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GROUND,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_DRAGON_DANCE,
+			MOVE_SCALE_SHOT,
+			MOVE_ICICLE_SPEAR,
+			MOVE_TERA_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEX),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEX),
+		.heldItem=ITEM_LOADED_DICE,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GROUND,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_DRAGON_DANCE,
+			MOVE_SCALE_SHOT,
+			MOVE_ICICLE_SPEAR,
+			MOVE_TERA_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEX),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_ROOST,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN91V1),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DRAGON,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN91V1),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DRAGON,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN91V1),
+		.heldItem=ITEM_HABAN_BERRY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DRAGON,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_GLACIATE,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN91V1),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DRAGON,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_FOCUS_BLAST,
+			MOVE_FREEZE_DRY,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN91V1),
+		.heldItem=ITEM_WEAKNESS_POLICY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DRAGON,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_EARTH_POWER,
+			MOVE_FREEZE_DRY,
+			MOVE_REFLECT,
+			MOVE_DRACO_METEOR,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN91V1),
+		.heldItem=ITEM_ASSAULT_VEST,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DRAGON,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_FREEZE_DRY,
+			MOVE_GLACIATE,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE | MON_FLAGS_GEN9NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_FOCUS_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DRACO_METEOR,
+			MOVE_ICE_BEAM,
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_CHOPLE_BERRY,
+		.ability=ABILITY_PRESSURE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FREEZE_DRY,
+			MOVE_EARTH_POWER,
+			MOVE_SUBSTITUTE,
+			MOVE_ROOST,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_KELDEO
@@ -73657,6 +78804,36 @@ static u16 const sTutorMoves_SPECIES_FLABEBE[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_FLABEBE[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_SYNTHESIS,
+			MOVE_MOONBLAST,
+			MOVE_PSYCHIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_EVIOLITE,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_PSYCHIC,
+			MOVE_MOONBLAST,
+			MOVE_SYNTHESIS,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_FLOETTE
@@ -73816,6 +78993,169 @@ static u16 const sTutorMoves_SPECIES_FLORGES[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_FLORGES[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_WISH,
+			MOVE_SYNTHESIS,
+			MOVE_MOONBLAST,
+			MOVE_AROMATHERAPY,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_SYNTHESIS,
+			MOVE_AROMATHERAPY,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_AROMATHERAPY,
+			MOVE_WISH,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_SYMBIOSIS,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SYNTHESIS,
+			MOVE_AROMATHERAPY,
+			MOVE_WISH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_WISH,
+			MOVE_AROMATHERAPY,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_SYMBIOSIS,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_SYNTHESIS,
+			MOVE_AROMATHERAPY,
+			MOVE_WISH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_AROMATHERAPY,
+			MOVE_WISH,
+			MOVE_SYNTHESIS,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_MOONBLAST,
+			MOVE_CALM_MIND,
+			MOVE_WISH,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_STEEL,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_SYNTHESIS,
+			MOVE_WISH,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_POISON,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_WISH,
+			MOVE_SYNTHESIS,
+			MOVE_MOONBLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_FLOWER_VEIL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_POISON,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_MOONBLAST,
+			MOVE_SYNTHESIS,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_SKIDDO
@@ -77778,6 +83118,21 @@ static u16 const sTutorMoves_SPECIES_GOURGEIST[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_GOURGEIST[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_GROWING_PUMPKIN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_PROTECT,
+			MOVE_POWER_WHIP,
+			MOVE_POLTERGEIST,
+			MOVE_SHADOW_SNEAK,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_BERGMITE
@@ -77960,6 +83315,21 @@ static u16 const sTutorMoves_SPECIES_AVALUGG[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_AVALUGG[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GHOST,
+		.nature=NATURE_IMPISH,
+		.moves=
+		{
+			MOVE_SLUSH_CRUSH,
+			MOVE_HIGH_HORSEPOWER,
+			MOVE_WIDE_GUARD,
+			MOVE_RECOVER,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_NOIBAT
@@ -78701,6 +84071,290 @@ static u16 const sTutorMoves_SPECIES_HOOPA[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_HOOPA[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_TRICK_ROOM,
+			MOVE_SHADOW_BALL,
+			MOVE_PSYSHOCK,
+			MOVE_FOCUS_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6UU),
+		.heldItem=ITEM_SALAC_BERRY,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+			MOVE_PSYSHOCK,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_HYPERSPACE_HOLE,
+			MOVE_FOCUS_BLAST,
+			MOVE_KNOCK_OFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_PSYSHOCK,
+			MOVE_FOCUS_BLAST,
+			MOVE_TRICK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN6RU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+			MOVE_PSYSHOCK,
+			MOVE_HYPERSPACE_HOLE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_FIGHTINIUM_Z,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_NASTY_PLOT,
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+			MOVE_SUBSTITUTE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_GHOSTIUM_Z,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+			MOVE_THUNDERBOLT,
+			MOVE_NASTY_PLOT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+			MOVE_TRICK,
+			MOVE_PSYSHOCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7MONOTYPE),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_QUIET,
+		.moves=
+		{
+			MOVE_TRICK_ROOM,
+			MOVE_PSYCHIC,
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GHOST,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_PSYSHOCK,
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FIGHTING,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_PSYSHOCK,
+			MOVE_FOCUS_BLAST,
+			MOVE_TRICK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_PSYSHOCK,
+			MOVE_FOCUS_BLAST,
+			MOVE_KNOCK_OFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_PSYSHOCK,
+			MOVE_FOCUS_BLAST,
+			MOVE_PSYCHIC,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FIGHTING,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_PSYSHOCK,
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+			MOVE_TRICK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FIGHTING,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_SUBSTITUTE,
+			MOVE_PSYSHOCK,
+			MOVE_SHADOW_BALL,
+			MOVE_FOCUS_BLAST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ELECTRIC,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_PSYSHOCK,
+			MOVE_THUNDERBOLT,
+			MOVE_TRICK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ELECTRIC,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_PSYCHIC,
+			MOVE_SHADOW_BALL,
+			MOVE_THUNDERBOLT,
+			MOVE_TRICK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ELECTRIC,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_NASTY_PLOT,
+			MOVE_SHADOW_BALL,
+			MOVE_PSYSHOCK,
+			MOVE_THUNDERBOLT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9ZU),
+		.heldItem=ITEM_THROAT_SPRAY,
+		.ability=ABILITY_MAGICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_SHADOW_BALL,
+			MOVE_THUNDERBOLT,
+			MOVE_TERA_BLAST,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_VOLCANION
@@ -79118,6 +84772,306 @@ static u16 const sTutorMoves_SPECIES_DECIDUEYE[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_DECIDUEYE[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_DECIDIUM_Z,
+		.ability=ABILITY_OVERGROW,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_SUBSTITUTE,
+			MOVE_LEAF_BLADE,
+			MOVE_SPIRIT_SHACKLE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_SPELL_TAG,
+		.ability=ABILITY_OVERGROW,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_LEAF_BLADE,
+			MOVE_SPIRIT_SHACKLE,
+			MOVE_SWORDS_DANCE,
+			MOVE_SHADOW_SNEAK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_GHOSTIUM_Z,
+		.ability=ABILITY_OVERGROW,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_NASTY_PLOT,
+			MOVE_SHADOW_BALL,
+			MOVE_LEAF_STORM,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_COLBUR_BERRY,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_DEFOG,
+			MOVE_GRASS_KNOT,
+			MOVE_ROOST,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_COLBUR_BERRY,
+		.ability=ABILITY_OVERGROW,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_DEFOG,
+			MOVE_LEAF_STORM,
+			MOVE_ROOST,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7NU),
+		.heldItem=ITEM_DECIDIUM_Z,
+		.ability=ABILITY_OVERGROW,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SPIRIT_SHACKLE,
+			MOVE_LEAF_BLADE,
+			MOVE_U_TURN,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CAREFUL,
+		.moves=
+		{
+			MOVE_SPIRIT_SHACKLE,
+			MOVE_ROOST,
+			MOVE_DEFOG,
+			MOVE_SWORDS_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7MONOTYPE),
+		.heldItem=ITEM_SPOOKY_PLATE,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_SPIRIT_SHACKLE,
+			MOVE_SHADOW_SNEAK,
+			MOVE_ROOST,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8RU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_POLTERGEIST,
+			MOVE_U_TURN,
+			MOVE_LEAF_BLADE,
+			MOVE_SHADOW_SNEAK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8RU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_LEAF_BLADE,
+			MOVE_SHADOW_SNEAK,
+			MOVE_POLTERGEIST,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_LEAF_BLADE,
+			MOVE_SPIRIT_SHACKLE,
+			MOVE_U_TURN,
+			MOVE_SHADOW_SNEAK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NU),
+		.heldItem=ITEM_SPELL_TAG,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_LEAF_BLADE,
+			MOVE_SPIRIT_SHACKLE,
+			MOVE_SHADOW_SNEAK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_OVERGROW,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_LEAF_STORM,
+			MOVE_SHADOW_BALL,
+			MOVE_U_TURN,
+			MOVE_GIGA_DRAIN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8NU),
+		.heldItem=ITEM_SPELL_TAG,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_LEAF_BLADE,
+			MOVE_SHADOW_SNEAK,
+			MOVE_SPIRIT_SHACKLE,
+			MOVE_SWORDS_DANCE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_LEAF_BLADE,
+			MOVE_SPIRIT_SHACKLE,
+			MOVE_DEFOG,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_SPELL_TAG,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_POLTERGEIST,
+			MOVE_LEAF_BLADE,
+			MOVE_SHADOW_SNEAK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_OVERGROW,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_LEAF_STORM,
+			MOVE_U_TURN,
+			MOVE_ROOST,
+			MOVE_DEFOG,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_LEAF_BLADE,
+			MOVE_U_TURN,
+			MOVE_POLTERGEIST,
+			MOVE_DEFOG,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_DEFOG,
+			MOVE_ROOST,
+			MOVE_SHADOW_BALL,
+			MOVE_KNOCK_OFF,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_LONG_REACH,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_POLTERGEIST,
+			MOVE_LEAF_BLADE,
+			MOVE_SHADOW_SNEAK,
+			MOVE_U_TURN,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_LITTEN
@@ -86585,6 +92539,276 @@ static u16 const sTutorMoves_SPECIES_NECROZMA[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_NECROZMA[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_METRONOME,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_SIGNAL_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_PHOTON_GEYSER,
+			MOVE_EARTH_POWER,
+			MOVE_HEAT_WAVE,
+			MOVE_SIGNAL_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UU),
+		.heldItem=ITEM_PSYCHIUM_Z,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_SIGNAL_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_FIRIUM_Z,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_CALM_MIND,
+			MOVE_MOONLIGHT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_PSYCHIUM_Z,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_STEALTH_ROCK,
+			MOVE_MOONLIGHT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7RU),
+		.heldItem=ITEM_PSYCHIUM_Z,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_CALM_MIND,
+			MOVE_STEALTH_ROCK,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7DOUBLESOU),
+		.heldItem=ITEM_GROUNDIUM_Z,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_PHOTON_GEYSER,
+			MOVE_EARTH_POWER,
+			MOVE_CALM_MIND,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN71V1),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_PRISMATIC_LASER,
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_SIGNAL_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN71V1),
+		.heldItem=ITEM_IAPAPA_BERRY,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_CALM,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_IRON_DEFENSE,
+			MOVE_MOONLIGHT,
+			MOVE_STORED_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8UU),
+		.heldItem=ITEM_LUM_BERRY,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_NAUGHTY,
+		.moves=
+		{
+			MOVE_DRAGON_DANCE,
+			MOVE_PHOTON_GEYSER,
+			MOVE_X_SCISSOR,
+			MOVE_HEAT_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8UU),
+		.heldItem=ITEM_POWER_HERB,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_METEOR_BEAM,
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_AUTOTOMIZE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8UU),
+		.heldItem=ITEM_COLBUR_BERRY,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_MOONLIGHT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8UU),
+		.heldItem=ITEM_POWER_HERB,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_NAUGHTY,
+		.moves=
+		{
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_DRAGON_DANCE,
+			MOVE_AUTOTOMIZE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8DOUBLESOU),
+		.heldItem=ITEM_POWER_HERB,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_EXPANDING_FORCE,
+			MOVE_METEOR_BEAM,
+			MOVE_EARTH_POWER,
+			MOVE_PROTECT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9OU),
+		.heldItem=ITEM_POWER_HERB,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GHOST,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_PHOTON_GEYSER,
+			MOVE_METEOR_BEAM,
+			MOVE_HEAT_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_POWER_HERB,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GHOST,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_PHOTON_GEYSER,
+			MOVE_METEOR_BEAM,
+			MOVE_HEAT_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_POWER_HERB,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_QUIET,
+		.moves=
+		{
+			MOVE_TRICK_ROOM,
+			MOVE_PHOTON_GEYSER,
+			MOVE_METEOR_BEAM,
+			MOVE_HEAT_WAVE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_LUM_BERRY,
+		.ability=ABILITY_PRISM_ARMOR,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_FAIRY,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_DRAGON_DANCE,
+			MOVE_PHOTON_GEYSER,
+			MOVE_EARTHQUAKE,
+			MOVE_X_SCISSOR,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_MAGEARNA
@@ -87380,6 +93604,21 @@ static u16 const sTutorMoves_SPECIES_MELTAN[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_MELTAN[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_MAGNET_PULL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_BOLD,
+		.moves=
+		{
+			MOVE_ACID_ARMOR,
+			MOVE_REST,
+			MOVE_FLASH_CANNON,
+			MOVE_THUNDERBOLT,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_MELMETAL
@@ -92795,6 +99034,22 @@ static u16 const sTutorMoves_SPECIES_MR_RIME[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_MR_RIME[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_SITRUS_BERRY,
+		.ability=ABILITY_ICE_BODY,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_ICE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_PSYCH_OUT,
+			MOVE_FREEZE_DRY,
+			MOVE_FOLLOW_ME,
+			MOVE_TRICK_ROOM,
+		},
+	},
+	
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_RUNERIGUS
@@ -95900,6 +102155,36 @@ static u16 const sTutorMoves_SPECIES_CALYREX[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_CALYREX[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN8ZU),
+		.heldItem=ITEM_WEAKNESS_POLICY,
+		.ability=ABILITY_UNNERVE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_AGILITY,
+			MOVE_CALM_MIND,
+			MOVE_GIGA_DRAIN,
+			MOVE_STORED_POWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9PU),
+		.heldItem=ITEM_WEAKNESS_POLICY,
+		.ability=ABILITY_UNNERVE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_GRASS,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_AGILITY,
+			MOVE_STORED_POWER,
+			MOVE_GIGA_DRAIN,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_WYRDEER
@@ -96758,6 +103043,21 @@ static u16 const sTutorMoves_SPECIES_RATTATA_ALOLAN[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_RATTATA_ALOLAN[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_HUSTLE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_DOUBLE_EDGE,
+			MOVE_SUCKER_PUNCH,
+			MOVE_U_TURN,
+			MOVE_PURSUIT,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_RATICATE_ALOLAN
@@ -96848,6 +103148,21 @@ static u16 const sTutorMoves_SPECIES_RATICATE_ALOLAN[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_RATICATE_ALOLAN[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_NORMAL_GEM,
+		.ability=ABILITY_HUSTLE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NORMAL,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_POPULATION_BOMB,
+			MOVE_KNOCK_OFF,
+			MOVE_HONE_CLAWS,
+			MOVE_U_TURN,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_RAICHU_ALOLAN
@@ -97714,6 +104029,51 @@ static u16 const sTutorMoves_SPECIES_MEOWTH_ALOLAN[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_MEOWTH_ALOLAN[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_DARKINIUM_Z,
+		.ability=ABILITY_TECHNICIAN,
+		.hiddenPowerType=TYPE_FIGHTING,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_PARTING_SHOT,
+			MOVE_DARK_PULSE,
+			MOVE_HIDDEN_POWER,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_LIFE_ORB,
+		.ability=ABILITY_TECHNICIAN,
+		.hiddenPowerType=TYPE_FIGHTING,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_NASTY_PLOT,
+			MOVE_DARK_PULSE,
+			MOVE_HIDDEN_POWER,
+			MOVE_THUNDERBOLT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7LC),
+		.heldItem=ITEM_DARKINIUM_Z,
+		.ability=ABILITY_TECHNICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FAKE_OUT,
+			MOVE_PARTING_SHOT,
+			MOVE_DARK_PULSE,
+			MOVE_TAUNT,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_PERSIAN_ALOLAN
@@ -97809,6 +104169,51 @@ static u16 const sTutorMoves_SPECIES_PERSIAN_ALOLAN[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_PERSIAN_ALOLAN[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_BLACK_GLASSES,
+		.ability=ABILITY_TECHNICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NORMAL,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_FAKE_OUT,
+			MOVE_PARTING_SHOT,
+			MOVE_ICY_WIND,
+			MOVE_SNARL,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_COVERT_CLOAK,
+		.ability=ABILITY_UNNERVE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DARK,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_FAKE_OUT,
+			MOVE_PARTING_SHOT,
+			MOVE_KNOCK_OFF,
+			MOVE_TAUNT,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
+		.heldItem=ITEM_COVERT_CLOAK,
+		.ability=ABILITY_FUR_COAT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_DARK,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_DARK_PULSE,
+			MOVE_MAKE_IT_RAIN,
+			MOVE_BURNING_JEALOUSY,
+			MOVE_NASTY_PLOT,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_GEODUDE_ALOLAN
@@ -104702,17 +111107,17 @@ static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_WORMADAM
 {
 	{
 		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
-		.heldItem=ITEM_LATIOSITE,
-		.ability=ABILITY_LEVITATE,
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_CLOAK_CHANGE,
 		.hiddenPowerType=TYPE_NONE,
-		.teraType=TYPE_ELECTRIC,
-		.nature=NATURE_TIMID,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_QUIET,
 		.moves=
 		{
-			MOVE_DRACO_METEOR,
-			MOVE_LUSTER_PURGE,
-			MOVE_THUNDERBOLT,
-			MOVE_PROTECT,
+			MOVE_LEAF_STORM,
+			MOVE_EARTHQUAKE,
+			MOVE_BUG_BUZZ,
+			MOVE_ALLY_SWITCH,
 		},
 	},
 };
@@ -104796,17 +111201,17 @@ static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_WORMADAM
 {
 	{
 		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
-		.heldItem=ITEM_LATIOSITE,
-		.ability=ABILITY_LEVITATE,
+		.heldItem=ITEM_LEFTOVERS,
+		.ability=ABILITY_CLOAK_CHANGE,
 		.hiddenPowerType=TYPE_NONE,
-		.teraType=TYPE_ELECTRIC,
-		.nature=NATURE_TIMID,
+		.teraType=TYPE_WATER,
+		.nature=NATURE_QUIET,
 		.moves=
 		{
-			MOVE_DRACO_METEOR,
-			MOVE_LUSTER_PURGE,
-			MOVE_THUNDERBOLT,
-			MOVE_PROTECT,
+			MOVE_LEAF_STORM,
+			MOVE_EARTHQUAKE,
+			MOVE_BUG_BUZZ,
+			MOVE_ALLY_SWITCH,
 		},
 	},
 };
@@ -105906,18 +112311,138 @@ static u16 const sTutorMoves_SPECIES_DARMANITAN_GALARIAN_ZEN_MODE[] =
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_DARMANITAN_GALARIAN_ZEN_MODE[] = 
 {
 	{
-		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
-		.heldItem=ITEM_LATIOSITE,
-		.ability=ABILITY_LEVITATE,
+		.flags= (0 | MON_FLAGS_GEN8UBERS),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_ZEN_MODE,
 		.hiddenPowerType=TYPE_NONE,
-		.teraType=TYPE_ELECTRIC,
-		.nature=NATURE_TIMID,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
 		.moves=
 		{
-			MOVE_DRACO_METEOR,
-			MOVE_LUSTER_PURGE,
-			MOVE_THUNDERBOLT,
-			MOVE_PROTECT,
+			MOVE_U_TURN,
+			MOVE_ICICLE_CRASH,
+			MOVE_FLARE_BLITZ,
+			MOVE_ROCK_SLIDE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8UBERS | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_ZEN_MODE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_ICICLE_CRASH,
+			MOVE_FLARE_BLITZ,
+			MOVE_EARTHQUAKE,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8BATTLESTADIUMSINGLES | MON_FLAGS_GEN8NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_ZEN_MODE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_ICICLE_CRASH,
+			MOVE_FLARE_BLITZ,
+			MOVE_EARTHQUAKE,
+			MOVE_U_TURN,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_ZEN_MODE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_ICICLE_CRASH,
+			MOVE_GIGA_IMPACT,
+			MOVE_FLARE_BLITZ,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_ZEN_MODE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_ICICLE_CRASH,
+			MOVE_EARTHQUAKE,
+			MOVE_SUPERPOWER,
+			MOVE_FLARE_BLITZ,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN81V1),
+		.heldItem=ITEM_SALAC_BERRY,
+		.ability=ABILITY_ZEN_MODE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_ADAMANT,
+		.moves=
+		{
+			MOVE_ICICLE_CRASH,
+			MOVE_FLARE_BLITZ,
+			MOVE_ENDURE,
+			MOVE_ENCORE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8ANYTHINGGOES),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_ZEN_MODE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_ICICLE_CRASH,
+			MOVE_U_TURN,
+			MOVE_FLARE_BLITZ,
+			MOVE_ROCK_SLIDE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_CHOICE_SCARF,
+		.ability=ABILITY_ZEN_MODE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_ICICLE_CRASH,
+			MOVE_FLARE_BLITZ,
+			MOVE_U_TURN,
+			MOVE_SUPERPOWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN8MONOTYPE),
+		.heldItem=ITEM_CHOICE_BAND,
+		.ability=ABILITY_ZEN_MODE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_ICICLE_CRASH,
+			MOVE_FIRE_PUNCH,
+			MOVE_EARTHQUAKE,
+			MOVE_U_TURN,
 		},
 	},
 };
@@ -106697,21 +113222,6 @@ static u16 const sTutorMoves_SPECIES_GRENINJA_BATTLE_BOND[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_GRENINJA_BATTLE_BOND[] = 
 {
-	{
-		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
-		.heldItem=ITEM_LATIOSITE,
-		.ability=ABILITY_LEVITATE,
-		.hiddenPowerType=TYPE_NONE,
-		.teraType=TYPE_ELECTRIC,
-		.nature=NATURE_TIMID,
-		.moves=
-		{
-			MOVE_DRACO_METEOR,
-			MOVE_LUSTER_PURGE,
-			MOVE_THUNDERBOLT,
-			MOVE_PROTECT,
-		},
-	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_GRENINJA_ASH
@@ -107128,21 +113638,6 @@ static u16 const sTutorMoves_SPECIES_ZYGARDE_10_POWER_CONSTRUCT[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_ZYGARDE_10_POWER_CONSTRUCT[] = 
 {
-	{
-		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
-		.heldItem=ITEM_LATIOSITE,
-		.ability=ABILITY_LEVITATE,
-		.hiddenPowerType=TYPE_NONE,
-		.teraType=TYPE_ELECTRIC,
-		.nature=NATURE_TIMID,
-		.moves=
-		{
-			MOVE_DRACO_METEOR,
-			MOVE_LUSTER_PURGE,
-			MOVE_THUNDERBOLT,
-			MOVE_PROTECT,
-		},
-	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_ZYGARDE_COMPLETE
@@ -107720,21 +114215,6 @@ static u16 const sTutorMoves_SPECIES_ROCKRUFF_OWN_TEMPO[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_ROCKRUFF_OWN_TEMPO[] = 
 {
-	{
-		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
-		.heldItem=ITEM_LATIOSITE,
-		.ability=ABILITY_LEVITATE,
-		.hiddenPowerType=TYPE_NONE,
-		.teraType=TYPE_ELECTRIC,
-		.nature=NATURE_TIMID,
-		.moves=
-		{
-			MOVE_DRACO_METEOR,
-			MOVE_LUSTER_PURGE,
-			MOVE_THUNDERBOLT,
-			MOVE_PROTECT,
-		},
-	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_LYCANROC_MIDNIGHT
@@ -108306,6 +114786,66 @@ static u16 const sTutorMoves_SPECIES_NECROZMA_ULTRA[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_NECROZMA_ULTRA[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN7UBERS | MON_FLAGS_GEN7UBERS),
+		.heldItem=ITEM_ULTRANECROZIUM_Z,
+		.ability=ABILITY_NEUROFORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_PHOTON_GEYSER,
+			MOVE_EARTHQUAKE,
+			MOVE_STONE_EDGE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UBERS),
+		.heldItem=ITEM_ULTRANECROZIUM_Z,
+		.ability=ABILITY_NEUROFORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_STEALTH_ROCK,
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_POWER_GEM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7UBERS | MON_FLAGS_GEN7ANYTHINGGOES),
+		.heldItem=ITEM_ULTRANECROZIUM_Z,
+		.ability=ABILITY_NEUROFORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_PHOTON_GEYSER,
+			MOVE_HEAT_WAVE,
+			MOVE_DRAGON_PULSE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN7ANYTHINGGOES),
+		.heldItem=ITEM_ULTRANECROZIUM_Z,
+		.ability=ABILITY_NEUROFORCE,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_SWORDS_DANCE,
+			MOVE_PHOTON_GEYSER,
+			MOVE_EARTHQUAKE,
+			MOVE_OUTRAGE,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_TOXTRICITY_LOW_KEY
@@ -111375,18 +117915,33 @@ static u16 const sTutorMoves_SPECIES_MAUSHOLD_FAMILY_OF_FOUR[] =
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_MAUSHOLD_FAMILY_OF_FOUR[] = 
 {
 	{
-		.flags= (0 | MON_FLAGS_GEN9VGCPRIDE),
-		.heldItem=ITEM_LATIOSITE,
-		.ability=ABILITY_LEVITATE,
+		.flags= (0 | MON_FLAGS_GEN9RU),
+		.heldItem=ITEM_WIDE_LENS,
+		.ability=ABILITY_TECHNICIAN,
 		.hiddenPowerType=TYPE_NONE,
-		.teraType=TYPE_ELECTRIC,
-		.nature=NATURE_TIMID,
+		.teraType=TYPE_NORMAL,
+		.nature=NATURE_JOLLY,
 		.moves=
 		{
-			MOVE_DRACO_METEOR,
-			MOVE_LUSTER_PURGE,
-			MOVE_THUNDERBOLT,
-			MOVE_PROTECT,
+			MOVE_TIDY_UP,
+			MOVE_POPULATION_BOMB,
+			MOVE_BITE,
+			MOVE_ENCORE,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN91V1),
+		.heldItem=ITEM_WIDE_LENS,
+		.ability=ABILITY_TECHNICIAN,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NORMAL,
+		.nature=NATURE_JOLLY,
+		.moves=
+		{
+			MOVE_POPULATION_BOMB,
+			MOVE_FEINT,
+			MOVE_ENCORE,
+			MOVE_TICKLE,
 		},
 	},
 };
@@ -123064,6 +129619,51 @@ static u16 const sTutorMoves_SPECIES_TERAPAGOS[] =
 
 static struct RoguePokemonCompetitiveSet const sCompetitiveSets_SPECIES_TERAPAGOS[] = 
 {
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_CHOICE_SPECS,
+		.ability=ABILITY_TERA_SHELL,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_TIMID,
+		.moves=
+		{
+			MOVE_TERA_STARSTORM,
+			MOVE_ICE_BEAM,
+			MOVE_EARTH_POWER,
+			MOVE_FLAMETHROWER,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9MONOTYPE),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_TERA_SHIFT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_RAPID_SPIN,
+			MOVE_TERA_STARSTORM,
+			MOVE_FLAMETHROWER,
+			MOVE_ICE_BEAM,
+		},
+	},
+	{
+		.flags= (0 | MON_FLAGS_GEN9NATIONALDEXMONOTYPE),
+		.heldItem=ITEM_HEAVY_DUTY_BOOTS,
+		.ability=ABILITY_TERA_SHIFT,
+		.hiddenPowerType=TYPE_NONE,
+		.teraType=TYPE_NONE,
+		.nature=NATURE_MODEST,
+		.moves=
+		{
+			MOVE_CALM_MIND,
+			MOVE_TERA_STARSTORM,
+			MOVE_RAPID_SPIN,
+			MOVE_FLAMETHROWER,
+		},
+	},
 };
 
 #ifdef APPEND_MON_FLAGS_SPECIES_PECHARUNT
