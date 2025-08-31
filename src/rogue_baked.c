@@ -485,7 +485,7 @@ void Rogue_ModifyEvolution(u16 species, u8 evoIdx, struct Evolution* outEvo)
 
             case(EVO_FRIENDSHIP):
                 outEvo->method = EVO_LEVEL;
-                outEvo->param = 30;
+                outEvo->param = 20;
                 break;
 
             case(EVO_TRADE):
