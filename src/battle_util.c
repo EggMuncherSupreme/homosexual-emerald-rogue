@@ -9476,8 +9476,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
     if(GetBattlerAbility(battlerAtk) == ABILITY_CATS_CRADLE && gActionsByTurnOrder[GetBattlerTurnOrderNum(battlerDef)] == B_ACTION_SWITCH)
         basePower *= 2;
 
-    if(move == MOVE_VEEVEE_VOLLEY)
-        basePower = 10 * (gBattleMons[battlerAtk].friendship) / 25;
+    
     
     if(move == MOVE_LICK && (gBattleMons[battlerAtk].species == SPECIES_LICKITUNG || gBattleMons[battlerAtk].species == SPECIES_LICKILICKY) )
         basePower *= 4;
@@ -9503,12 +9502,7 @@ static inline u32 CalcMoveBasePower(u32 move, u32 battlerAtk, u32 battlerDef, u3
         }
         basePower = sFlailHpScaleToPowerTable[i + 1];
         break;
-    case EFFECT_RETURN:
-        basePower = 10 * (gBattleMons[battlerAtk].friendship) / 25;
-        break;
-    case EFFECT_FRUSTRATION:
-        basePower = 10 * (MAX_FRIENDSHIP - gBattleMons[battlerAtk].friendship) / 25;
-        break;
+    
     case EFFECT_FURY_CUTTER:
         basePower = CalcFuryCutterBasePower(basePower, gDisableStructs[battlerAtk].furyCutterCounter);
         break;

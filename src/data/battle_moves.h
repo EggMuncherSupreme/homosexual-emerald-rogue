@@ -3900,7 +3900,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_RETURN] =
     {
         .effect = EFFECT_RETURN,
-        .power = 1,
+        .power = 102,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
@@ -3930,7 +3930,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_FRUSTRATION] =
     {
         .effect = EFFECT_FRUSTRATION,
-        .power = 1,
+        .power = 102,
         .type = TYPE_NORMAL,
         .accuracy = 100,
         .pp = 20,
@@ -11819,7 +11819,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_PIKA_PAPOW] =
     {
         .effect = EFFECT_RETURN,
-        .power = 1,
+        .power = 102,
         .type = TYPE_ELECTRIC,
         .accuracy = 0,
         .pp = 20,
@@ -12011,7 +12011,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_DYNAMAX] =
     [MOVE_VEEVEE_VOLLEY] =
     {
         .effect = EFFECT_PHOTON_GEYSER,
-        .power = 1,
+        .power = 102,
         .type = TYPE_NORMAL,
         .accuracy = 0,
         .pp = 20,
