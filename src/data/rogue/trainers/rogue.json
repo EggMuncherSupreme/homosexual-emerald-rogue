@@ -665,7 +665,7 @@
                 "trainer_pic": "TRAINER_PIC_BIRD_KEEPER",
                 "trainer_class": "TRAINER_CLASS_COMMUNITY_MOD",
                 "class_flags": [ "BOSS_ANY_ELITE" ],
-                "weather": "VOLCANIC_ASH",
+                "weather": "SANDSTORM",
                 "shiny_species": "SPECIES_STARLY",
                 "pokeball": "LUXURY_BALL",
                 "encounter_text":
