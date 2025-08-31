@@ -72931,7 +72931,7 @@ static struct LevelUpMove const sLevelUpMoves_SPECIES_GOLURK[] =
 	{ .move=MOVE_HAMMER_ARM, .level=52 },
 	{ .move=MOVE_EARTHQUAKE, .level=58 },
 	{ .move=MOVE_DYNAMIC_PUNCH, .level=64 },
-	{ .move=MOVE_HIGH_HORSEPOWER, .level=70 },
+	{ .move=MOVE_HEADLONG_RUSH, .level=70 },
 	{ .move=MOVE_NONE, .level=0 },
 };
 
