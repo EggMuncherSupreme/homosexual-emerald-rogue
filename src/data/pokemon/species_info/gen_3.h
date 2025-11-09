@@ -693,8 +693,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .formSpeciesIdTable = sZigzagoonFormSpeciesIdTable
 
 #define LINOONE_MISC_INFO                                                       \
-        .baseHP        = 103,                                                    \
-        .baseAttack    = 85,                                                    \
+        .baseHP        = 103,                                                   \
+        .baseAttack    = 90,                                                    \
         .baseDefense   = 86,                                                    \
         .baseSpeed     = 105,                                                   \
         .baseSpAttack  = 50,                                                    \
@@ -820,7 +820,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_OBSTAGOON] =
     {
-        .baseHP        = 98,
+        .baseHP        = 108,
         .baseAttack    = 105,
         .baseDefense   = 101,
         .baseSpeed     = 100,
@@ -7614,13 +7614,13 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         LATIAS_MISC_INFO,
         .baseHP        = 80,
-        .baseAttack    = 75,
-        .baseDefense   = 85,
+        .baseAttack    = 80,
+        .baseDefense   = 90,
         .baseSpeed     = 110,
-        .baseSpAttack  = 105,
-        .baseSpDefense = 125,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 130,
         .expYield = 270,
-        .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_PRISM_ARMOR },
+        .abilities = { ABILITY_LEVITATE, ABILITY_NONE },
         .bodyColor = BODY_COLOR_RED,
         .cryId = CRY_LATIAS,
         .height = 14,
@@ -7651,11 +7651,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         LATIAS_MISC_INFO,
         .baseHP        = 80,
-        .baseAttack    = 95,
-        .baseDefense   = 115,
+        .baseAttack    = 100,
+        .baseDefense   = 120,
         .baseSpeed     = 110,
-        .baseSpAttack  = 135,
-        .baseSpDefense = 145,
+        .baseSpAttack  = 140,
+        .baseSpDefense = 150,
         .expYield = 315,
         .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE, ABILITY_LEVITATE },
         .bodyColor = BODY_COLOR_PURPLE,
@@ -7709,11 +7709,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         LATIOS_MISC_INFO,
         .baseHP        = 80,
-        .baseAttack    = 85,
-        .baseDefense   = 75,
+        .baseAttack    = 90,
+        .baseDefense   = 80,
         .baseSpeed     = 110,
-        .baseSpAttack  = 125,
-        .baseSpDefense = 105,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 110,
         .expYield = 270,
         .abilities = { ABILITY_LEVITATE, ABILITY_NONE, ABILITY_NEUROFORCE },
         .bodyColor = BODY_COLOR_BLUE,
@@ -7746,11 +7746,11 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     {
         LATIOS_MISC_INFO,
         .baseHP        = 80,
-        .baseAttack    = 125,
-        .baseDefense   = 95,
+        .baseAttack    = 130,
+        .baseDefense   = 100,
         .baseSpeed     = 110,
-        .baseSpAttack  = 155,
-        .baseSpDefense = 115,
+        .baseSpAttack  = 160,
+        .baseSpDefense = 120,
         .expYield = 315,
         .abilities = { ABILITY_LEVITATE, ABILITY_LEVITATE, ABILITY_LEVITATE },
         .bodyColor = BODY_COLOR_PURPLE,

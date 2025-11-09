@@ -3888,7 +3888,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
     [SPECIES_WEAVILE] =
     {
         .baseHP        = 75,
-        .baseAttack    = 130,
+        .baseAttack    = 125,
         .baseDefense   = 65,
         .baseSpeed     = 125,
         .baseSpAttack  = 45,
@@ -3904,7 +3904,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .friendship = 35,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = { ABILITY_PRESSURE, ABILITY_HOMOPHOBIA, ABILITY_PICKPOCKET },
+        .abilities = { ABILITY_INNER_FOCUS, ABILITY_HOMOPHOBIA, ABILITY_PICKPOCKET },
         .bodyColor = BODY_COLOR_BLACK,
         .speciesName = _("Weavile"),
         .cryId = CRY_WEAVILE,

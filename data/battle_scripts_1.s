@@ -423,6 +423,7 @@ gBattleScriptsForMoveEffects::
 	.4byte BattleScript_EffectSnow                    @ EFFECT_SNOWSCAPE
 	.4byte BattleScript_EffectTripleArrows            @ EFFECT_TRIPLE_ARROWS
 	.4byte BattleScript_EffectInfernalParade          @ EFFECT_INFERNAL_PARADE
+	.4byte BattleScript_EffectBitterMalice 			  @ EFFECT_BITTER_MALICE
 	.4byte BattleScript_EffectTakeHeart               @ EFFECT_TAKE_HEART
 	.4byte BattleScript_EffectAxeKick                 @ EFFECT_AXE_KICK
 	.4byte BattleScript_EffectHit                     @ EFFECT_COLLISION_COURSE
@@ -3799,6 +3800,7 @@ BattleScript_EffectBurnHit::
 	setmoveeffect MOVE_EFFECT_BURN
 	goto BattleScript_EffectHit
 
+BattleScript_EffectBitterMalice::
 BattleScript_EffectFrostbiteHit::
 	setmoveeffect MOVE_EFFECT_FROSTBITE
 	goto BattleScript_EffectHit

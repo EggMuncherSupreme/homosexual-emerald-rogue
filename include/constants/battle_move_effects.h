@@ -445,7 +445,8 @@
 #define EFFECT_QUARRY                       439
 #define EFFECT_SMELTERY                     440
 #define EFFECT_EXTREME_EVOBOOST_2           441
+#define EFFECT_BITTER_MALICE                442
 
-#define NUM_BATTLE_MOVE_EFFECTS             442
+#define NUM_BATTLE_MOVE_EFFECTS             443
 
 #endif  // GUARD_CONSTANTS_BATTLE_MOVE_EFFECTS_H
