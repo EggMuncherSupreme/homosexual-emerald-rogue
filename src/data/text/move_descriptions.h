@@ -273,8 +273,8 @@ static const u8 sAuroraBeamDescription[] = _(
     "beam that may lower Attack.");
 
 static const u8 sHyperBeamDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "Leaves the user immobile if\n"
+    "the target stays standing.");
 
 static const u8 sPeckDescription[] = _(
     "Attacks the foe with a\n"
@@ -661,8 +661,8 @@ static const u8 sSharpenDescription[] = _(
     "and raises Attack.");
 
 static const u8 sConversionDescription[] = _(
-    "Changes the user's type\n"
-    "into a known move's type.");
+    "Changes the user's type and\n"
+    "boosts all stats next turn.");
 
 static const u8 sTriAttackDescription[] = _(
     "Fires three types of beams\n"
@@ -1257,12 +1257,12 @@ static const u8 sCrushClawDescription[] = _(
     "claws. May lower Defense.");
 
 static const u8 sBlastBurnDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "Leaves the user immobile if\n"
+    "the target stays standing.");
 
 static const u8 sHydroCannonDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "Leaves the user immobile if\n"
+    "the target stays standing.");
 
 static const u8 sMeteorMashDescription[] = _(
     "Fires a meteor-like punch.\n"
@@ -1381,8 +1381,8 @@ static const u8 sDragonClawDescription[] = _(
     "claws.");
 
 static const u8 sFrenzyPlantDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "Leaves the user immobile if\n"
+    "the target stays standing.");
 
 static const u8 sBulkUpDescription[] = _(
     "Bulks up the body to boost\n"
@@ -1826,7 +1826,7 @@ static const u8 sDefendOrderDescription[] = _(
 
 static const u8 sHealOrderDescription[] = _(
     "The user's underlings show\n"
-    "up to heal half its max HP.");
+    "up to heal to its max HP.");
 
 static const u8 sHeadSmashDescription[] = _(
     "A life-risking headbutt that\n"
@@ -2173,12 +2173,12 @@ static const u8 sFieryDanceDescription[] = _(
     "May raise Sp. Atk.");
 
 static const u8 sFreezeShockDescription[] = _(
-    "A powerful 2-turn move that\n"
-    "may paralyze the foe.");
+    "Leaves the user immobile if\n"
+    "the target stays standing.");
 
 static const u8 sIceBurnDescription[] = _(
-    "A powerful 2-turn move that\n"
-    "may inflict a burn.");
+    "Leaves the user immobile if\n"
+    "the target stays standing.");
 
 static const u8 sSnarlDescription[] = _(
     "Yells and rants at the foe\n"
@@ -2345,8 +2345,8 @@ static const u8 sSpikyShieldDescription[] = _(
     "the foe if struck.");
 
 static const u8 sAromaticMistDescription[] = _(
-    "Raises the Sp. Def of a\n"
-    "partner Pokémon.");
+    "Raises partner's Sp. Def.\n"
+    "Boosted by Misty Terrain.");
 
 static const u8 sEerieImpulseDescription[] = _(
     "Exposes the foe to a pulse\n"
@@ -2750,7 +2750,7 @@ static const u8 sTeatimeDescription[] = _(
     "and eat their Berries.");
 
 static const u8 sOctolockDescription[] = _(
-    "Traps the foe to lower Def\n"
+"Traps the foe to lower Def\n"
     "and Sp. Def fall each turn.");
 
 static const u8 sBoltBeakDescription[] = _(
@@ -2843,7 +2843,7 @@ static const u8 sFalseSurrenderDescription[] = _(
 
 static const u8 sMeteorAssaultDescription[] = _(
     "Attacks with a thick leek.\n"
-    "The user must then rest.");
+    "The user may need rest.");
 
 static const u8 sEternabeamDescription[] = _(
     "Eternatus' strongest move.\n"
@@ -3015,7 +3015,7 @@ static const u8 sChloroblastDescription[] = _(
 
 static const u8 sMountainGaleDescription[] = _(
     "Giant chunks of ice damage\n"
-    "the foe. It may flinch.");
+    "foes. It may frostbite.");
 
 static const u8 sVictoryDanceDescription[] = _(
     "Dances to raise Attack,\n"
@@ -3034,12 +3034,12 @@ static const u8 sEsperWingDescription[] = _(
     "Ups the user's Speed.");
 
 static const u8 sBitterMaliceDescription[] = _(
-    "A spine-chilling resentment.\n"
-    "May lower the foe's Attack.");
+    "Hurts a foe harder if it has\n"
+    "an ailment. May frostbite.");
 
 static const u8 sShelterDescription[] = _(
     "The user hardens their skin,\n"
-    "sharply raising its Defense.");
+    "sharply raising its defenses.");
 
 static const u8 sTripleArrowsDescription[] = _(
     "High critical hit ratio.\n"
